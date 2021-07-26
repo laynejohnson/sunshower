@@ -14,7 +14,10 @@
 // ---------------------------------- //
 
 Features:
-// TODO:
+// TODO: Language toggle
+// TODO: Units toggle
+// TODO: Color toggle
+// Add favorite cities
 
 Refactor:
  // TODO:

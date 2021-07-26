@@ -25,16 +25,26 @@ struct WeatherManager {
             
             // Give session a task
             // .dataTask returns a URLSessionDataTask
-            // Completion handler takes a function as a value; Data?, URLResponse, and Error? are function parameters
-            let task = session.dataTask(with: url, completionHandler: <#T##(Data?, URLResponse?, Error?) -> Void#>)
+            // Completion handler takes a function as a value; Data?, URLResponse, and Error? are function parameters; function returns nothing.
+            //            // Completion handler triggered by task after session completes networking and task is complete.
+            //            let task = session.dataTask(with: url, completionHandler: handle(data:response:error:))
+            
+            let task = session.dataTask(with: url) { data, response, error in
+                if error != nil {
+                    print(error!)
+                    // Exit function and do not continue
+                    return
+                }
+                // Use optional binding to unwrap data
+                if let safeData = data {
+                    let dataString = String(data: safeData, encoding:.utf8)
+                    print(dataString)
+                }
+            }
             
             // Start task
             task.resume()
-            
         }
     }
     
-    func handle(data: Data?, response: URLResponse?, error: Error?) -> Void {
-        
-    }
 }
