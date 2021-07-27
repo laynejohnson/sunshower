@@ -7,9 +7,16 @@
 
 import Foundation
 
+// Create protocol in the same file as the class the will use protocol (not delegate file)
+protocol WeatherManagerDelegate {
+    func didUpdateWeather(weather: WeatherModel)
+}
+
 struct WeatherManager {
     
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?units=imperial&appid=\(openWeatherApiKey)"
+    
+    var delegate: WeatherManagerDelegate?
     
     func fetchWeather(cityName: String) {
         let urlString = "\(weatherURL)&q=\(cityName)"
@@ -37,11 +44,13 @@ struct WeatherManager {
                 }
                 // Use optional binding to unwrap data
                 if let safeData = data {
-                    parseJSON(weatherData: safeData)
-                    
-                    // View data in XCode inspector
-                    //                    let dataString = String(data: safeData, encoding:.utf8)
-                    //                    print(dataString!)
+                    if let weather = self.parseJSON(weatherData: safeData) {
+                        // Send data to delegate
+                        self.delegate?.didUpdateWeather(weather: weather)
+                    }
+                    // View data in XCode inspector:
+                    // let dataString = String(data: safeData, encoding:.utf8)
+                    // print(dataString!)
                 }
             }
             // Start task
@@ -49,7 +58,7 @@ struct WeatherManager {
         }
     }
     
-    func parseJSON(weatherData: Data) {
+    func parseJSON(weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         
         // .self turns WeatherData into a data type (instead of object)
@@ -61,10 +70,11 @@ struct WeatherManager {
             let name = decodedData.name
             
             let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp)
+            return weather
             
-            print(weather.conditionName)
         } catch {
             print(error)
+            return nil
         }
     }
 }

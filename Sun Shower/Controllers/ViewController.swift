@@ -28,7 +28,12 @@ import UIKit
 
 // UITextFieldDelegate allow our view controller to manage the editing and validation of text field
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
+    
+    func didUpdateWeather(weather: WeatherModel) {
+        print("This is from delegate: \(weather.temperature)")
+    }
+    
     
     // MARK: - IBOutlets
         
@@ -56,6 +61,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // UITextField will notify view controller delegate; self == current view controller
         searchTextField.delegate = self
+        // Set current class as delegate
+        weatherManager.delegate = self
         
     }
     
@@ -116,6 +123,4 @@ class ViewController: UIViewController, UITextFieldDelegate {
 // ---------------------------------- //
 // - - - - - - - - FUNC - - - - - - - //
 // ---------------------------------- //
-
-
 
