@@ -39,8 +39,8 @@ struct WeatherManager {
             // Give session a task
             // .dataTask returns a URLSessionDataTask
             // Completion handler takes a function as a value; Data?, URLResponse, and Error? are function parameters; function returns nothing.
-            //            // Completion handler triggered by task after session completes networking and task is complete.
-            //            let task = session.dataTask(with: url, completionHandler: handle(data:response:error:))
+            // Completion handler triggered by task after session completes networking and task is complete.
+            // let task = session.dataTask(with: url, completionHandler: handle(data:response:error:))
             
             let task = session.dataTask(with: url) { data, response, error in
                 if error != nil {
@@ -54,7 +54,7 @@ struct WeatherManager {
                         // Send data to delegate
                         self.delegate?.didUpdateWeather(self, weather: weather)
                     }
-                    // View data in XCode inspector:
+                    // View data in console:
                     // let dataString = String(data: safeData, encoding:.utf8)
                     // print(dataString!)
                 }
@@ -74,8 +74,9 @@ struct WeatherManager {
             let id = decodedData.weather[0].id
             let temp = decodedData.main.temp
             let name = decodedData.name
+            let description = decodedData.weather.description
             
-            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp)
+            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, description: description)
             return weather
             
         } catch {

@@ -17,7 +17,8 @@
  // TODO: Language toggle
  // TODO: Units toggle
  // TODO: Color toggle
- // Add favorite cities
+ // TODO: Add favorite cities
+ // TODO: Add symbols day/night
  
  Refactor:
  // TODO:
@@ -115,7 +116,17 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         
-        print("This is from delegate: \(weather.temperature)")
+        DispatchQueue.main.async {
+            print(weather.cityName)
+            print(weather.conditionId)
+            print(weather.conditionName)
+            print(weather.description)
+            
+            self.conditionImageView.image = UIImage.init(systemName: weather.conditionName)
+            self.temperatureLabel.text = weather.temperatureString
+            self.cityLabel.text = weather.cityName
+        }
+      
     }
     
     func didFailWithError(error: Error) {
