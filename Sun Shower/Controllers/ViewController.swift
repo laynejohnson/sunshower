@@ -119,10 +119,18 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
         DispatchQueue.main.async {
             print(weather.cityName)
             print(weather.conditionId)
-            print(weather.conditionName)
+            print(weather.dayConditionName)
             print(weather.description)
+            print(weather.icon)
             
-            self.conditionImageView.image = UIImage.init(systemName: weather.conditionName)
+            let icon = weather.icon
+            
+            if icon.contains("n") {
+                self.conditionImageView.image = UIImage.init(systemName: weather.nightConditionName)
+            } else if icon.contains("d") {
+                self.conditionImageView.image = UIImage.init(systemName: weather.dayConditionName)
+            }
+            
             self.temperatureLabel.text = weather.temperatureString
             self.cityLabel.text = weather.cityName
         }
