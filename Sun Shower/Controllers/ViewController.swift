@@ -7,19 +7,19 @@
 
 /*
  
-// MARK: - Development List:
-
-// ---------------------------------- //
-// - - - - - - - - DEV - - - - - - -  //
-// ---------------------------------- //
-
-Features:
-// TODO: Language toggle
-// TODO: Units toggle
-// TODO: Color toggle
-// Add favorite cities
-
-Refactor:
+ // MARK: - Development List:
+ 
+ // ---------------------------------- //
+ // - - - - - - - - DEV - - - - - - -  //
+ // ---------------------------------- //
+ 
+ Features:
+ // TODO: Language toggle
+ // TODO: Units toggle
+ // TODO: Color toggle
+ // Add favorite cities
+ 
+ Refactor:
  // TODO:
  
  */
@@ -30,24 +30,19 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
     
-    func didUpdateWeather(weather: WeatherModel) {
-        print("This is from delegate: \(weather.temperature)")
-    }
-    
-    
     // MARK: - IBOutlets
-        
+    
     // ---------------------------------- //
     // - - - - - - -  OUTLETS - - - - - - //
     // ---------------------------------- //
-
+    
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     
     // MARK: - Properties
-        
+    
     // ---------------------------------- //
     // - - - - - - - - VARS - - - - - - - //
     // ---------------------------------- //
@@ -67,11 +62,11 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
     }
     
     // MARK: - IBActions
-        
+    
     // ---------------------------------- //
     // - - - - - - - ACTIONS - - - - - -  //
     // ---------------------------------- //
-
+    
     @IBAction func searchPressed(_ sender: Any) {
         // Dismiss keyboard
         searchTextField.endEditing(true)
@@ -116,11 +111,15 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
         searchTextField.text = ""
     }
     
-}
-
-// MARK: - Functions
+    // MARK: - Weather Manager Delegate Methods
     
-// ---------------------------------- //
-// - - - - - - - - FUNC - - - - - - - //
-// ---------------------------------- //
-
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
+        
+        print("This is from delegate: \(weather.temperature)")
+    }
+    
+    func didFailWithError(error: Error) {
+        
+        print(error)
+    }
+}

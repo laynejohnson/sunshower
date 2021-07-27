@@ -9,7 +9,11 @@ import Foundation
 
 // Create protocol in the same file as the class the will use protocol (not delegate file)
 protocol WeatherManagerDelegate {
-    func didUpdateWeather(weather: WeatherModel)
+    
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
+    
+    // Error handling
+    func didFailWithError(error: Error)
 }
 
 struct WeatherManager {
@@ -19,11 +23,13 @@ struct WeatherManager {
     var delegate: WeatherManagerDelegate?
     
     func fetchWeather(cityName: String) {
+        
         let urlString = "\(weatherURL)&q=\(cityName)"
-        performRequest(urlString: urlString)
+        performRequest(with: urlString)
     }
     
-    func performRequest(urlString: String) {
+    func performRequest(with urlString: String) {
+        
         // Create a URL with URL initializer
         if let url = URL(string: urlString) {
             
@@ -38,15 +44,15 @@ struct WeatherManager {
             
             let task = session.dataTask(with: url) { data, response, error in
                 if error != nil {
-                    print(error!)
+                    delegate?.didFailWithError(error: error!)
                     // Exit function and do not continue
                     return
                 }
                 // Use optional binding to unwrap data
                 if let safeData = data {
-                    if let weather = self.parseJSON(weatherData: safeData) {
+                    if let weather = self.parseJSON(safeData) {
                         // Send data to delegate
-                        self.delegate?.didUpdateWeather(weather: weather)
+                        self.delegate?.didUpdateWeather(self, weather: weather)
                     }
                     // View data in XCode inspector:
                     // let dataString = String(data: safeData, encoding:.utf8)
@@ -58,7 +64,7 @@ struct WeatherManager {
         }
     }
     
-    func parseJSON(weatherData: Data) -> WeatherModel? {
+    func parseJSON(_ weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         
         // .self turns WeatherData into a data type (instead of object)
@@ -73,7 +79,7 @@ struct WeatherManager {
             return weather
             
         } catch {
-            print(error)
+            delegate?.didFailWithError(error: error)
             return nil
         }
     }
