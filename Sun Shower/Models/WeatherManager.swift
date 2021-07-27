@@ -54,7 +54,6 @@ struct WeatherManager {
         
         // .self turns WeatherData into a data type (instead of object)
         // throw keyword indicates that if something goes wrong, method will throw an error
-        // .decode moth
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
             let id = decodedData.weather[0].id
