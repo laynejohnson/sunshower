@@ -18,6 +18,7 @@
  // TODO: Units toggle
  // TODO: Color toggle
  // TODO: Add favorite cities
+ // TODO: Add loading/fetching progress circle/animation
  
  Refactor:
  // TODO:
@@ -62,11 +63,11 @@ class ViewController: UIViewController {
         // Must set locationManager delegate before requesting location (line 66)
         locationManager.delegate = self
         
-        //        // Send location permission request
-        //        locationManager.requestWhenInUseAuthorization()
-        //        // Request location
-        //        locationManager.requestLocation()
-
+        // Send location permission request
+        locationManager.requestWhenInUseAuthorization()
+        
+        // Request location
+        locationManager.requestLocation()
         
         searchTextField.delegate = self
         weatherManager.delegate = self
@@ -125,7 +126,7 @@ extension ViewController: WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         
         DispatchQueue.main.async {
-        
+            
             let icon = weather.icon
             
             if icon.contains("n") {
@@ -137,7 +138,7 @@ extension ViewController: WeatherManagerDelegate {
             self.temperatureLabel.text = weather.temperatureString
             self.cityLabel.text = weather.cityName
         }
-      
+        
     }
     
     func didFailWithError(error: Error) {
@@ -151,16 +152,15 @@ extension ViewController: WeatherManagerDelegate {
 extension ViewController: CLLocationManagerDelegate {
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
-    
-        // Send location permission request
+        
         locationManager.requestWhenInUseAuthorization()
-        // Request location
         locationManager.requestLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if let location = locations.last {
+            locationManager.stopUpdatingLocation()
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
             weatherManager.fetchWeather(latitude: lat, longitude: lon)
