@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 // Create protocol in the same file as the class the will use protocol (not delegate file)
 protocol WeatherManagerDelegate {
@@ -25,6 +26,11 @@ struct WeatherManager {
     func fetchWeather(cityName: String) {
         
         let urlString = "\(weatherURL)&q=\(cityName)"
+        performRequest(with: urlString)
+    }
+    
+    func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
         performRequest(with: urlString)
     }
     

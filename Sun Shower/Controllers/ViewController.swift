@@ -58,19 +58,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Must set locationManager delegate before requesting location (line 66)
         locationManager.delegate = self
         
-        // Send location permission request
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
+        //        // Send location permission request
+        //        locationManager.requestWhenInUseAuthorization()
+        //        // Request location
+        //        locationManager.requestLocation()
+
         
-        // UITextField will notify view controller delegate; self == current view controller
         searchTextField.delegate = self
-        
-        // Set current class as delegate
         weatherManager.delegate = self
         
     }
+    
+    @IBAction func locationButtonPressed(_ sender: UIButton) {
+        print("location button pressed")
+        
+//        // Send location permission request
+//        locationManager.requestWhenInUseAuthorization()
+//        // Request location
+//        locationManager.requestLocation()
+    }
+    
 }
 
 // MARK: - UITextFieldDelegate
@@ -150,10 +160,15 @@ extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        print("Location: \(locationManager.location!)")
+        if let location = locations.last {
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            weatherManager.fetchWeather(latitude: lat, longitude: lon)
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        
         print("Error: \(error)")
     }
 }
