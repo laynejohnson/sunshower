@@ -18,7 +18,6 @@
  // TODO: Units toggle
  // TODO: Color toggle
  // TODO: Add favorite cities
- // TODO: Add symbols day/night
  
  Refactor:
  // TODO:
@@ -29,7 +28,9 @@ import UIKit
 
 // UITextFieldDelegate allow our view controller to manage the editing and validation of text field
 
-class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
+// MARK: - View Controller
+
+class ViewController: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -42,7 +43,7 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     
-    // MARK: - Properties
+    // MARK: - Variables
     
     // ---------------------------------- //
     // - - - - - - - - VARS - - - - - - - //
@@ -61,24 +62,17 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
         weatherManager.delegate = self
         
     }
-    
-    // MARK: - IBActions
-    
-    // ---------------------------------- //
-    // - - - - - - - ACTIONS - - - - - -  //
-    // ---------------------------------- //
+}
+
+// MARK: - UITextFieldDelegate
+
+extension ViewController: UITextFieldDelegate {
     
     @IBAction func searchPressed(_ sender: Any) {
         // Dismiss keyboard
         searchTextField.endEditing(true)
         print(searchTextField.text!)
     }
-    
-    // MARK: - Delegate Methods
-    
-    // ---------------------------------- //
-    // - - - - - - - DELEGATE - - - - - - //
-    // ---------------------------------- //
     
     // Function enables return key on keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -111,18 +105,16 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
         // Clear search field text
         searchTextField.text = ""
     }
-    
-    // MARK: - Weather Manager Delegate Methods
+}
+
+// MARK: - WeatherManagerDelegate
+
+extension ViewController: WeatherManagerDelegate {
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         
         DispatchQueue.main.async {
-            print(weather.cityName)
-            print(weather.conditionId)
-            print(weather.dayConditionName)
-            print(weather.description)
-            print(weather.icon)
-            
+        
             let icon = weather.icon
             
             if icon.contains("n") {
