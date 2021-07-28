@@ -83,27 +83,21 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-tG-JYE">
-                                        <rect key="frame" x="117" y="401" width="140" height="417"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8v-yp-nIX" userLabel="Location Button">
-                                                <rect key="frame" x="35" y="173.5" width="70" height="70"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="fri-XT-JZF"/>
-                                                    <constraint firstAttribute="height" constant="70" id="w6k-Ju-NEb"/>
-                                                </constraints>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="noun_Location_28620"/>
-                                                <connections>
-                                                    <action selector="locationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uBV-Ts-GfB"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8v-yp-nIX" userLabel="Location Button">
+                                        <rect key="frame" x="152" y="401" width="70" height="70"/>
                                         <constraints>
-                                            <constraint firstItem="t8v-yp-nIX" firstAttribute="centerY" secondItem="nm8-tG-JYE" secondAttribute="centerY" id="0q2-mW-ZPY"/>
-                                            <constraint firstItem="t8v-yp-nIX" firstAttribute="centerX" secondItem="nm8-tG-JYE" secondAttribute="centerX" id="fix-6E-j8K"/>
+                                            <constraint firstAttribute="width" constant="70" id="fri-XT-JZF"/>
+                                            <constraint firstAttribute="height" constant="70" id="w6k-Ju-NEb"/>
                                         </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="noun_Location_28620"/>
+                                        <connections>
+                                            <action selector="locationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uBV-Ts-GfB"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-tG-JYE">
+                                        <rect key="frame" x="117" y="491" width="140" height="327"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -125,6 +119,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="Fj6-nf-RNN" id="g5X-8Y-4GH"/>
                         <outlet property="conditionImageView" destination="BzZ-Lu-BPK" id="zjB-UV-14E"/>
+                        <outlet property="locationButton" destination="t8v-yp-nIX" id="I2U-q2-rY5"/>
                         <outlet property="searchTextField" destination="TgH-Am-Yq1" id="idn-BJ-xnN"/>
                         <outlet property="temperatureLabel" destination="5DU-qH-YPL" id="Nsg-bf-4q7"/>
                     </connections>

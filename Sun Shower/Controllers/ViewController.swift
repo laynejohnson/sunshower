@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var locationButton: UIButton!
     
     // MARK: - Variables
     
@@ -70,15 +71,6 @@ class ViewController: UIViewController {
         searchTextField.delegate = self
         weatherManager.delegate = self
         
-    }
-    
-    @IBAction func locationButtonPressed(_ sender: UIButton) {
-        print("location button pressed")
-        
-//        // Send location permission request
-//        locationManager.requestWhenInUseAuthorization()
-//        // Request location
-//        locationManager.requestLocation()
     }
     
 }
@@ -157,6 +149,14 @@ extension ViewController: WeatherManagerDelegate {
 // MARK: - CLLocationManagerDelegate
 
 extension ViewController: CLLocationManagerDelegate {
+    
+    @IBAction func locationButtonPressed(_ sender: UIButton) {
+    
+        // Send location permission request
+        locationManager.requestWhenInUseAuthorization()
+        // Request location
+        locationManager.requestLocation()
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
