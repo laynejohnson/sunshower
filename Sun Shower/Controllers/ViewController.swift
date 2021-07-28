@@ -25,6 +25,7 @@
  */
 
 import UIKit
+import CoreLocation
 
 // UITextFieldDelegate allow our view controller to manage the editing and validation of text field
 
@@ -50,14 +51,22 @@ class ViewController: UIViewController {
     // ---------------------------------- //
     
     var weatherManager = WeatherManager()
+    let locationManager = CLLocationManager()
     
     // MARK: - viewDidLoad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationManager.delegate = self
+        
+        // Send location permission request
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
         // UITextField will notify view controller delegate; self == current view controller
         searchTextField.delegate = self
+        
         // Set current class as delegate
         weatherManager.delegate = self
         
@@ -132,5 +141,19 @@ extension ViewController: WeatherManagerDelegate {
     func didFailWithError(error: Error) {
         
         print(error)
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension ViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        print("Location: \(locationManager.location!)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error: \(error)")
     }
 }
