@@ -47,6 +47,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var countryFlagLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var locationButton: UIButton!
     
@@ -78,6 +79,27 @@ class ViewController: UIViewController {
         
     }
     
+}
+
+// MARK: - UI Functions
+
+//func countryFlag(countryCode: String) -> String {
+//  let base = 127397
+//  var tempScalarView = String.UnicodeScalarView()
+//  for i in countryCode.utf16 {
+//    if let scalar = UnicodeScalar(base + Int(i)) {
+//      tempScalarView.append(scalar)
+//    }
+//  }
+//  return String(tempScalarView)
+//}
+//print(countryFlag(countryCode: "IN")) //OUTPUT: 🇮🇳
+//print(countryFlag(countryCode: "US")) //OUTPUT: 🇺🇸
+
+func getCountryFlag(countryCode: String) -> String {
+  return String(String.UnicodeScalarView(
+     countryCode.unicodeScalars.compactMap(
+       { UnicodeScalar(127397 + $0.value) })))
 }
 
 // MARK: - UITextFieldDelegate
@@ -142,8 +164,11 @@ extension ViewController: WeatherManagerDelegate {
             self.temperatureLabel.text = weather.temperatureString
             self.descriptionLabel.text = weather.description
             self.cityLabel.text = weather.cityName
-            self.countryLabel.text = weather.country
             
+            // Set country label and flag.
+            let countryCode = weather.country
+            self.countryLabel.text = countryCode
+            self.countryFlagLabel.text = getCountryFlag(countryCode: countryCode)
         }
         
     }
