@@ -21,6 +21,7 @@
  // TODO: Add loading/fetching progress circle/animation
  // TODO: Upgrade UI
  // TODO: Update app icon
+ // TODO: Country code --> country
  
  Refactor:
  // TODO:
@@ -76,6 +77,13 @@ class ViewController: UIViewController {
         
         searchTextField.delegate = self
         weatherManager.delegate = self
+        
+        // Dismiss keyboard with tap gesture
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
+        
+        // If gesture blocks other touches
+        // tapGesture.cancelsTouchesInView = false
         
     }
     
