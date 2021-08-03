@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var locationButton: UIButton!
     
@@ -141,7 +142,8 @@ extension ViewController: WeatherManagerDelegate {
             self.temperatureLabel.text = weather.temperatureString
             self.descriptionLabel.text = weather.description
             self.cityLabel.text = weather.cityName
-            print(weather.description)
+            self.countryLabel.text = weather.country
+            
         }
         
     }

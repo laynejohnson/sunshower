@@ -89,8 +89,14 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vf-Wi-jZ9" userLabel="Country Label">
+                                        <rect key="frame" x="171" y="445" width="32.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8v-yp-nIX" userLabel="Location Button">
-                                        <rect key="frame" x="152" y="445" width="70" height="70"/>
+                                        <rect key="frame" x="152" y="494" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="fri-XT-JZF"/>
                                             <constraint firstAttribute="height" constant="70" id="w6k-Ju-NEb"/>
@@ -102,7 +108,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-tG-JYE">
-                                        <rect key="frame" x="117" y="535" width="140" height="283"/>
+                                        <rect key="frame" x="117" y="584" width="140" height="234"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -125,6 +131,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="Fj6-nf-RNN" id="g5X-8Y-4GH"/>
                         <outlet property="conditionImageView" destination="BzZ-Lu-BPK" id="zjB-UV-14E"/>
+                        <outlet property="countryLabel" destination="8vf-Wi-jZ9" id="dC3-Qa-OnC"/>
                         <outlet property="descriptionLabel" destination="bsj-KM-svs" id="vWR-R3-YaW"/>
                         <outlet property="locationButton" destination="t8v-yp-nIX" id="I2U-q2-rY5"/>
                         <outlet property="searchTextField" destination="TgH-Am-Yq1" id="idn-BJ-xnN"/>
