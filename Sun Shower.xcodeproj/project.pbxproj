@@ -64,16 +64,15 @@
 		E8897E0D26AC88DE00992D6E /* Sun Shower */ = {
 			isa = PBXGroup;
 			children = (
+				E8897E0E26AC88DE00992D6E /* AppDelegate.swift */,
+				E8897E1026AC88DE00992D6E /* SceneDelegate.swift */,
+				E870728626AE2CC3001B59D9 /* Constants.swift */,
+				E8897E1C26AC88DF00992D6E /* Info.plist */,
+				E8897E1726AC88DF00992D6E /* Assets.xcassets */,
 				E8897E2526AC89D100992D6E /* Assets */,
 				E8897E2226AC899600992D6E /* Models */,
 				E8897E2326AC899D00992D6E /* Views */,
 				E8897E2426AC89A200992D6E /* Controllers */,
-				E8897E0E26AC88DE00992D6E /* AppDelegate.swift */,
-				E8897E1026AC88DE00992D6E /* SceneDelegate.swift */,
-				E8897E1726AC88DF00992D6E /* Assets.xcassets */,
-				E8897E1926AC88DF00992D6E /* LaunchScreen.storyboard */,
-				E8897E1C26AC88DF00992D6E /* Info.plist */,
-				E870728626AE2CC3001B59D9 /* Constants.swift */,
 			);
 			path = "Sun Shower";
 			sourceTree = "<group>";
@@ -91,6 +90,7 @@
 		E8897E2326AC899D00992D6E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E8897E1926AC88DF00992D6E /* LaunchScreen.storyboard */,
 				E8897E1426AC88DE00992D6E /* Main.storyboard */,
 			);
 			path = Views;

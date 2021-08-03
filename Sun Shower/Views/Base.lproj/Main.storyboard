@@ -55,7 +55,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjq-0N-8i3" userLabel="Temperature Stack View">
-                                        <rect key="frame" x="94" y="220" width="186" height="95.5"/>
+                                        <rect key="frame" x="100.5" y="220" width="173" height="95.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DU-qH-YPL">
                                                 <rect key="frame" x="0.0" y="0.0" width="89" height="95.5"/>
@@ -69,22 +69,28 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpp-Dm-OV4">
-                                                <rect key="frame" x="129" y="0.0" width="57" height="95.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpp-Dm-OV4">
+                                                <rect key="frame" x="129" y="0.0" width="44" height="95.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partly cloudy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsj-KM-svs" userLabel="Description Label">
+                                        <rect key="frame" x="128.5" y="335.5" width="117.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montréal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj6-nf-RNN" userLabel="City Label">
-                                        <rect key="frame" x="108.5" y="335.5" width="157.5" height="45.5"/>
+                                        <rect key="frame" x="108.5" y="379.5" width="157.5" height="45.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8v-yp-nIX" userLabel="Location Button">
-                                        <rect key="frame" x="152" y="401" width="70" height="70"/>
+                                        <rect key="frame" x="152" y="445" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="fri-XT-JZF"/>
                                             <constraint firstAttribute="height" constant="70" id="w6k-Ju-NEb"/>
@@ -96,7 +102,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-tG-JYE">
-                                        <rect key="frame" x="117" y="491" width="140" height="327"/>
+                                        <rect key="frame" x="117" y="535" width="140" height="283"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -119,6 +125,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="Fj6-nf-RNN" id="g5X-8Y-4GH"/>
                         <outlet property="conditionImageView" destination="BzZ-Lu-BPK" id="zjB-UV-14E"/>
+                        <outlet property="descriptionLabel" destination="bsj-KM-svs" id="vWR-R3-YaW"/>
                         <outlet property="locationButton" destination="t8v-yp-nIX" id="I2U-q2-rY5"/>
                         <outlet property="searchTextField" destination="TgH-Am-Yq1" id="idn-BJ-xnN"/>
                         <outlet property="temperatureLabel" destination="5DU-qH-YPL" id="Nsg-bf-4q7"/>

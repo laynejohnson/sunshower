@@ -9,11 +9,14 @@ import Foundation
 
 struct WeatherModel {
     // Stored properties:
+    
+    // 
     let conditionId: Int
     let cityName: String
     let temperature: Double
     let description: String
     let icon: String
+    let country: String
     
     // Computed properties:
     

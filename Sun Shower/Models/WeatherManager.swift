@@ -80,10 +80,10 @@ struct WeatherManager {
             let id = decodedData.weather[0].id
             let temp = decodedData.main.temp
             let name = decodedData.name
-            let description = decodedData.weather.description
+            let description = decodedData.weather[0].description
             let icon = decodedData.weather[0].icon
-            
-            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, description: description, icon: icon)
+            let country = decodedData.sys["country"]
+            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, description: description, icon: icon, country: country)
             return weather
             
         } catch {

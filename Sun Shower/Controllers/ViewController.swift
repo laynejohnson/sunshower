@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var locationButton: UIButton!
@@ -62,14 +63,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Must set locationManager delegate before requesting location (line 66)
+        // Must set locationManager delegate before requesting location.
         locationManager.delegate = self
         
-        // Send location permission request
+        // Send location permission request.
         locationManager.requestWhenInUseAuthorization()
         
-        // Request location
-        locationManager.requestLocation()
+        // Request intial location fix.
+        locationManager.startUpdatingLocation()
         
         searchTextField.delegate = self
         weatherManager.delegate = self
@@ -83,12 +84,12 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     
     @IBAction func searchPressed(_ sender: Any) {
-        // Dismiss keyboard
+        // Dismiss keyboard.
         searchTextField.endEditing(true)
         print(searchTextField.text!)
     }
     
-    // Function enables return key on keyboard
+    // Function enables return key on keyboard.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Dismiss keyboard
         searchTextField.endEditing(true)
@@ -97,26 +98,26 @@ extension ViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        // Validate entry
+        // Validate entry.
         if textField.text != "" {
             // Should end editing
             return true
         } else {
-            // Do not end editing
+            // Do not end editing.
             textField.placeholder = "Enter a city"
             return false
         }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        // Function runs when search field editing stops
+        // Function runs when search field editing stops.
         
-        // Store search field text
+        // Store search field text.
         if let city = searchTextField.text {
             weatherManager.fetchWeather(cityName: city)
         }
         
-        // Clear search field text
+        // Clear search field text.
         searchTextField.text = ""
     }
 }
@@ -138,7 +139,9 @@ extension ViewController: WeatherManagerDelegate {
             }
             
             self.temperatureLabel.text = weather.temperatureString
+            self.descriptionLabel.text = weather.description
             self.cityLabel.text = weather.cityName
+            print(weather.description)
         }
         
     }
