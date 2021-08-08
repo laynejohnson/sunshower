@@ -77,13 +77,19 @@ struct WeatherManager {
         // throw keyword indicates that if something goes wrong, method will throw an error
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
+            
             let id = decodedData.weather[0].id
-            let temp = decodedData.main.temp
-            let name = decodedData.name
             let description = decodedData.weather[0].description
             let icon = decodedData.weather[0].icon
+            let temp = decodedData.main.temp
+            let feelsLike = decodedData.main.feelsLike
+            let tempMin = decodedData.main.tempMin
+            let tempMax = decodedData.main.tempMax
+            let name = decodedData.name
             let country = decodedData.sys.country
-            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, description: description, icon: icon, country: country)
+            
+            let weather = WeatherModel(cityName: name, temperature: temp, feelsLike: feelsLike, tempMin: tempMin, tempMax: tempMax, conditionId: id, description: description, icon: icon, country: country)
+            
             return weather
             
         } catch {

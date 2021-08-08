@@ -18,6 +18,9 @@ struct WeatherData: Codable {
 // Property names must match property names in JSON
 struct Main: Codable {
     let temp: Double
+    let feelsLike: Double
+    let tempMin: Double
+    let tempMax: Double
 }
 
 struct Weather: Codable {

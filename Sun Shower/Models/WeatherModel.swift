@@ -8,14 +8,25 @@
 import Foundation
 
 struct WeatherModel {
+    
     // Stored properties:
     
-    // 
-    let conditionId: Int
+    // WeatherData struct
     let cityName: String
+    
+    // Weather.main
     let temperature: Double
+    let feelsLike: Double
+    let tempMin: Double
+    let tempMax: Double
+    
+    // Weather.weather
+    
+    let conditionId: Int
     let description: String
     let icon: String
+    
+    // Weather.sys
     let country: String
     
     // Computed properties:
