@@ -53,9 +53,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
    
-    @IBOutlet weak var highTemperatureLabel: UILabel!
-    @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var lowTemperatureLabel: UILabel!
+    @IBOutlet weak var currentTemperatureLabel: UILabel!
+    @IBOutlet weak var highTemperatureLabel: UILabel!
     
     @IBOutlet weak var searchTextField: UITextField!
 
@@ -95,32 +95,23 @@ class ViewController: UIViewController {
         // If gesture blocks other touches
         // tapGesture.cancelsTouchesInView = false
         
-        textStackView.setCustomSpacing(2.0, after: cityLabel)
-        textStackView.setCustomSpacing(10.0, after: countryLabel)
-        
     }
     
 }
 
 // MARK: - UI Functions
 
-//func countryFlag(countryCode: String) -> String {
-//  let base = 127397
-//  var tempScalarView = String.UnicodeScalarView()
-//  for i in countryCode.utf16 {
-//    if let scalar = UnicodeScalar(base + Int(i)) {
-//      tempScalarView.append(scalar)
-//    }
-//  }
-//  return String(tempScalarView)
-//}
-//print(countryFlag(countryCode: "IN")) //OUTPUT: 🇮🇳
-//print(countryFlag(countryCode: "US")) //OUTPUT: 🇺🇸
-
+// Get country flag
 func getCountryFlag(countryCode: String) -> String {
   return String(String.UnicodeScalarView(
      countryCode.unicodeScalars.compactMap(
        { UnicodeScalar(127397 + $0.value) })))
+}
+
+// Get country name
+func getCountryName(countryCode: String) -> String? {
+    let current = Locale(identifier: "en_US")
+    return current.localizedString(forRegionCode: countryCode)
 }
 
 // MARK: - UITextFieldDelegate
@@ -182,13 +173,18 @@ extension ViewController: WeatherManagerDelegate {
                 self.conditionImageView.image = UIImage.init(systemName: weather.dayConditionName)
             }
             
-            self.currentTemperatureLabel.text = weather.temperatureString
-            self.descriptionLabel.text = weather.description
             self.cityLabel.text = weather.cityName
-            
-            // Set country label and flag.
             let countryCode = weather.country
-            self.countryLabel.text = countryCode
+            let countryName = getCountryName(countryCode: countryCode)
+            self.countryLabel.text = countryName
+            self.descriptionLabel.text = weather.description.capitalizingFirstLetter()
+            
+            self.currentTemperatureLabel.text = weather.currentTemperatureString
+            self.lowTemperatureLabel.text = weather.lowTemperatureString
+            self.highTemperatureLabel.text = weather.highTemperatureString
+          
+            
+            // Set country flag.
 //            self.countryFlagLabel.text = getCountryFlag(countryCode: countryCode)
         }
         
@@ -205,6 +201,8 @@ extension ViewController: WeatherManagerDelegate {
 extension ViewController: CLLocationManagerDelegate {
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
+        
+        print("Location button pressed")
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
@@ -223,5 +221,17 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         
         print("Error: \(error)")
+    }
+}
+
+// MARK: - String Extension
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
     }
 }

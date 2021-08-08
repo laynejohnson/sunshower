@@ -15,8 +15,8 @@ struct WeatherModel {
     let cityName: String
     
     // Weather.main
-    let temperature: Double
-    let feelsLike: Double
+    let currentTemperature: Double
+    let feels_like: Double
     let tempMin: Double
     let tempMax: Double
     
@@ -31,8 +31,16 @@ struct WeatherModel {
     
     // Computed properties:
     
-    var temperatureString: String {
-        return String(format: "%.1f", temperature)
+    var currentTemperatureString: String {
+        return String(format: "%.0f", currentTemperature)
+    }
+    
+    var highTemperatureString: String {
+        return String(format: "%.0f", tempMax)
+    }
+    
+    var lowTemperatureString: String {
+        return String(format: "%.0f", tempMin)
     }
     
     var dayConditionName: String {

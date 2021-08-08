@@ -78,17 +78,17 @@ struct WeatherManager {
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
             
-            let id = decodedData.weather[0].id
+            let conditionId = decodedData.weather[0].id
             let description = decodedData.weather[0].description
             let icon = decodedData.weather[0].icon
-            let temp = decodedData.main.temp
-            let feelsLike = decodedData.main.feelsLike
-            let tempMin = decodedData.main.tempMin
-            let tempMax = decodedData.main.tempMax
+            let currentTemp = decodedData.main.temp
+            let feelsLike = decodedData.main.feels_like
+            let tempMin = decodedData.main.temp_min
+            let tempMax = decodedData.main.temp_max
             let name = decodedData.name
             let country = decodedData.sys.country
             
-            let weather = WeatherModel(cityName: name, temperature: temp, feelsLike: feelsLike, tempMin: tempMin, tempMax: tempMax, conditionId: id, description: description, icon: icon, country: country)
+            let weather = WeatherModel(cityName: name, currentTemperature: currentTemp, feels_like: feelsLike, tempMin: tempMin, tempMax: tempMax, conditionId: conditionId, description: description, icon: icon, country: country)
             
             return weather
             
