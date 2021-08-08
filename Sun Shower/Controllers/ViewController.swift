@@ -43,14 +43,24 @@ class ViewController: UIViewController {
     // - - - - - - -  OUTLETS - - - - - - //
     // ---------------------------------- //
     
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var colorThemeButton: UIButton!
+    
     @IBOutlet weak var conditionImageView: UIImageView!
-    @IBOutlet weak var temperatureLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet weak var countryFlagLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+   
+    @IBOutlet weak var highTemperatureLabel: UILabel!
+    @IBOutlet weak var currentTemperatureLabel: UILabel!
+    @IBOutlet weak var lowTemperatureLabel: UILabel!
+    
     @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var locationButton: UIButton!
+
+    @IBOutlet weak var textStackView: UIStackView!
+    
     
     // MARK: - Variables
     
@@ -75,7 +85,7 @@ class ViewController: UIViewController {
         // Request intial location fix.
         locationManager.startUpdatingLocation()
         
-        searchTextField.delegate = self
+//        searchTextField.delegate = self
         weatherManager.delegate = self
         
         // Dismiss keyboard with tap gesture
@@ -84,6 +94,9 @@ class ViewController: UIViewController {
         
         // If gesture blocks other touches
         // tapGesture.cancelsTouchesInView = false
+        
+        textStackView.setCustomSpacing(2.0, after: cityLabel)
+        textStackView.setCustomSpacing(10.0, after: countryLabel)
         
     }
     
@@ -169,14 +182,14 @@ extension ViewController: WeatherManagerDelegate {
                 self.conditionImageView.image = UIImage.init(systemName: weather.dayConditionName)
             }
             
-            self.temperatureLabel.text = weather.temperatureString
+            self.currentTemperatureLabel.text = weather.temperatureString
             self.descriptionLabel.text = weather.description
             self.cityLabel.text = weather.cityName
             
             // Set country label and flag.
             let countryCode = weather.country
             self.countryLabel.text = countryCode
-            self.countryFlagLabel.text = getCountryFlag(countryCode: countryCode)
+//            self.countryFlagLabel.text = getCountryFlag(countryCode: countryCode)
         }
         
     }
