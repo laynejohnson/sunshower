@@ -138,7 +138,7 @@ extension ViewController: UITextFieldDelegate {
             // Should end editing
             return true
         } else {
-            // Do not end editing.
+            // Do not end editing
             textField.placeholder = "Enter a city"
             return false
         }
