@@ -3,7 +3,7 @@
 //  Sun Shower
 //
 //  Created by Layne Johnson on 8/11/21.
-//
+//  Copyright © 2021. All rights reserved.
 
 import UIKit
 

@@ -135,14 +135,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j71-x4-hB4" userLabel="Temp View">
                                         <rect key="frame" x="0.0" y="443.5" width="414" height="193.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other_temp" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-4e-Fbu" userLabel="Low Temp UI Circle">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="access_temp" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-4e-Fbu" userLabel="Low Temp UI Circle">
                                                 <rect key="frame" x="43" y="47" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="4QI-oc-fjb"/>
                                                     <constraint firstAttribute="height" constant="100" id="5PE-nE-2Ue"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="current_temp" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-9Q-Ek2" userLabel="Current Temp UI Circle">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Current Temp" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-9Q-Ek2" userLabel="Current Temp UI Circle">
                                                 <rect key="frame" x="150.5" y="40.5" width="113" height="113"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="113" id="Aip-gl-Z96"/>
@@ -155,7 +155,7 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other_temp" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-bJ-z0u" userLabel="High Temp UI Circle">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="access_temp" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-bJ-z0u" userLabel="High Temp UI Circle">
                                                 <rect key="frame" x="271" y="47" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="eEd-XK-fwE"/>
@@ -196,9 +196,46 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vme-7s-2ok" userLabel="Recents View">
                                         <rect key="frame" x="0.0" y="637" width="414" height="137"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AQu-QX-HzD" userLabel="Horizontal Stack View">
+                                                <rect key="frame" x="24" y="0.0" width="366" height="137"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uiG-cs-z0N">
+                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="137"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-Sg-IgL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="183" height="68.5"/>
+                                                                <state key="normal" image="Montreal"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU9-he-vW8">
+                                                                <rect key="frame" x="0.0" y="68.5" width="183" height="68.5"/>
+                                                                <state key="normal" image="Austin"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Au-iX-3zd">
+                                                        <rect key="frame" x="183" y="0.0" width="183" height="137"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-vE-rmd">
+                                                                <rect key="frame" x="0.0" y="0.0" width="183" height="68.5"/>
+                                                                <state key="normal" image="Siem Riep"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE2-OM-CFR">
+                                                                <rect key="frame" x="0.0" y="68.5" width="183" height="68.5"/>
+                                                                <state key="normal" image="Nashville"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" name="Background"/>
                                         <constraints>
+                                            <constraint firstItem="AQu-QX-HzD" firstAttribute="leading" secondItem="Vme-7s-2ok" secondAttribute="leading" constant="24" id="MS5-Wr-Eh7"/>
                                             <constraint firstAttribute="height" constant="137" id="Nbh-Qh-RaJ"/>
+                                            <constraint firstItem="AQu-QX-HzD" firstAttribute="top" secondItem="Vme-7s-2ok" secondAttribute="top" id="UL1-g1-crB"/>
+                                            <constraint firstAttribute="trailing" secondItem="AQu-QX-HzD" secondAttribute="trailing" constant="24" id="Xb1-vk-s6o"/>
+                                            <constraint firstAttribute="bottom" secondItem="AQu-QX-HzD" secondAttribute="bottom" id="jpJ-Qb-62L"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -245,11 +282,35 @@
                     <view key="view" contentMode="scaleToFill" id="hOx-PF-pF6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oi6-0N-7ao" userLabel="Search Text Field">
+                                <rect key="frame" x="159" y="431" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wd-0n-sOL" userLabel="Search Button">
+                                <rect key="frame" x="183" y="473" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchPressed:" destination="ixq-6x-fEW" eventType="touchUpInside" id="3HS-EC-fcX"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search_icon_pink" translatesAutoresizingMaskIntoConstraints="NO" id="gFZ-lt-llZ">
+                                <rect key="frame" x="87" y="734" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5of-h6-q2F"/>
                         <color key="backgroundColor" name="Background"/>
                         <color key="tintColor" name="AlmostBlack"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="X4s-Tr-lvD"/>
+                    <connections>
+                        <outlet property="searchButton" destination="4wd-0n-sOL" id="86v-fg-Xqi"/>
+                        <outlet property="searchTextField" destination="oi6-0N-7ao" id="Twp-lB-gxJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOl-RS-TVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -298,17 +359,22 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Austin" width="163" height="58"/>
+        <image name="Current Temp" width="116" height="116"/>
+        <image name="Montreal" width="163" height="58"/>
+        <image name="Nashville" width="163" height="58"/>
+        <image name="Siem Riep" width="163" height="58"/>
+        <image name="access_temp" width="102" height="102"/>
         <image name="cloud.sun.bolt" catalog="system" width="128" height="128"/>
-        <image name="current_temp" width="91" height="91"/>
         <image name="location_icon" width="30" height="30"/>
-        <image name="other_temp" width="73" height="73"/>
         <image name="rainbow_icon" width="33" height="27"/>
         <image name="search_icon" width="30" height="30"/>
+        <image name="search_icon_pink" width="43" height="43"/>
         <namedColor name="AlmostBlack">
-            <color red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18000000715255737" green="0.18000000715255737" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Background">
-            <color red="0.99586385489999996" green="0.97273629900000003" blue="0.96078354119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.99599999189376831" green="0.97299998998641968" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

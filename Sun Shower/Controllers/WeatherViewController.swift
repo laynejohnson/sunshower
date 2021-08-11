@@ -3,7 +3,7 @@
 //  Sun Shower
 //
 //  Created by Layne Johnson on 7/24/21.
-//
+//  Copyright © 2021. All rights reserved.
 
 /*
  
@@ -28,8 +28,6 @@
 import UIKit
 import CoreLocation
 
-// UITextFieldDelegate allow our view controller to manage the editing and validation of text field
-
 // MARK: - View Controller
 
 class WeatherViewController: UIViewController {
@@ -53,8 +51,6 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var lowTemperatureLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var highTemperatureLabel: UILabel!
-    
-    @IBOutlet weak var searchTextField: UITextField!
 
     @IBOutlet weak var textStackView: UIStackView!
     
@@ -73,16 +69,15 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Must set locationManager delegate before requesting location.
+        // Must set locationManager delegate before requesting location
         locationManager.delegate = self
         
-        // Send location permission request.
+        // Send location permission request
         locationManager.requestWhenInUseAuthorization()
         
-        // Request intial location fix.
+        // Request intial location fix
         locationManager.startUpdatingLocation()
         
-//        searchTextField.delegate = self
         weatherManager.delegate = self
         
         // Dismiss keyboard with tap gesture
@@ -98,60 +93,17 @@ class WeatherViewController: UIViewController {
 
 // MARK: - UI Functions
 
-// Get country flag
-func getCountryFlag(countryCode: String) -> String {
-  return String(String.UnicodeScalarView(
-     countryCode.unicodeScalars.compactMap(
-       { UnicodeScalar(127397 + $0.value) })))
-}
+//// Get country flag
+//func getCountryFlag(countryCode: String) -> String {
+//  return String(String.UnicodeScalarView(
+//     countryCode.unicodeScalars.compactMap(
+//       { UnicodeScalar(127397 + $0.value) })))
+//}
 
 // Get country name
 func getCountryName(countryCode: String) -> String? {
     let current = Locale(identifier: "en_US")
     return current.localizedString(forRegionCode: countryCode)
-}
-
-// MARK: - UITextFieldDelegate
-
-extension WeatherViewController: UITextFieldDelegate {
-    
-    @IBAction func searchPressed(_ sender: Any) {
-        // Dismiss keyboard.
-        searchTextField.endEditing(true)
-        print(searchTextField.text!)
-    }
-    
-    // Function enables return key on keyboard.
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Dismiss keyboard
-        searchTextField.endEditing(true)
-        print(searchTextField.text!)
-        return true
-    }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        // Validate entry.
-        if textField.text != "" {
-            // Should end editing
-            return true
-        } else {
-            // Do not end editing
-            textField.placeholder = "Enter a city"
-            return false
-        }
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        // Function runs when search field editing stops.
-        
-        // Store search field text.
-        if let city = searchTextField.text {
-            weatherManager.fetchWeather(cityName: city)
-        }
-        
-        // Clear search field text.
-        searchTextField.text = ""
-    }
 }
 
 // MARK: - WeatherManagerDelegate
