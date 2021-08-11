@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -60,7 +59,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="iPv-0X-hiI" firstAttribute="centerX" secondItem="3QM-0F-VFb" secondAttribute="centerX" id="5n3-6t-JQZ"/>
                                                     <constraint firstItem="UTW-sh-JYk" firstAttribute="centerX" secondItem="3QM-0F-VFb" secondAttribute="centerX" id="GX1-y1-n2R"/>
@@ -75,7 +74,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="Background"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="48h-P2-us2"/>
                                             <constraint firstItem="4iR-T4-0NW" firstAttribute="centerX" secondItem="1lL-YX-yIT" secondAttribute="centerX" id="AmI-Uv-8ev"/>
@@ -89,29 +88,31 @@
                                         <rect key="frame" x="0.0" y="250" width="414" height="193.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="a0J-Af-jEX" userLabel="Text Stack View">
-                                                <rect key="frame" x="115.5" y="0.0" width="183" height="127.5"/>
+                                                <rect key="frame" x="128.5" y="0.0" width="157.5" height="127.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Montreal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URb-eh-jil" userLabel="City Label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="56"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="47"/>
+                                                        <color key="backgroundColor" name="Background"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="40"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcu-I1-rAr" userLabel="Country Label">
-                                                        <rect key="frame" x="0.0" y="36" width="183" height="91.5"/>
+                                                        <rect key="frame" x="0.0" y="27" width="157.5" height="100.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="xcu-I1-rAr" firstAttribute="centerX" secondItem="a0J-Af-jEX" secondAttribute="centerX" id="6qR-J1-rjs"/>
                                                     <constraint firstItem="URb-eh-jil" firstAttribute="centerX" secondItem="a0J-Af-jEX" secondAttribute="centerX" id="IJ2-C0-hZX"/>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear skies" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rah-fD-2pk" userLabel="Description Label">
-                                                <rect key="frame" x="150.5" y="160" width="113" height="25.5"/>
+                                                <rect key="frame" x="158" y="160" width="98.5" height="25.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25.5" id="enp-jX-WRd"/>
                                                 </constraints>
@@ -120,7 +121,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="Background"/>
                                         <constraints>
                                             <constraint firstItem="rah-fD-2pk" firstAttribute="centerX" secondItem="a0J-Af-jEX" secondAttribute="centerX" id="4yF-og-QP4"/>
                                             <constraint firstItem="rah-fD-2pk" firstAttribute="centerX" secondItem="fHg-Dj-SSU" secondAttribute="centerX" id="ISF-qZ-fLi"/>
@@ -149,7 +150,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="4fQ-HS-bV3" userLabel="Current Temp Label">
-                                                <rect key="frame" x="194.5" y="78.5" width="25" height="36.5"/>
+                                                <rect key="frame" x="192.5" y="81.5" width="29" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="26"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -162,19 +163,19 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="t2C-kM-hJX" userLabel="High Temp Label">
-                                                <rect key="frame" x="309.5" y="80" width="23.5" height="34"/>
+                                                <rect key="frame" x="307.5" y="83" width="27" height="28"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="4we-RK-SCQ" userLabel="Low Temp Label">
-                                                <rect key="frame" x="81.5" y="80" width="23.5" height="34"/>
+                                                <rect key="frame" x="79.5" y="83" width="27" height="28"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="Background"/>
                                         <constraints>
                                             <constraint firstItem="xIj-9Q-Ek2" firstAttribute="centerX" secondItem="j71-x4-hB4" secondAttribute="centerX" id="1Qo-UK-c15"/>
                                             <constraint firstItem="t2C-kM-hJX" firstAttribute="centerY" secondItem="C1Z-bJ-z0u" secondAttribute="centerY" id="BeL-o7-gn0"/>
@@ -195,7 +196,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vme-7s-2ok" userLabel="Recents View">
                                         <rect key="frame" x="0.0" y="637" width="414" height="137"/>
-                                        <color key="backgroundColor" red="1" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="Background"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="137" id="Nbh-Qh-RaJ"/>
                                         </constraints>
@@ -210,7 +211,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="1" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="J7a-Wo-wmg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OEw-D0-0xx"/>
                             <constraint firstItem="J7a-Wo-wmg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZIU-to-Z09"/>
@@ -245,9 +246,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="5of-h6-q2F"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <color key="tintColor" name="AlmostBlack"/>
                     </view>
-                    <navigationItem key="navigationItem" id="X4s-Tr-lvD"/>
+                    <navigationItem key="navigationItem" title="Search" id="X4s-Tr-lvD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOl-RS-TVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,9 +263,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6SJ-B9-a3W"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <color key="tintColor" name="AlmostBlack"/>
                     </view>
-                    <navigationItem key="navigationItem" id="u7A-BN-5Bm"/>
+                    <navigationItem key="navigationItem" title="Hue" id="u7A-BN-5Bm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yj9-le-TaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,7 +281,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="AlmostBlack"/>
+                        <color key="barTintColor" name="Background"/>
                         <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="0.0"/>
                             <color key="textColor" name="AlmostBlack"/>
                         </textAttributes>
                     </navigationBar>
@@ -302,8 +307,8 @@
         <namedColor name="AlmostBlack">
             <color red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="Background">
+            <color red="0.99586385489999996" green="0.97273629900000003" blue="0.96078354119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

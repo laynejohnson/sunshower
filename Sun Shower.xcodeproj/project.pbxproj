@@ -44,6 +44,7 @@
 		E8BF0D3626C3FBAD00F29361 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E8BF0D3826C3FBC000F29361 /* HueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueViewController.swift; sourceTree = "<group>"; };
 		E8BF0D3A26C4010900F29361 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		E8BF0D3C26C41AD900F29361 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 		E8897E0226AC88DE00992D6E = {
 			isa = PBXGroup;
 			children = (
+				E8BF0D3C26C41AD900F29361 /* README.md */,
 				E86C6C2A26C06279004BD1E5 /* Fonts */,
 				E8897E0D26AC88DE00992D6E /* Sun Shower */,
 				E8897E0C26AC88DE00992D6E /* Products */,
