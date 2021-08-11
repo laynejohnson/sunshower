@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -30,7 +31,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J7a-Wo-wmg" userLabel="Main Stack View">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <view contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="1lL-YX-yIT" userLabel="Top View">
+                                    <view contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="1lL-YX-yIT" userLabel="Icon View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3QM-0F-VFb" userLabel="Icon Stack View">
@@ -87,7 +88,7 @@
                                             <constraint firstItem="4iR-T4-0NW" firstAttribute="top" secondItem="1lL-YX-yIT" secondAttribute="top" constant="79" id="nF6-nR-KzW"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-Dj-SSU" userLabel="Text View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-Dj-SSU" userLabel="City View">
                                         <rect key="frame" x="0.0" y="250" width="414" height="193.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="a0J-Af-jEX" userLabel="Text Stack View">
@@ -138,14 +139,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j71-x4-hB4" userLabel="Temp View">
                                         <rect key="frame" x="0.0" y="443.5" width="414" height="193.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="access_temp" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-4e-Fbu" userLabel="Low Temp UI Circle">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Other Temp" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-4e-Fbu" userLabel="Low Temp Halo">
                                                 <rect key="frame" x="43" y="47" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="4QI-oc-fjb"/>
                                                     <constraint firstAttribute="height" constant="100" id="5PE-nE-2Ue"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Current Temp" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-9Q-Ek2" userLabel="Current Temp UI Circle">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Current Temp" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-9Q-Ek2" userLabel="Current Temp Halo">
                                                 <rect key="frame" x="150.5" y="40.5" width="113" height="113"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="113" id="Aip-gl-Z96"/>
@@ -158,8 +159,9 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="access_temp" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-bJ-z0u" userLabel="High Temp UI Circle">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Other Temp" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-bJ-z0u" userLabel="High Temp Halo">
                                                 <rect key="frame" x="271" y="47" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="eEd-XK-fwE"/>
                                                     <constraint firstAttribute="height" constant="100" id="tVc-PQ-zIh"/>
@@ -197,13 +199,13 @@
                                             <constraint firstItem="4fQ-HS-bV3" firstAttribute="centerX" secondItem="j71-x4-hB4" secondAttribute="centerX" id="vRA-1U-bRi"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vme-7s-2ok" userLabel="Recents View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vme-7s-2ok" userLabel="Favorites View">
                                         <rect key="frame" x="0.0" y="637" width="414" height="137"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AQu-QX-HzD" userLabel="Horizontal Stack View">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AQu-QX-HzD" userLabel="City Horizontal Stack View">
                                                 <rect key="frame" x="24" y="0.0" width="366" height="137"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uiG-cs-z0N">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uiG-cs-z0N" userLabel="Left Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="183" height="137"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-Sg-IgL">
@@ -216,7 +218,7 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Au-iX-3zd">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Au-iX-3zd" userLabel="Right Stack View">
                                                         <rect key="frame" x="183" y="0.0" width="183" height="137"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-vE-rmd">
@@ -293,7 +295,7 @@
                                     <constraint firstAttribute="width" constant="43" id="QOv-Ph-NhU"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-pd-C4C">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-pd-C4C" userLabel="Search Stack View">
                                 <rect key="frame" x="58" y="389" width="298" height="118"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search cities" textAlignment="natural" minimumFontSize="17" background="search box" translatesAutoresizingMaskIntoConstraints="NO" id="oi6-0N-7ao" userLabel="Search Text Field">
@@ -360,9 +362,117 @@
                     <view key="view" contentMode="scaleToFill" id="I1c-vg-V6d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rainbow_icon_pink" translatesAutoresizingMaskIntoConstraints="NO" id="j5G-8Q-my2">
+                                <rect key="frame" x="185.5" y="753" width="43" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8LH-9R-CD1" userLabel="Vertical Stack View">
+                                <rect key="frame" x="47" y="246" width="320" height="165"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAa-y1-PEz">
+                                        <rect key="frame" x="132.5" y="0.0" width="55" height="55"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSC-qq-zvp" userLabel="Top Center View">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fA-fe-nG4" userLabel="Blue Hue Button">
+                                                        <rect key="frame" x="5" y="5" width="45" height="45"/>
+                                                        <state key="normal" image="blue_hue"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="4fA-fe-nG4" firstAttribute="centerY" secondItem="SSC-qq-zvp" secondAttribute="centerY" id="cYk-Ju-otL"/>
+                                                    <constraint firstItem="4fA-fe-nG4" firstAttribute="centerX" secondItem="SSC-qq-zvp" secondAttribute="centerX" id="rbi-dF-uPk"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bi9-eR-cak">
+                                        <rect key="frame" x="58" y="55" width="204" height="55"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7FB-CT-ec9" userLabel="Middle Left View">
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-gU-Nvs" userLabel="Pink Hue Button">
+                                                        <rect key="frame" x="0.0" y="5" width="45" height="45"/>
+                                                        <state key="normal" image="pink_hue"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="MZc-gU-Nvs" firstAttribute="centerY" secondItem="7FB-CT-ec9" secondAttribute="centerY" id="Kwc-1I-8GH"/>
+                                                    <constraint firstItem="MZc-gU-Nvs" firstAttribute="leading" secondItem="7FB-CT-ec9" secondAttribute="leading" id="zSi-ul-wwg"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4G-xr-ea9" userLabel="Middle Right View">
+                                                <rect key="frame" x="204" y="0.0" width="0.0" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-qL-SBQ" userLabel="Yellow Hue Button">
+                                                        <rect key="frame" x="-45" y="5" width="45" height="45"/>
+                                                        <state key="normal" image="yellow_hue"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="pEO-qL-SBQ" firstAttribute="centerY" secondItem="d4G-xr-ea9" secondAttribute="centerY" id="UpN-We-wab"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pEO-qL-SBQ" secondAttribute="trailing" id="tBQ-9S-Kk8"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="d4G-xr-ea9" firstAttribute="centerY" secondItem="bi9-eR-cak" secondAttribute="centerY" id="5o0-x6-ocO"/>
+                                            <constraint firstItem="7FB-CT-ec9" firstAttribute="centerX" secondItem="bi9-eR-cak" secondAttribute="centerX" id="nWm-ZB-OVp"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Zv-tm-g2h">
+                                        <rect key="frame" x="0.0" y="110" width="320" height="55"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKS-Ec-5Z5" userLabel="Bottom Left View">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKw-mX-0MB" userLabel="Default Hue Button">
+                                                        <rect key="frame" x="0.0" y="5" width="45" height="45"/>
+                                                        <state key="normal" image="default_hue"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="PKw-mX-0MB" firstAttribute="centerY" secondItem="RKS-Ec-5Z5" secondAttribute="centerY" id="x5J-02-ANI"/>
+                                                    <constraint firstItem="PKw-mX-0MB" firstAttribute="leading" secondItem="RKS-Ec-5Z5" secondAttribute="leading" id="zto-k8-h9Y"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9s-Uz-2ma" userLabel="Bottom Right View">
+                                                <rect key="frame" x="240" y="0.0" width="80" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOp-oU-Sik" userLabel="Sunshower Hue Button">
+                                                        <rect key="frame" x="35" y="5" width="45" height="45"/>
+                                                        <state key="normal" image="sunshower_hue"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="WOp-oU-Sik" secondAttribute="trailing" id="B6y-x2-Pc8"/>
+                                                    <constraint firstItem="WOp-oU-Sik" firstAttribute="centerY" secondItem="W9s-Uz-2ma" secondAttribute="centerY" id="noA-ni-KBy"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bi9-eR-cak" firstAttribute="leading" secondItem="8LH-9R-CD1" secondAttribute="leading" constant="58" id="09y-wx-qbd"/>
+                                    <constraint firstAttribute="trailing" secondItem="bi9-eR-cak" secondAttribute="trailing" constant="58" id="ffP-9P-rwb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6SJ-B9-a3W"/>
                         <color key="backgroundColor" name="Background"/>
                         <color key="tintColor" name="AlmostBlack"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8LH-9R-CD1" secondAttribute="trailing" constant="47" id="E95-YV-bvn"/>
+                            <constraint firstItem="8LH-9R-CD1" firstAttribute="leading" secondItem="I1c-vg-V6d" secondAttribute="leading" constant="47" id="Whv-rL-tDX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hue" id="u7A-BN-5Bm"/>
                 </viewController>
@@ -400,15 +510,21 @@
         <image name="Current Temp" width="116" height="116"/>
         <image name="Montreal" width="163" height="58"/>
         <image name="Nashville" width="163" height="58"/>
+        <image name="Other Temp" width="102" height="102"/>
         <image name="Siem Riep" width="163" height="58"/>
-        <image name="access_temp" width="102" height="102"/>
+        <image name="blue_hue" width="45" height="45"/>
         <image name="cloud.sun.bolt" catalog="system" width="128" height="128"/>
+        <image name="default_hue" width="45" height="45"/>
         <image name="location_icon" width="32" height="32"/>
+        <image name="pink_hue" width="45" height="45"/>
         <image name="rainbow_icon" width="37" height="29"/>
+        <image name="rainbow_icon_pink" width="45" height="36"/>
         <image name="search box" width="310" height="61"/>
         <image name="search_button" width="142" height="55"/>
         <image name="search_icon" width="34" height="34"/>
         <image name="search_icon_pink" width="43" height="43"/>
+        <image name="sunshower_hue" width="45" height="45"/>
+        <image name="yellow_hue" width="45" height="45"/>
         <namedColor name="AlmostBlack">
             <color red="0.18000000715255737" green="0.18000000715255737" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -418,5 +534,8 @@
         <namedColor name="LightGrey">
             <color red="0.81999999284744263" green="0.81999999284744263" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
