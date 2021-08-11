@@ -19,9 +19,6 @@
  // TODO: Color toggle
  // TODO: Add favorite cities
  // TODO: Add loading/fetching progress circle/animation
- // TODO: Upgrade UI
- // TODO: Update app icon
- // TODO: Country code --> country
  
  Refactor:
  // TODO:
