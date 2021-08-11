@@ -35,7 +35,7 @@ import CoreLocation
 
 // MARK: - View Controller
 
-class ViewController: UIViewController {
+class WeatherViewController: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -116,7 +116,7 @@ func getCountryName(countryCode: String) -> String? {
 
 // MARK: - UITextFieldDelegate
 
-extension ViewController: UITextFieldDelegate {
+extension WeatherViewController: UITextFieldDelegate {
     
     @IBAction func searchPressed(_ sender: Any) {
         // Dismiss keyboard.
@@ -159,7 +159,7 @@ extension ViewController: UITextFieldDelegate {
 
 // MARK: - WeatherManagerDelegate
 
-extension ViewController: WeatherManagerDelegate {
+extension WeatherViewController: WeatherManagerDelegate {
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         
@@ -198,7 +198,7 @@ extension ViewController: WeatherManagerDelegate {
 
 // MARK: - CLLocationManagerDelegate
 
-extension ViewController: CLLocationManagerDelegate {
+extension WeatherViewController: CLLocationManagerDelegate {
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
         
