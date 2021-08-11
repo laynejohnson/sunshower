@@ -17,8 +17,8 @@
  // TODO: Language toggle
  // TODO: Units toggle
  // TODO: Color toggle
- // TODO: Add favorite cities
  // TODO: Add loading/fetching progress circle/animation
+ // Implement favorites feature (hard coded now)
  
  Refactor:
  // TODO:
@@ -38,22 +38,34 @@ class WeatherViewController: UIViewController {
     // - - - - - - -  OUTLETS - - - - - - //
     // ---------------------------------- //
     
+    // Icon Stack
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var colorThemeButton: UIButton!
-    
+
+    // Weather View
     @IBOutlet weak var conditionImageView: UIImageView!
-    
+    @IBOutlet weak var textStackView: UIStackView!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
    
+    // Temperature View
+    // Halos
+    @IBOutlet weak var lowTempHalo: UIImageView!
+    @IBOutlet weak var currentTempHalo: UIImageView!
+    @IBOutlet weak var highTempHalo: UIImageView!
+    
+    // Labels
     @IBOutlet weak var lowTemperatureLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var highTemperatureLabel: UILabel!
-
-    @IBOutlet weak var textStackView: UIStackView!
     
+    // Favorites View
+    @IBOutlet weak var firstFavorite: UIButton!
+    @IBOutlet weak var secondFavorite: UIButton!
+    @IBOutlet weak var thirdFavorite: UIButton!
+    @IBOutlet weak var fourthFavorite: UIButton!
     
     // MARK: - Variables
     
@@ -63,6 +75,7 @@ class WeatherViewController: UIViewController {
     
     var weatherManager = WeatherManager()
     let locationManager = CLLocationManager()
+    var hue: Int = 0
     
     // MARK: - viewDidLoad()
     
@@ -86,9 +99,28 @@ class WeatherViewController: UIViewController {
         
         // If gesture blocks other touches
         // tapGesture.cancelsTouchesInView = false
-        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        // Hue switch statement here
+        switch hue {
+        case 1:
+            print("pink selected")
+        // Icon stack highlighted
+        // Temp halos
+        // Favorites
+        case 2:
+            print("blue selected")
+        case 3:
+            print("yellow selected")
+        case 4:
+            print("sunshower selected")
+        default:
+            print("hello, I am the default selection")
+        }
+    }
 }
 
 // MARK: - UI Functions

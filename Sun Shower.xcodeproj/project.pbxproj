@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E82920A926C45EAE00E9D8C1 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E82920A826C45EAE00E9D8C1 /* Poppins-Regular.ttf */; };
 		E86C6C3F26C062B2004BD1E5 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E86C6C2D26C062B1004BD1E5 /* Poppins-Medium.ttf */; };
 		E86C6C4726C062B2004BD1E5 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E86C6C3526C062B2004BD1E5 /* Poppins-Bold.ttf */; };
 		E86C6C4826C062B2004BD1E5 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E86C6C3626C062B2004BD1E5 /* Poppins-SemiBold.ttf */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E82920A826C45EAE00E9D8C1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		E86C6C2D26C062B1004BD1E5 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		E86C6C3526C062B2004BD1E5 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		E86C6C3626C062B2004BD1E5 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		E86C6C2A26C06279004BD1E5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E82920A826C45EAE00E9D8C1 /* Poppins-Regular.ttf */,
 				E86C6C3526C062B2004BD1E5 /* Poppins-Bold.ttf */,
 				E86C6C2D26C062B1004BD1E5 /* Poppins-Medium.ttf */,
 				E86C6C3626C062B2004BD1E5 /* Poppins-SemiBold.ttf */,
@@ -198,6 +201,7 @@
 			files = (
 				E86C6C4826C062B2004BD1E5 /* Poppins-SemiBold.ttf in Resources */,
 				E8897E1B26AC88DF00992D6E /* LaunchScreen.storyboard in Resources */,
+				E82920A926C45EAE00E9D8C1 /* Poppins-Regular.ttf in Resources */,
 				E8897E1826AC88DF00992D6E /* Assets.xcassets in Resources */,
 				E86C6C3F26C062B2004BD1E5 /* Poppins-Medium.ttf in Resources */,
 				E86C6C4726C062B2004BD1E5 /* Poppins-Bold.ttf in Resources */,

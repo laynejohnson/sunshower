@@ -12,8 +12,8 @@
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
         </array>
-        <array key="Poppins-Medium.ttf">
-            <string>Poppins-Medium</string>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
         </array>
         <array key="Poppins-SemiBold.ttf">
             <string>Poppins-SemiBold</string>
@@ -208,11 +208,11 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uiG-cs-z0N" userLabel="Left Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="183" height="137"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-Sg-IgL">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-Sg-IgL" userLabel="First Favorite Button">
                                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="68.5"/>
                                                                 <state key="normal" image="Montreal"/>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU9-he-vW8">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU9-he-vW8" userLabel="Second Favorite Button">
                                                                 <rect key="frame" x="0.0" y="68.5" width="183" height="68.5"/>
                                                                 <state key="normal" image="Austin"/>
                                                             </button>
@@ -221,11 +221,11 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Au-iX-3zd" userLabel="Right Stack View">
                                                         <rect key="frame" x="183" y="0.0" width="183" height="137"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-vE-rmd">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-vE-rmd" userLabel="Third Favorite Button">
                                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="68.5"/>
                                                                 <state key="normal" image="Siem Riep"/>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE2-OM-CFR">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE2-OM-CFR" userLabel="Fourth Favorite Button">
                                                                 <rect key="frame" x="0.0" y="68.5" width="183" height="68.5"/>
                                                                 <state key="normal" image="Nashville"/>
                                                             </button>
@@ -267,13 +267,20 @@
                         <outlet property="colorThemeButton" destination="iPv-0X-hiI" id="o13-HG-5wC"/>
                         <outlet property="conditionImageView" destination="4iR-T4-0NW" id="WmO-Ix-mvX"/>
                         <outlet property="countryLabel" destination="xcu-I1-rAr" id="2rH-C8-Lph"/>
+                        <outlet property="currentTempHalo" destination="xIj-9Q-Ek2" id="Wnw-xd-EEF"/>
                         <outlet property="currentTemperatureLabel" destination="4fQ-HS-bV3" id="brN-0q-D85"/>
                         <outlet property="descriptionLabel" destination="rah-fD-2pk" id="9R8-xG-KQ7"/>
+                        <outlet property="firstFavorite" destination="YcR-Sg-IgL" id="ctQ-aT-jZ6"/>
+                        <outlet property="fourthFavorite" destination="tE2-OM-CFR" id="ku1-8F-s1P"/>
+                        <outlet property="highTempHalo" destination="C1Z-bJ-z0u" id="oFe-Et-ygg"/>
                         <outlet property="highTemperatureLabel" destination="t2C-kM-hJX" id="odV-gK-fxm"/>
                         <outlet property="locationButton" destination="BLp-R1-ggI" id="GgY-LF-NwF"/>
+                        <outlet property="lowTempHalo" destination="MNb-4e-Fbu" id="5Hc-Hr-EwN"/>
                         <outlet property="lowTemperatureLabel" destination="4we-RK-SCQ" id="wK1-nf-Yp2"/>
                         <outlet property="searchButton" destination="UTW-sh-JYk" id="CNg-sQ-0Mp"/>
+                        <outlet property="secondFavorite" destination="tU9-he-vW8" id="AaK-LL-BE2"/>
                         <outlet property="textStackView" destination="a0J-Af-jEX" id="pbt-PX-06I"/>
+                        <outlet property="thirdFavorite" destination="ysf-vE-rmd" id="1pa-1W-gDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -300,11 +307,12 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search cities" textAlignment="natural" minimumFontSize="17" background="search box" translatesAutoresizingMaskIntoConstraints="NO" id="oi6-0N-7ao" userLabel="Search Text Field">
                                         <rect key="frame" x="0.0" y="0.0" width="298" height="51"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="cxz-YO-tHw"/>
                                         </constraints>
                                         <color key="textColor" name="AlmostBlack"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES" textContentType="address-level2"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholder.text">
@@ -368,7 +376,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8LH-9R-CD1" userLabel="Vertical Stack View">
-                                <rect key="frame" x="47" y="246" width="320" height="165"/>
+                                <rect key="frame" x="47" y="366" width="320" height="165"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAa-y1-PEz">
                                         <rect key="frame" x="132.5" y="0.0" width="55" height="55"/>
@@ -379,6 +387,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fA-fe-nG4" userLabel="Blue Hue Button">
                                                         <rect key="frame" x="5" y="5" width="45" height="45"/>
                                                         <state key="normal" image="blue_hue"/>
+                                                        <connections>
+                                                            <action selector="blueHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="Hp5-cb-wDS"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -398,6 +409,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-gU-Nvs" userLabel="Pink Hue Button">
                                                         <rect key="frame" x="0.0" y="5" width="45" height="45"/>
                                                         <state key="normal" image="pink_hue"/>
+                                                        <connections>
+                                                            <action selector="pinkHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="fn5-mz-9co"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -412,6 +426,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-qL-SBQ" userLabel="Yellow Hue Button">
                                                         <rect key="frame" x="-45" y="5" width="45" height="45"/>
                                                         <state key="normal" image="yellow_hue"/>
+                                                        <connections>
+                                                            <action selector="yellowHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="gDu-tU-u3I"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -435,6 +452,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKw-mX-0MB" userLabel="Default Hue Button">
                                                         <rect key="frame" x="0.0" y="5" width="45" height="45"/>
                                                         <state key="normal" image="default_hue"/>
+                                                        <connections>
+                                                            <action selector="defaultHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="RY2-K1-rMF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -449,6 +469,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOp-oU-Sik" userLabel="Sunshower Hue Button">
                                                         <rect key="frame" x="35" y="5" width="45" height="45"/>
                                                         <state key="normal" image="sunshower_hue"/>
+                                                        <connections>
+                                                            <action selector="sunshowerHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="UpB-OU-6hX"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -475,6 +498,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hue" id="u7A-BN-5Bm"/>
+                    <connections>
+                        <outlet property="blueHueButton" destination="4fA-fe-nG4" id="g9t-Wg-tdC"/>
+                        <outlet property="defaultHueButton" destination="PKw-mX-0MB" id="h6f-mO-qux"/>
+                        <outlet property="pinkHueButton" destination="MZc-gU-Nvs" id="QU4-82-aDs"/>
+                        <outlet property="sunshowerHueButton" destination="WOp-oU-Sik" id="M6F-Ox-ceG"/>
+                        <outlet property="yellowHueButton" destination="pEO-qL-SBQ" id="Vfy-lt-wJE"/>
+                        <outlet property="yellowHueSelected" destination="UpN-We-wab" id="UKS-Y3-Kyj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yj9-le-TaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
