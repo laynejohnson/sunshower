@@ -11,6 +11,9 @@
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
         </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
         <array key="Poppins-SemiBold.ttf">
             <string>Poppins-SemiBold</string>
         </array>
@@ -88,17 +91,17 @@
                                         <rect key="frame" x="0.0" y="250" width="414" height="193.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="a0J-Af-jEX" userLabel="Text Stack View">
-                                                <rect key="frame" x="128.5" y="0.0" width="157.5" height="127.5"/>
+                                                <rect key="frame" x="115.5" y="0.0" width="183" height="127.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Montreal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URb-eh-jil" userLabel="City Label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="47"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="56"/>
                                                         <color key="backgroundColor" name="Background"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="40"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcu-I1-rAr" userLabel="Country Label">
-                                                        <rect key="frame" x="0.0" y="27" width="157.5" height="100.5"/>
+                                                        <rect key="frame" x="0.0" y="36" width="183" height="91.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,7 +115,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear skies" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rah-fD-2pk" userLabel="Description Label">
-                                                <rect key="frame" x="158" y="160" width="98.5" height="25.5"/>
+                                                <rect key="frame" x="150.5" y="160" width="113" height="25.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25.5" id="enp-jX-WRd"/>
                                                 </constraints>
@@ -150,7 +153,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="4fQ-HS-bV3" userLabel="Current Temp Label">
-                                                <rect key="frame" x="192.5" y="81.5" width="29" height="30.5"/>
+                                                <rect key="frame" x="194.5" y="78.5" width="25" height="36.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="26"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -163,13 +166,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="t2C-kM-hJX" userLabel="High Temp Label">
-                                                <rect key="frame" x="307.5" y="83" width="27" height="28"/>
+                                                <rect key="frame" x="309.5" y="80" width="23.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="4we-RK-SCQ" userLabel="Low Temp Label">
-                                                <rect key="frame" x="79.5" y="83" width="27" height="28"/>
+                                                <rect key="frame" x="81.5" y="80" width="23.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -283,28 +286,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oi6-0N-7ao" userLabel="Search Text Field">
-                                <rect key="frame" x="159" y="431" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wd-0n-sOL" userLabel="Search Button">
-                                <rect key="frame" x="183" y="473" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Search"/>
-                                <connections>
-                                    <action selector="searchPressed:" destination="ixq-6x-fEW" eventType="touchUpInside" id="3HS-EC-fcX"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search_icon_pink" translatesAutoresizingMaskIntoConstraints="NO" id="gFZ-lt-llZ">
-                                <rect key="frame" x="87" y="734" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_icon_pink" translatesAutoresizingMaskIntoConstraints="NO" id="gFZ-lt-llZ">
+                                <rect key="frame" x="185.5" y="744" width="43" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="38L-KJ-yWD"/>
+                                    <constraint firstAttribute="width" constant="43" id="QOv-Ph-NhU"/>
+                                </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-pd-C4C">
+                                <rect key="frame" x="58" y="389" width="298" height="118"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search cities" textAlignment="natural" minimumFontSize="17" background="search box" translatesAutoresizingMaskIntoConstraints="NO" id="oi6-0N-7ao" userLabel="Search Text Field">
+                                        <rect key="frame" x="0.0" y="0.0" width="298" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="cxz-YO-tHw"/>
+                                        </constraints>
+                                        <color key="textColor" name="AlmostBlack"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES" textContentType="address-level2"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholder.text">
+                                                <color key="value" name="LightGrey"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wd-0n-sOL" userLabel="Search Button">
+                                        <rect key="frame" x="156" y="63" width="142" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="8jW-w9-Jb7"/>
+                                            <constraint firstAttribute="height" constant="55" id="ac1-b8-yd2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                        <state key="normal" image="search_button">
+                                            <color key="titleColor" name="AlmostBlack"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchPressed:" destination="ixq-6x-fEW" eventType="touchUpInside" id="3HS-EC-fcX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oi6-0N-7ao" firstAttribute="leading" secondItem="Shf-pd-C4C" secondAttribute="leading" id="DCn-f5-Eyf"/>
+                                    <constraint firstAttribute="trailing" secondItem="oi6-0N-7ao" secondAttribute="trailing" id="EU3-6H-r4D"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5of-h6-q2F"/>
                         <color key="backgroundColor" name="Background"/>
                         <color key="tintColor" name="AlmostBlack"/>
+                        <constraints>
+                            <constraint firstItem="gFZ-lt-llZ" firstAttribute="centerX" secondItem="hOx-PF-pF6" secondAttribute="centerX" id="4v6-gh-WVy"/>
+                            <constraint firstItem="gFZ-lt-llZ" firstAttribute="bottom" secondItem="hOx-PF-pF6" secondAttribute="bottomMargin" constant="-75" id="7aW-O7-B1o"/>
+                            <constraint firstItem="Shf-pd-C4C" firstAttribute="leading" secondItem="hOx-PF-pF6" secondAttribute="leadingMargin" constant="38" id="BNO-H2-e8a"/>
+                            <constraint firstItem="Shf-pd-C4C" firstAttribute="centerY" secondItem="hOx-PF-pF6" secondAttribute="centerY" id="Mnj-Tc-LCW"/>
+                            <constraint firstItem="Shf-pd-C4C" firstAttribute="centerX" secondItem="hOx-PF-pF6" secondAttribute="centerX" id="Yrx-Hs-1yt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Shf-pd-C4C" secondAttribute="trailing" constant="38" id="og0-di-UVr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="X4s-Tr-lvD"/>
                     <connections>
@@ -366,15 +403,20 @@
         <image name="Siem Riep" width="163" height="58"/>
         <image name="access_temp" width="102" height="102"/>
         <image name="cloud.sun.bolt" catalog="system" width="128" height="128"/>
-        <image name="location_icon" width="30" height="30"/>
-        <image name="rainbow_icon" width="33" height="27"/>
-        <image name="search_icon" width="30" height="30"/>
+        <image name="location_icon" width="32" height="32"/>
+        <image name="rainbow_icon" width="37" height="29"/>
+        <image name="search box" width="310" height="61"/>
+        <image name="search_button" width="142" height="55"/>
+        <image name="search_icon" width="34" height="34"/>
         <image name="search_icon_pink" width="43" height="43"/>
         <namedColor name="AlmostBlack">
             <color red="0.18000000715255737" green="0.18000000715255737" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Background">
             <color red="0.99599999189376831" green="0.97299998998641968" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="LightGrey">
+            <color red="0.81999999284744263" green="0.81999999284744263" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
