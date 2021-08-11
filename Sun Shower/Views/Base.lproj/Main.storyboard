@@ -92,17 +92,17 @@
                                         <rect key="frame" x="0.0" y="250" width="414" height="193.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="a0J-Af-jEX" userLabel="Text Stack View">
-                                                <rect key="frame" x="115.5" y="0.0" width="183" height="127.5"/>
+                                                <rect key="frame" x="128.5" y="0.0" width="157.5" height="127.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Montreal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URb-eh-jil" userLabel="City Label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="56"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="47"/>
                                                         <color key="backgroundColor" name="Background"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="40"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcu-I1-rAr" userLabel="Country Label">
-                                                        <rect key="frame" x="0.0" y="36" width="183" height="91.5"/>
+                                                        <rect key="frame" x="0.0" y="27" width="157.5" height="100.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,7 +116,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear skies" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rah-fD-2pk" userLabel="Description Label">
-                                                <rect key="frame" x="150.5" y="160" width="113" height="25.5"/>
+                                                <rect key="frame" x="158" y="160" width="98.5" height="25.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25.5" id="enp-jX-WRd"/>
                                                 </constraints>
@@ -154,7 +154,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="4fQ-HS-bV3" userLabel="Current Temp Label">
-                                                <rect key="frame" x="194.5" y="78.5" width="25" height="36.5"/>
+                                                <rect key="frame" x="192.5" y="81.5" width="29" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="26"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -168,13 +168,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="t2C-kM-hJX" userLabel="High Temp Label">
-                                                <rect key="frame" x="309.5" y="80" width="23.5" height="34"/>
+                                                <rect key="frame" x="307.5" y="83" width="27" height="28"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="4we-RK-SCQ" userLabel="Low Temp Label">
-                                                <rect key="frame" x="81.5" y="80" width="23.5" height="34"/>
+                                                <rect key="frame" x="79.5" y="83" width="27" height="28"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -371,20 +371,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rainbow_icon_pink" translatesAutoresizingMaskIntoConstraints="NO" id="j5G-8Q-my2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rainbow_icon_pink" translatesAutoresizingMaskIntoConstraints="NO" id="j5G-8Q-my2">
                                 <rect key="frame" x="185.5" y="753" width="43" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="BQU-sO-jwN"/>
+                                </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8LH-9R-CD1" userLabel="Vertical Stack View">
-                                <rect key="frame" x="47" y="366" width="320" height="165"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8LH-9R-CD1" userLabel="Vertical Stack View">
+                                <rect key="frame" x="47" y="366" width="320" height="164"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAa-y1-PEz">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAa-y1-PEz">
                                         <rect key="frame" x="132.5" y="0.0" width="55" height="55"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSC-qq-zvp" userLabel="Top Center View">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSC-qq-zvp" userLabel="Top Center View">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fA-fe-nG4" userLabel="Blue Hue Button">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fA-fe-nG4" userLabel="Blue Hue Button">
                                                         <rect key="frame" x="5" y="5" width="45" height="45"/>
                                                         <state key="normal" image="blue_hue"/>
                                                         <connections>
@@ -396,18 +398,19 @@
                                                 <constraints>
                                                     <constraint firstItem="4fA-fe-nG4" firstAttribute="centerY" secondItem="SSC-qq-zvp" secondAttribute="centerY" id="cYk-Ju-otL"/>
                                                     <constraint firstItem="4fA-fe-nG4" firstAttribute="centerX" secondItem="SSC-qq-zvp" secondAttribute="centerX" id="rbi-dF-uPk"/>
+                                                    <constraint firstItem="4fA-fe-nG4" firstAttribute="leading" secondItem="SSC-qq-zvp" secondAttribute="leading" constant="5" id="uyj-dm-UQt"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bi9-eR-cak">
-                                        <rect key="frame" x="58" y="55" width="204" height="55"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bi9-eR-cak">
+                                        <rect key="frame" x="58" y="55" width="204" height="54"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7FB-CT-ec9" userLabel="Middle Left View">
-                                                <rect key="frame" x="0.0" y="0.0" width="204" height="55"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FB-CT-ec9" userLabel="Middle Left View">
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="54"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-gU-Nvs" userLabel="Pink Hue Button">
-                                                        <rect key="frame" x="0.0" y="5" width="45" height="45"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-gU-Nvs" userLabel="Pink Hue Button">
+                                                        <rect key="frame" x="0.0" y="5" width="45" height="44"/>
                                                         <state key="normal" image="pink_hue"/>
                                                         <connections>
                                                             <action selector="pinkHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="fn5-mz-9co"/>
@@ -416,24 +419,26 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="MZc-gU-Nvs" firstAttribute="top" secondItem="7FB-CT-ec9" secondAttribute="top" constant="5" id="0ge-a0-PM5"/>
                                                     <constraint firstItem="MZc-gU-Nvs" firstAttribute="centerY" secondItem="7FB-CT-ec9" secondAttribute="centerY" id="Kwc-1I-8GH"/>
                                                     <constraint firstItem="MZc-gU-Nvs" firstAttribute="leading" secondItem="7FB-CT-ec9" secondAttribute="leading" id="zSi-ul-wwg"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4G-xr-ea9" userLabel="Middle Right View">
-                                                <rect key="frame" x="204" y="0.0" width="0.0" height="55"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4G-xr-ea9" userLabel="Middle Right View">
+                                                <rect key="frame" x="204" y="0.0" width="0.0" height="54"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-qL-SBQ" userLabel="Yellow Hue Button">
-                                                        <rect key="frame" x="-45" y="5" width="45" height="45"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-qL-SBQ" userLabel="Yellow Hue Button">
+                                                        <rect key="frame" x="-45" y="5" width="45" height="44"/>
                                                         <state key="normal" image="yellow_hue"/>
                                                         <connections>
-                                                            <action selector="yellowHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="gDu-tU-u3I"/>
+                                                            <action selector="yellowHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="nJb-mQ-ujK"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="pEO-qL-SBQ" firstAttribute="centerY" secondItem="d4G-xr-ea9" secondAttribute="centerY" id="UpN-We-wab"/>
+                                                    <constraint firstItem="pEO-qL-SBQ" firstAttribute="top" secondItem="d4G-xr-ea9" secondAttribute="top" constant="5" id="hOO-CQ-clz"/>
                                                     <constraint firstAttribute="trailing" secondItem="pEO-qL-SBQ" secondAttribute="trailing" id="tBQ-9S-Kk8"/>
                                                 </constraints>
                                             </view>
@@ -443,13 +448,13 @@
                                             <constraint firstItem="7FB-CT-ec9" firstAttribute="centerX" secondItem="bi9-eR-cak" secondAttribute="centerX" id="nWm-ZB-OVp"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Zv-tm-g2h">
-                                        <rect key="frame" x="0.0" y="110" width="320" height="55"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Zv-tm-g2h">
+                                        <rect key="frame" x="0.0" y="109" width="320" height="55"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKS-Ec-5Z5" userLabel="Bottom Left View">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKS-Ec-5Z5" userLabel="Bottom Left View">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="55"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKw-mX-0MB" userLabel="Default Hue Button">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKw-mX-0MB" userLabel="Default Hue Button">
                                                         <rect key="frame" x="0.0" y="5" width="45" height="45"/>
                                                         <state key="normal" image="default_hue"/>
                                                         <connections>
@@ -463,10 +468,10 @@
                                                     <constraint firstItem="PKw-mX-0MB" firstAttribute="leading" secondItem="RKS-Ec-5Z5" secondAttribute="leading" id="zto-k8-h9Y"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9s-Uz-2ma" userLabel="Bottom Right View">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9s-Uz-2ma" userLabel="Bottom Right View">
                                                 <rect key="frame" x="240" y="0.0" width="80" height="55"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOp-oU-Sik" userLabel="Sunshower Hue Button">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOp-oU-Sik" userLabel="Sunshower Hue Button">
                                                         <rect key="frame" x="35" y="5" width="45" height="45"/>
                                                         <state key="normal" image="sunshower_hue"/>
                                                         <connections>
@@ -477,6 +482,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="WOp-oU-Sik" secondAttribute="trailing" id="B6y-x2-Pc8"/>
+                                                    <constraint firstItem="WOp-oU-Sik" firstAttribute="leading" secondItem="W9s-Uz-2ma" secondAttribute="leading" constant="35" id="df4-bA-veu"/>
                                                     <constraint firstItem="WOp-oU-Sik" firstAttribute="centerY" secondItem="W9s-Uz-2ma" secondAttribute="centerY" id="noA-ni-KBy"/>
                                                 </constraints>
                                             </view>
@@ -485,7 +491,12 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="bi9-eR-cak" firstAttribute="leading" secondItem="8LH-9R-CD1" secondAttribute="leading" constant="58" id="09y-wx-qbd"/>
+                                    <constraint firstItem="bi9-eR-cak" firstAttribute="top" secondItem="8LH-9R-CD1" secondAttribute="top" constant="55" id="2nJ-ag-5hi"/>
+                                    <constraint firstItem="1Zv-tm-g2h" firstAttribute="leading" secondItem="8LH-9R-CD1" secondAttribute="leading" id="V42-hB-Iyd"/>
+                                    <constraint firstItem="HAa-y1-PEz" firstAttribute="centerX" secondItem="8LH-9R-CD1" secondAttribute="centerX" id="ZCZ-yZ-59X"/>
                                     <constraint firstAttribute="trailing" secondItem="bi9-eR-cak" secondAttribute="trailing" constant="58" id="ffP-9P-rwb"/>
+                                    <constraint firstItem="1Zv-tm-g2h" firstAttribute="centerX" secondItem="8LH-9R-CD1" secondAttribute="centerX" id="nhO-JZ-KHK"/>
+                                    <constraint firstItem="bi9-eR-cak" firstAttribute="centerY" secondItem="8LH-9R-CD1" secondAttribute="centerY" id="yZp-VX-CsK"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -493,8 +504,14 @@
                         <color key="backgroundColor" name="Background"/>
                         <color key="tintColor" name="AlmostBlack"/>
                         <constraints>
+                            <constraint firstItem="8LH-9R-CD1" firstAttribute="top" secondItem="6SJ-B9-a3W" secondAttribute="top" constant="278" id="1JF-EU-dwr"/>
                             <constraint firstAttribute="trailing" secondItem="8LH-9R-CD1" secondAttribute="trailing" constant="47" id="E95-YV-bvn"/>
+                            <constraint firstItem="8LH-9R-CD1" firstAttribute="centerX" secondItem="j5G-8Q-my2" secondAttribute="centerX" id="EKS-Mo-n0o"/>
+                            <constraint firstItem="8LH-9R-CD1" firstAttribute="centerY" secondItem="I1c-vg-V6d" secondAttribute="centerY" id="S3j-hr-FMN"/>
                             <constraint firstItem="8LH-9R-CD1" firstAttribute="leading" secondItem="I1c-vg-V6d" secondAttribute="leading" constant="47" id="Whv-rL-tDX"/>
+                            <constraint firstItem="8LH-9R-CD1" firstAttribute="centerX" secondItem="I1c-vg-V6d" secondAttribute="centerX" id="eS2-Oi-57Q"/>
+                            <constraint firstItem="6SJ-B9-a3W" firstAttribute="bottom" secondItem="j5G-8Q-my2" secondAttribute="bottom" constant="75" id="np0-hw-9vG"/>
+                            <constraint firstItem="j5G-8Q-my2" firstAttribute="leading" secondItem="6SJ-B9-a3W" secondAttribute="leading" constant="185.5" id="px8-b2-y1g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hue" id="u7A-BN-5Bm"/>
@@ -504,7 +521,6 @@
                         <outlet property="pinkHueButton" destination="MZc-gU-Nvs" id="QU4-82-aDs"/>
                         <outlet property="sunshowerHueButton" destination="WOp-oU-Sik" id="M6F-Ox-ceG"/>
                         <outlet property="yellowHueButton" destination="pEO-qL-SBQ" id="Vfy-lt-wJE"/>
-                        <outlet property="yellowHueSelected" destination="UpN-We-wab" id="UKS-Y3-Kyj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yj9-le-TaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
