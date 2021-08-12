@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -92,17 +91,17 @@
                                         <rect key="frame" x="0.0" y="250" width="414" height="193.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="a0J-Af-jEX" userLabel="Text Stack View">
-                                                <rect key="frame" x="128.5" y="0.0" width="157.5" height="127.5"/>
+                                                <rect key="frame" x="115.5" y="0.0" width="183" height="127.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Montreal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URb-eh-jil" userLabel="City Label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="47"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="56"/>
                                                         <color key="backgroundColor" name="Background"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="40"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcu-I1-rAr" userLabel="Country Label">
-                                                        <rect key="frame" x="0.0" y="27" width="157.5" height="100.5"/>
+                                                        <rect key="frame" x="0.0" y="36" width="183" height="91.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,7 +115,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear skies" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rah-fD-2pk" userLabel="Description Label">
-                                                <rect key="frame" x="158" y="160" width="98.5" height="25.5"/>
+                                                <rect key="frame" x="150.5" y="160" width="113" height="25.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25.5" id="enp-jX-WRd"/>
                                                 </constraints>
@@ -154,7 +153,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="4fQ-HS-bV3" userLabel="Current Temp Label">
-                                                <rect key="frame" x="192.5" y="81.5" width="29" height="30.5"/>
+                                                <rect key="frame" x="194.5" y="78.5" width="25" height="36.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="26"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -168,13 +167,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="t2C-kM-hJX" userLabel="High Temp Label">
-                                                <rect key="frame" x="307.5" y="83" width="27" height="28"/>
+                                                <rect key="frame" x="309.5" y="80" width="23.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="4we-RK-SCQ" userLabel="Low Temp Label">
-                                                <rect key="frame" x="79.5" y="83" width="27" height="28"/>
+                                                <rect key="frame" x="81.5" y="80" width="23.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -403,14 +402,15 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bi9-eR-cak">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bi9-eR-cak">
                                         <rect key="frame" x="58" y="55" width="204" height="54"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FB-CT-ec9" userLabel="Middle Left View">
-                                                <rect key="frame" x="0.0" y="0.0" width="204" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="54"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-gU-Nvs" userLabel="Pink Hue Button">
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-gU-Nvs" userLabel="Pink Hue Button">
                                                         <rect key="frame" x="0.0" y="5" width="45" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" image="pink_hue"/>
                                                         <connections>
                                                             <action selector="pinkHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="fn5-mz-9co"/>
@@ -418,24 +418,20 @@
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="MZc-gU-Nvs" firstAttribute="top" secondItem="7FB-CT-ec9" secondAttribute="top" constant="5" id="0ge-a0-PM5"/>
-                                                    <constraint firstItem="MZc-gU-Nvs" firstAttribute="centerY" secondItem="7FB-CT-ec9" secondAttribute="centerY" id="Kwc-1I-8GH"/>
-                                                    <constraint firstItem="MZc-gU-Nvs" firstAttribute="leading" secondItem="7FB-CT-ec9" secondAttribute="leading" id="zSi-ul-wwg"/>
-                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4G-xr-ea9" userLabel="Middle Right View">
-                                                <rect key="frame" x="204" y="0.0" width="0.0" height="54"/>
+                                                <rect key="frame" x="102" y="0.0" width="102" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-qL-SBQ" userLabel="Yellow Hue Button">
-                                                        <rect key="frame" x="-45" y="5" width="45" height="44"/>
+                                                        <rect key="frame" x="57" y="5" width="45" height="44"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="yellow_hue"/>
                                                         <connections>
                                                             <action selector="yellowHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="nJb-mQ-ujK"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="pEO-qL-SBQ" firstAttribute="centerY" secondItem="d4G-xr-ea9" secondAttribute="centerY" id="UpN-We-wab"/>
                                                     <constraint firstItem="pEO-qL-SBQ" firstAttribute="top" secondItem="d4G-xr-ea9" secondAttribute="top" constant="5" id="hOO-CQ-clz"/>
@@ -445,7 +441,6 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="d4G-xr-ea9" firstAttribute="centerY" secondItem="bi9-eR-cak" secondAttribute="centerY" id="5o0-x6-ocO"/>
-                                            <constraint firstItem="7FB-CT-ec9" firstAttribute="centerX" secondItem="bi9-eR-cak" secondAttribute="centerX" id="nWm-ZB-OVp"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Zv-tm-g2h">
@@ -581,8 +576,5 @@
         <namedColor name="LightGrey">
             <color red="0.81999999284744263" green="0.81999999284744263" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
