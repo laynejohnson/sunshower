@@ -125,13 +125,6 @@ class WeatherViewController: UIViewController {
 
 // MARK: - UI Functions
 
-//// Get country flag
-//func getCountryFlag(countryCode: String) -> String {
-//  return String(String.UnicodeScalarView(
-//     countryCode.unicodeScalars.compactMap(
-//       { UnicodeScalar(127397 + $0.value) })))
-//}
-
 // Get country name
 func getCountryName(countryCode: String) -> String? {
     let current = Locale(identifier: "en_US")
@@ -163,10 +156,6 @@ extension WeatherViewController: WeatherManagerDelegate {
             self.currentTemperatureLabel.text = weather.currentTemperatureString
             self.lowTemperatureLabel.text = weather.lowTemperatureString
             self.highTemperatureLabel.text = weather.highTemperatureString
-          
-            
-            // Set country flag.
-//            self.countryFlagLabel.text = getCountryFlag(countryCode: countryCode)
         }
         
     }
