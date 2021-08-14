@@ -15,8 +15,7 @@
  
  Features:
  // TODO: Language toggle
- // TODO: Units toggle
- // TODO: Color toggle
+ // TODO: Units toggle (Tap to change unit)
  // TODO: Add loading/fetching progress circle/animation
  // Implement favorites feature (hard coded now)
  
@@ -61,7 +60,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var highTemperatureLabel: UILabel!
     
-    // Favorites View
+    // Favorites View (temp setup)
     @IBOutlet weak var firstFavorite: UIButton!
     @IBOutlet weak var secondFavorite: UIButton!
     @IBOutlet weak var thirdFavorite: UIButton!
@@ -121,7 +120,32 @@ class WeatherViewController: UIViewController {
             print("hello, I am the default selection")
         }
     }
+    
+    // Favorites temp setup (hard coded)
+    func getFavoriteWeather(city: String) {
+        weatherManager.fetchWeather(cityName: city)
+    }
+  
+    @IBAction func montrealPressed(_ sender: UIButton) {
+        getFavoriteWeather(city: "Montreal")
+    }
+    
+    @IBAction func austinPressed(_ sender: UIButton) {
+        getFavoriteWeather(city: "Austin")
+    }
+    
+    @IBAction func parisPressed(_ sender: UIButton) {
+        getFavoriteWeather(city: "Paris")
+    }
+    
+    @IBAction func nashvillePressed(_ sender: UIButton) {
+        getFavoriteWeather(city: "Nashville")
+    }
+    
 }
+// End WeatherViewController
+
+
 
 // MARK: - UI Functions
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
@@ -16,30 +16,25 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         searchTextField.delegate = self
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
+        
     }
-    
-}
-
-// MARK: - UITextFieldDelegate
-
-extension SearchViewController: UITextFieldDelegate {
     
     @IBAction func searchPressed(_ sender: UIButton) {
         // Dismiss keyboard.
         searchTextField.endEditing(true)
         print(searchTextField.text!)
         
-        self.dismiss(animated: true) {
-            let city = self.searchTextField.text
-            
-        }
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: - UITextFieldDelegate Functions
     
     // Function enables return key on keyboard.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -65,11 +60,24 @@ extension SearchViewController: UITextFieldDelegate {
         // Function runs when search field editing stops.
         
         // Store search field text.
-        if let city = searchTextField.text {
-            weatherManager.fetchWeather(cityName: city)
-        }
+//        if let city = searchTextField.text {
+//            weatherManager.fetchWeather(cityName: city)
+//        }
         
         // Clear search field text.
         searchTextField.text = ""
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    }
 }
+
+
+
+
+
+
+
+
+
