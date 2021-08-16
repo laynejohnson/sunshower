@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "hue_footer.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

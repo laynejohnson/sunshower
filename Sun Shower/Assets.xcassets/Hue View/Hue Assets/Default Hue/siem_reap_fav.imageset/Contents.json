@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "siem_reap_fav.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

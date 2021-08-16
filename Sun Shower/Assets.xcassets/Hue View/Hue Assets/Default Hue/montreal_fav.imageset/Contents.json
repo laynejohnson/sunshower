@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "montreal_fav.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
