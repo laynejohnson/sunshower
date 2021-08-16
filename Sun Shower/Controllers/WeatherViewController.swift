@@ -41,14 +41,14 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var colorThemeButton: UIButton!
-
+    
     // Weather View
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var textStackView: UIStackView!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-   
+    
     // Temperature View
     // Halos
     @IBOutlet weak var lowTempHalo: UIImageView!
@@ -77,7 +77,7 @@ class WeatherViewController: UIViewController {
     
     var hue: Int = 0
     
-    // MARK: - viewDidLoad()
+    // MARK: - View Controller Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,8 +154,6 @@ class WeatherViewController: UIViewController {
 }
 // End WeatherViewController
 
-
-
 // MARK: - UI Functions
 
 // Get country name
@@ -230,7 +228,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
 // MARK: - SearchViewControllerDelegate
 
 extension WeatherViewController: SearchViewControllerDelegate {
-
+    
     func searchPerformed(cityName: String) {
         print("This is city from stubFunc: \(cityName)")
         getWeather(city: cityName)
@@ -243,7 +241,7 @@ extension String {
     func capitalizingFirstLetter() -> String {
         return prefix(1).capitalized + dropFirst()
     }
-
+    
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
     }

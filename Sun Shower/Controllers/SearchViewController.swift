@@ -25,7 +25,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         searchTextField.delegate = self
-     
+        
     }
     
     @IBAction func searchPressed(_ sender: UIButton) {
@@ -35,8 +35,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         
         delegate?.searchPerformed(cityName: city)
         
-    navigationController?.popViewController(animated: true)
-    
+        navigationController?.popViewController(animated: true)
+        
     }
     
     // MARK: - UITextFieldDelegate Functions
@@ -63,21 +63,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         // Function runs when search field editing stops.
         
-        // Store search field text.
+        // Capture search field text
         if let searchCity = searchTextField.text {
             city = searchCity
         }
-//
-//        // Clear search field text.
-//            searchTextField.text = ""
     }
 }
-
-
-
-
-
-
-
-
-
