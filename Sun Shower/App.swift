@@ -11,6 +11,7 @@ struct App {
     
     struct Segues {
         // Add segue identifiers here
+        let searchSegue = "SearchSegue"
     }
     
     struct Hues {

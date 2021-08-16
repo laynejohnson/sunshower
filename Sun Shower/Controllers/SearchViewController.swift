@@ -7,31 +7,36 @@
 
 import UIKit
 
+protocol SearchViewControllerDelegate {
+    
+    func searchPerformed(cityName: String)
+    
+}
+
 class SearchViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     
-    let weatherManager = WeatherManager()
+    var city: String = ""
+    var delegate: SearchViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchTextField.delegate = self
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        
+     
     }
     
     @IBAction func searchPressed(_ sender: UIButton) {
         // Dismiss keyboard.
         searchTextField.endEditing(true)
-        print(searchTextField.text!)
+        print("I am city from searchPressed \(city)")
         
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+        delegate?.searchPerformed(cityName: city)
+        
+    navigationController?.popViewController(animated: true)
+    
     }
     
     // MARK: - UITextFieldDelegate Functions
@@ -40,7 +45,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Dismiss keyboard
         searchTextField.endEditing(true)
-        print(searchTextField.text!)
         return true
     }
     
@@ -60,16 +64,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         // Function runs when search field editing stops.
         
         // Store search field text.
-//        if let city = searchTextField.text {
-//            weatherManager.fetchWeather(cityName: city)
-//        }
-        
-        // Clear search field text.
-        searchTextField.text = ""
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        if let searchCity = searchTextField.text {
+            city = searchCity
+        }
+//
+//        // Clear search field text.
+//            searchTextField.text = ""
     }
 }
 

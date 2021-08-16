@@ -16,7 +16,7 @@
  Features:
  // TODO: Language toggle
  // TODO: Units toggle (Tap to change unit)
- // TODO: Add loading/fetching progress circle/animation
+ // TODO: Add loading/fetching progress circle/animation (fetching weather)
  // Implement favorites feature (hard coded now)
  
  Refactor:
@@ -29,7 +29,13 @@ import CoreLocation
 
 // MARK: - View Controller
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController, SearchViewControllerDelegate {
+    
+    func searchPerformed(cityName: String) {
+        print("This is city from stubFunc: \(cityName)")
+        getWeather(city: cityName)
+    }
+    
     
     // MARK: - IBOutlets
     
@@ -74,6 +80,7 @@ class WeatherViewController: UIViewController {
     
     var weatherManager = WeatherManager()
     let locationManager = CLLocationManager()
+    
     var hue: Int = 0
     
     // MARK: - viewDidLoad()
@@ -122,26 +129,36 @@ class WeatherViewController: UIViewController {
     }
     
     // Favorites temp setup (hard coded)
-    func getFavoriteWeather(city: String) {
+    func getWeather(city: String) {
         weatherManager.fetchWeather(cityName: city)
     }
-  
+    
     @IBAction func montrealPressed(_ sender: UIButton) {
-        getFavoriteWeather(city: "Montreal")
+        getWeather(city: "Montreal")
     }
     
     @IBAction func austinPressed(_ sender: UIButton) {
-        getFavoriteWeather(city: "Austin")
+        getWeather(city: "Austin")
     }
     
     @IBAction func parisPressed(_ sender: UIButton) {
-        getFavoriteWeather(city: "Paris")
+        getWeather(city: "Paris")
     }
     
     @IBAction func nashvillePressed(_ sender: UIButton) {
-        getFavoriteWeather(city: "Nashville")
+        getWeather(city: "Nashville")
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.destination is SearchViewController {
+            let destination = segue.destination as! SearchViewController
+            destination.delegate = self
+            
+            
+        }
+   
+    }
 }
 // End WeatherViewController
 
@@ -217,6 +234,14 @@ extension WeatherViewController: CLLocationManagerDelegate {
         print("Error: \(error)")
     }
 }
+
+//extension WeatherViewController: SearchViewControllerDelegate {
+//
+//    func searchPerformed(cityName: String) {
+//        print("This is the city from stub function: \(cityName)")
+//        getWeather(city: cityName)
+//    }
+//}
 
 // MARK: - String Extension
 
