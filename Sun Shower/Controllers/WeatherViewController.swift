@@ -198,6 +198,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
         print("Location button pressed")
         
         locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         locationManager.requestLocation()
     }
     
