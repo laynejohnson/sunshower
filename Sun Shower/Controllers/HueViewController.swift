@@ -10,9 +10,13 @@ import UIKit
  // TODO: Add theme assets
  // TODO: Config switch statement in weather view controller
 
-class HueViewController: UIViewController {
+protocol HueViewControllerDelegate {
     
-    var hue: Int = 0
+    func changeHue(hueCode: Int)
+    
+}
+
+class HueViewController: UIViewController {
     
     @IBOutlet weak var defaultHueButton: UIButton!
     @IBOutlet weak var pinkHueButton: UIButton!
@@ -20,32 +24,30 @@ class HueViewController: UIViewController {
     @IBOutlet weak var yellowHueButton: UIButton!
     @IBOutlet weak var sunshowerHueButton: UIButton!
     
+    var delegate: HueViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func defaultHueSelected(_ sender: UIButton) {
-        hue = 0
-        print(hue)
+        delegate?.changeHue(hueCode: 0)
     }
     
     @IBAction func pinkHueSelected(_ sender: UIButton) {
-        hue = 1
-        print(hue)
+        delegate?.changeHue(hueCode: 1)
     }
     
     @IBAction func blueHueSelected(_ sender: UIButton) {
-        hue = 2
-        print(hue)
+        delegate?.changeHue(hueCode: 2)
     }
     
     @IBAction func yellowHueSelected(_ sender: UIButton) {
-        hue = 3
-        print(hue)
+        delegate?.changeHue(hueCode: 3)
+      
     }
     
     @IBAction func sunshowerHueSelected(_ sender: UIButton) {
-        hue = 4
-        print(hue)
+        delegate?.changeHue(hueCode: 4)
     }
 }

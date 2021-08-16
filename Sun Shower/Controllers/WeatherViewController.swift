@@ -75,7 +75,7 @@ class WeatherViewController: UIViewController {
     var weatherManager = WeatherManager()
     let locationManager = CLLocationManager()
     
-    var hue: Int = 0
+//    var hue: Int = 0
     
     // MARK: - View Controller Life Cycle Methods
     
@@ -104,22 +104,6 @@ class WeatherViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        // Hue switch statement here
-        switch hue {
-        case 1:
-            print("pink selected")
-        // Icon stack highlighted
-        // Temp halos
-        // Favorites
-        case 2:
-            print("blue selected")
-        case 3:
-            print("yellow selected")
-        case 4:
-            print("sunshower selected")
-        default:
-            print("hello, I am the default selection")
-        }
     }
     
     // Favorites temp setup (hard coded)
@@ -148,6 +132,9 @@ class WeatherViewController: UIViewController {
         
         if segue.destination is SearchViewController {
             let destination = segue.destination as! SearchViewController
+            destination.delegate = self
+        } else if segue.destination is HueViewController {
+            let destination = segue.destination as! HueViewController
             destination.delegate = self
         }
     }
@@ -233,6 +220,31 @@ extension WeatherViewController: SearchViewControllerDelegate {
         print("This is city from stubFunc: \(cityName)")
         getWeather(city: cityName)
     }
+}
+
+// MARK: - HueViewControllerDelegate
+
+extension WeatherViewController: HueViewControllerDelegate {
+    
+    func changeHue(hueCode: Int) {
+
+        switch hueCode {
+        case 1:
+            print("pink selected")
+        // Icon stack highlighted
+        // Temp halos
+        // Favorites
+        case 2:
+            print("blue selected")
+        case 3:
+            print("yellow selected")
+        case 4:
+            print("sunshower selected")
+        default:
+            print("hello, I am the default selection")
+        }
+    }
+    
 }
 
 // MARK: - String Extension
