@@ -29,13 +29,7 @@ import CoreLocation
 
 // MARK: - View Controller
 
-class WeatherViewController: UIViewController, SearchViewControllerDelegate {
-    
-    func searchPerformed(cityName: String) {
-        print("This is city from stubFunc: \(cityName)")
-        getWeather(city: cityName)
-    }
-    
+class WeatherViewController: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -149,15 +143,13 @@ class WeatherViewController: UIViewController, SearchViewControllerDelegate {
         getWeather(city: "Nashville")
     }
     
+    // MARK: - Prepare for Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.destination is SearchViewController {
             let destination = segue.destination as! SearchViewController
             destination.delegate = self
-            
-            
         }
-   
     }
 }
 // End WeatherViewController
@@ -235,13 +227,15 @@ extension WeatherViewController: CLLocationManagerDelegate {
     }
 }
 
-//extension WeatherViewController: SearchViewControllerDelegate {
-//
-//    func searchPerformed(cityName: String) {
-//        print("This is the city from stub function: \(cityName)")
-//        getWeather(city: cityName)
-//    }
-//}
+// MARK: - SearchViewControllerDelegate
+
+extension WeatherViewController: SearchViewControllerDelegate {
+
+    func searchPerformed(cityName: String) {
+        print("This is city from stubFunc: \(cityName)")
+        getWeather(city: cityName)
+    }
+}
 
 // MARK: - String Extension
 
