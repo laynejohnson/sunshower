@@ -40,7 +40,7 @@ class WeatherViewController: UIViewController {
     // Icon Stack
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var colorThemeButton: UIButton!
+    @IBOutlet weak var hueButton: UIButton!
     
     // Weather View
     @IBOutlet weak var conditionImageView: UIImageView!
@@ -51,9 +51,9 @@ class WeatherViewController: UIViewController {
     
     // Temperature View
     // Halos
-    @IBOutlet weak var lowTempHalo: UIImageView!
-    @IBOutlet weak var currentTempHalo: UIImageView!
-    @IBOutlet weak var highTempHalo: UIImageView!
+    @IBOutlet weak var lowTempImage: UIImageView!
+    @IBOutlet weak var currentTempImage: UIImageView!
+    @IBOutlet weak var highTempImage: UIImageView!
     
     // Labels
     @IBOutlet weak var lowTemperatureLabel: UILabel!
@@ -61,10 +61,10 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var highTemperatureLabel: UILabel!
     
     // Favorites View (temp setup)
-    @IBOutlet weak var firstFavorite: UIButton!
-    @IBOutlet weak var secondFavorite: UIButton!
-    @IBOutlet weak var thirdFavorite: UIButton!
-    @IBOutlet weak var fourthFavorite: UIButton!
+    @IBOutlet weak var firstFavoriteButton: UIButton!
+    @IBOutlet weak var secondFavoriteButton: UIButton!
+    @IBOutlet weak var thirdFavoriteButton: UIButton!
+    @IBOutlet weak var fourthFavoriteButton: UIButton!
     
     // MARK: - Variables
     
@@ -75,7 +75,7 @@ class WeatherViewController: UIViewController {
     var weatherManager = WeatherManager()
     let locationManager = CLLocationManager()
     
-//    var hue: Int = 0
+    //    var hue: Int = 0
     
     // MARK: - View Controller Life Cycle Methods
     
@@ -226,22 +226,113 @@ extension WeatherViewController: SearchViewControllerDelegate {
 
 extension WeatherViewController: HueViewControllerDelegate {
     
-    func changeHue(hueCode: Int) {
+    func didChangeDefaultButtonImage(button: UIButton, imageName: String) {
 
+        if let image = UIImage(named: imageName) {
+            button.setImage(image, for: .highlighted)
+        }
+    }
+    
+    func didChangeHighlightedButtonImage(button: UIButton, imageName: String) {
+
+        if let image = UIImage(named: imageName) {
+            button.setImage(image, for: .highlighted)
+        }
+    }
+
+    func didChangeUIImage(imageView: UIImage, imageName: String) {
+        if let image = UIImage(named: imageName) {
+            imageView.image = UIImage(named: imageName)
+        }
+    }
+    
+    func hueChosen(hueCode: Int) {
+        
         switch hueCode {
         case 1:
-            print("pink selected")
-        // Icon stack highlighted
-        // Temp halos
-        // Favorites
+            print("Cotton candy sky chosen")
+            
+            // CHANGE BUTTONS
+            // Set location button image
+            if let locationButtonImage = UIImage(named: "location_icon_pink") {
+                locationButton.setImage(locationButtonImage, for: .highlighted)
+            }
+            
+            // Set search button
+            if let searchButtonImage = UIImage(named: "search_icon_pink") {
+                searchButton.setImage(searchButtonImage, for: .highlighted)
+            }
+            // Set hue button
+            if let hueButtonImage = UIImage(named: "hue_icon_pink") {
+                hueButton.setImage(hueButtonImage, for: .highlighted)
+            }
+            
+            // CHANGE TEMP UI
+        
+            lowTempImage.image = UIImage(named: "other_temp_halo_pink")
+            currentTempImage.image = UIImage(named: "current_temp_halo_pink")
+            highTempImage.image = UIImage(named: "other_temp_halo_pink")
+        
+            // CHANGE FAVORITES UI
+            // Change default state image
+            // Change highlighted state image
+            
+            if let firstFavNormal = UIImage(named: "montreal_fav_pink") {
+                firstFavoriteButton.setImage(firstFavNormal, for: .normal)
+            }
+            
+            if let firstFavHighlight = UIImage(named: "montreal_fav_pink_highlight") {
+                firstFavoriteButton.setImage(firstFavHighlight, for: .highlighted)
+            }
+       
+//
+//            secondFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
+//            secondFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .highlighted)
+//
+//            thirdFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
+//            thirdFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .highlighted)
+//
+//            fourthFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
+//            fourthFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .highlighted)
+    
         case 2:
-            print("blue selected")
+            print("Fine day chosen")
+            
+            // Set location button image
+            if let locationButtonImage = UIImage(named: "location_icon_blue") {
+                locationButton.setImage(locationButtonImage, for: .highlighted)
+            }
+            
+            // Set search button
+            if let searcButtonImage = UIImage(named: "search_icon_blue") {
+                searchButton.setImage(searcButtonImage, for: .highlighted)
+            }
+            // Set hue button
+            if let hueButtonImage = UIImage(named: "hue_icon_blue") {
+                hueButton.setImage(hueButtonImage, for: .highlighted)
+            }
         case 3:
-            print("yellow selected")
+            print("Sunshine chosen")
+            
         case 4:
-            print("sunshower selected")
+            print("Sunshower chosen")
+            
         default:
-            print("hello, I am the default selection")
+            print("Hello, I am the default hue")
+            
+            // Set location button image
+            if let locationButtonImage = UIImage(named: "location_icon_default") {
+                locationButton.setImage(locationButtonImage, for: .highlighted)
+            }
+            
+            // Set search button
+            if let searcButtonImage = UIImage(named: "search_icon_default") {
+                searchButton.setImage(searcButtonImage, for: .highlighted)
+            }
+            // Set hue button
+            if let hueButtonImage = UIImage(named: "hue_icon_default") {
+                hueButton.setImage(hueButtonImage, for: .highlighted)
+            }
         }
     }
     

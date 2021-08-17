@@ -42,27 +42,27 @@
                                                             <constraint firstAttribute="height" constant="70" id="pCb-Mi-hBs"/>
                                                             <constraint firstAttribute="width" constant="70" id="yvf-9x-ayS"/>
                                                         </constraints>
-                                                        <state key="normal" image="location_icon_almost_black"/>
+                                                        <state key="normal" image="location_icon_black"/>
                                                         <state key="selected" image="location_icon_selected"/>
-                                                        <state key="highlighted" image="location_icon_selected"/>
+                                                        <state key="highlighted" image="location_icon_default"/>
                                                         <connections>
                                                             <action selector="locationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ji3-Sm-KL5"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTW-sh-JYk" userLabel="Search Button">
                                                         <rect key="frame" x="0.0" y="70" width="70" height="70"/>
-                                                        <state key="normal" image="search_icon_almost_black"/>
+                                                        <state key="normal" image="search_icon_black"/>
                                                         <state key="selected" image="search_icon_selected"/>
-                                                        <state key="highlighted" image="search_icon_selected"/>
+                                                        <state key="highlighted" image="sea"/>
                                                         <connections>
                                                             <segue destination="ixq-6x-fEW" kind="show" identifier="" id="dWI-ZZ-cTg"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPv-0X-hiI" userLabel="Color Theme Button">
                                                         <rect key="frame" x="0.0" y="140" width="70" height="70"/>
-                                                        <state key="normal" image="rainbow_icon_almost_black"/>
+                                                        <state key="normal" image="hue_icon_black"/>
                                                         <state key="selected" image="rainbow_icon_selected"/>
-                                                        <state key="highlighted" image="rainbow_icon_selected"/>
+                                                        <state key="highlighted" image="hue_icon_default"/>
                                                         <connections>
                                                             <segue destination="pf6-pC-Vg5" kind="show" id="daI-YF-sPW"/>
                                                         </connections>
@@ -144,14 +144,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j71-x4-hB4" userLabel="Temp View">
                                         <rect key="frame" x="0.0" y="443.5" width="414" height="193.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Low Temp Halo_Default" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-4e-Fbu" userLabel="Low Temp Halo">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other_temp_halo_default" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-4e-Fbu" userLabel="Low Temp Halo">
                                                 <rect key="frame" x="43" y="47" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="4QI-oc-fjb"/>
                                                     <constraint firstAttribute="height" constant="100" id="5PE-nE-2Ue"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Current Temp Halo_ Default" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-9Q-Ek2" userLabel="Current Temp Halo">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="current_temp_halo_default" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-9Q-Ek2" userLabel="Current Temp Halo">
                                                 <rect key="frame" x="150.5" y="40.5" width="113" height="113"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="113" id="Aip-gl-Z96"/>
@@ -164,7 +164,7 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="High Temp Halo_Default" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-bJ-z0u" userLabel="High Temp Halo">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other_temp_halo_default" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-bJ-z0u" userLabel="High Temp Halo">
                                                 <rect key="frame" x="271" y="47" width="100" height="100"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -281,23 +281,23 @@
                     <navigationItem key="navigationItem" id="jsT-R5-ORI"/>
                     <connections>
                         <outlet property="cityLabel" destination="URb-eh-jil" id="hjm-qF-y9x"/>
-                        <outlet property="colorThemeButton" destination="iPv-0X-hiI" id="o13-HG-5wC"/>
                         <outlet property="conditionImageView" destination="4iR-T4-0NW" id="WmO-Ix-mvX"/>
                         <outlet property="countryLabel" destination="xcu-I1-rAr" id="2rH-C8-Lph"/>
-                        <outlet property="currentTempHalo" destination="xIj-9Q-Ek2" id="Wnw-xd-EEF"/>
+                        <outlet property="currentTempImage" destination="xIj-9Q-Ek2" id="Wnw-xd-EEF"/>
                         <outlet property="currentTemperatureLabel" destination="4fQ-HS-bV3" id="brN-0q-D85"/>
                         <outlet property="descriptionLabel" destination="rah-fD-2pk" id="9R8-xG-KQ7"/>
-                        <outlet property="firstFavorite" destination="YcR-Sg-IgL" id="ctQ-aT-jZ6"/>
-                        <outlet property="fourthFavorite" destination="tE2-OM-CFR" id="ku1-8F-s1P"/>
-                        <outlet property="highTempHalo" destination="C1Z-bJ-z0u" id="oFe-Et-ygg"/>
+                        <outlet property="firstFavoriteButton" destination="YcR-Sg-IgL" id="ctQ-aT-jZ6"/>
+                        <outlet property="fourthFavoriteButton" destination="tE2-OM-CFR" id="ku1-8F-s1P"/>
+                        <outlet property="highTempImage" destination="C1Z-bJ-z0u" id="oFe-Et-ygg"/>
                         <outlet property="highTemperatureLabel" destination="t2C-kM-hJX" id="odV-gK-fxm"/>
+                        <outlet property="hueButton" destination="iPv-0X-hiI" id="o13-HG-5wC"/>
                         <outlet property="locationButton" destination="BLp-R1-ggI" id="GgY-LF-NwF"/>
-                        <outlet property="lowTempHalo" destination="MNb-4e-Fbu" id="5Hc-Hr-EwN"/>
+                        <outlet property="lowTempImage" destination="MNb-4e-Fbu" id="5Hc-Hr-EwN"/>
                         <outlet property="lowTemperatureLabel" destination="4we-RK-SCQ" id="wK1-nf-Yp2"/>
                         <outlet property="searchButton" destination="UTW-sh-JYk" id="CNg-sQ-0Mp"/>
-                        <outlet property="secondFavorite" destination="tU9-he-vW8" id="AaK-LL-BE2"/>
+                        <outlet property="secondFavoriteButton" destination="tU9-he-vW8" id="AaK-LL-BE2"/>
                         <outlet property="textStackView" destination="a0J-Af-jEX" id="pbt-PX-06I"/>
-                        <outlet property="thirdFavorite" destination="ysf-vE-rmd" id="1pa-1W-gDw"/>
+                        <outlet property="thirdFavoriteButton" destination="ysf-vE-rmd" id="1pa-1W-gDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -572,26 +572,28 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Current Temp Halo_ Default" width="104" height="104"/>
-        <image name="High Temp Halo_Default" width="90" height="90"/>
-        <image name="Low Temp Halo_Default" width="90" height="90"/>
         <image name="Search Bar" width="365" height="63"/>
         <image name="Search_footer" width="43" height="43"/>
         <image name="austin_fav" width="174" height="63"/>
         <image name="blue_hue" width="60" height="60"/>
         <image name="cloud.sun.bolt" catalog="system" width="128" height="128"/>
+        <image name="current_temp_halo_default" width="104" height="104"/>
         <image name="default_hue" width="60" height="60"/>
         <image name="hue_footer" width="45" height="36"/>
-        <image name="location_icon_almost_black" width="32" height="32"/>
+        <image name="hue_icon_black" width="37" height="29"/>
+        <image name="hue_icon_default" width="37" height="29"/>
+        <image name="location_icon_black" width="32" height="32"/>
+        <image name="location_icon_default" width="32" height="32"/>
         <image name="location_icon_selected" width="32" height="32"/>
         <image name="montreal_fav" width="174" height="63"/>
         <image name="nashville_fav" width="174" height="63"/>
+        <image name="other_temp_halo_default" width="90" height="90"/>
         <image name="paris_fav" width="174" height="63"/>
         <image name="pink_hue" width="60" height="60"/>
-        <image name="rainbow_icon_almost_black" width="37" height="29"/>
         <image name="rainbow_icon_selected" width="37" height="29"/>
+        <image name="sea" width="128" height="128"/>
         <image name="search_button" width="142" height="55"/>
-        <image name="search_icon_almost_black" width="34" height="34"/>
+        <image name="search_icon_black" width="34" height="34"/>
         <image name="search_icon_selected" width="34" height="34"/>
         <image name="sunshine_hue" width="60" height="60"/>
         <image name="sunshower_hue" width="60" height="60"/>

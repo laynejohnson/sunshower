@@ -7,12 +7,15 @@
 
 import UIKit
 
- // TODO: Add theme assets
- // TODO: Config switch statement in weather view controller
-
 protocol HueViewControllerDelegate {
     
-    func changeHue(hueCode: Int)
+    func hueChosen(hueCode: Int)
+    
+    func didChangeDefaultButtonImage(button: UIButton, imageName: String)
+
+    func didChangeHighlightedButtonImage(button: UIButton, imageName: String)
+
+    func didChangeUIImage(imageView: UIImage, imageName: String)
     
 }
 
@@ -31,23 +34,37 @@ class HueViewController: UIViewController {
     }
     
     @IBAction func defaultHueSelected(_ sender: UIButton) {
-        delegate?.changeHue(hueCode: 0)
+        
+        delegate?.hueChosen(hueCode: 0)
+        
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func pinkHueSelected(_ sender: UIButton) {
-        delegate?.changeHue(hueCode: 1)
+        
+        delegate?.hueChosen(hueCode: 1)
+        
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func blueHueSelected(_ sender: UIButton) {
-        delegate?.changeHue(hueCode: 2)
+        
+        delegate?.hueChosen(hueCode: 2)
+        
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func yellowHueSelected(_ sender: UIButton) {
-        delegate?.changeHue(hueCode: 3)
-      
+        
+        delegate?.hueChosen(hueCode: 3)
+        
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func sunshowerHueSelected(_ sender: UIButton) {
-        delegate?.changeHue(hueCode: 4)
+        
+        delegate?.hueChosen(hueCode: 4)
+        
+        navigationController?.popViewController(animated: true)
     }
 }
