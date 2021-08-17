@@ -13,6 +13,7 @@ struct WeatherModel {
     
     // WeatherData struct
     let cityName: String
+    let message: String?
     
     // Weather.main
     let currentTemperature: Double

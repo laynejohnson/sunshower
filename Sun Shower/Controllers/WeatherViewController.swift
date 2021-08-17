@@ -18,6 +18,7 @@
  // TODO: Units toggle (Tap to change unit)
  // TODO: Add loading/fetching progress circle/animation (fetching weather)
  // Implement favorites feature (hard coded now)
+ // Implement city entry validation e.g. city not found
  
  Refactor:
  // TODO:
@@ -106,25 +107,20 @@ class WeatherViewController: UIViewController {
         
     }
     
-    // Favorites temp setup (hard coded)
-    func getWeather(city: String) {
-        weatherManager.fetchWeather(cityName: city)
-    }
-    
     @IBAction func montrealPressed(_ sender: UIButton) {
-        getWeather(city: "Montreal")
+        weatherManager.fetchWeather(cityName: "Montreal")
     }
     
     @IBAction func austinPressed(_ sender: UIButton) {
-        getWeather(city: "Austin")
+        weatherManager.fetchWeather(cityName: "Austin")
     }
     
     @IBAction func parisPressed(_ sender: UIButton) {
-        getWeather(city: "Paris")
+        weatherManager.fetchWeather(cityName: "Austin")
     }
     
     @IBAction func nashvillePressed(_ sender: UIButton) {
-        getWeather(city: "Nashville")
+        weatherManager.fetchWeather(cityName: "Nashville")
     }
     
     // MARK: - Prepare for Segue
@@ -174,6 +170,7 @@ extension WeatherViewController: WeatherManagerDelegate {
             self.currentTemperatureLabel.text = weather.currentTemperatureString
             self.lowTemperatureLabel.text = weather.lowTemperatureString
             self.highTemperatureLabel.text = weather.highTemperatureString
+        
         }
         
     }
@@ -218,7 +215,8 @@ extension WeatherViewController: SearchViewControllerDelegate {
     
     func searchPerformed(cityName: String) {
         print("This is city from stubFunc: \(cityName)")
-        getWeather(city: cityName)
+        weatherManager.fetchWeather(cityName: cityName)
+        
     }
 }
 

@@ -60,9 +60,9 @@ struct WeatherManager {
                         // Send data to delegate
                         self.delegate?.didUpdateWeather(self, weather: weather)
                     }
-                    // View data in console:
-                    // let dataString = String(data: safeData, encoding:.utf8)
-                    // print(dataString!)
+                    //                     View data in console:
+                    let dataString = String(data: safeData, encoding:.utf8)
+                    print(dataString!)
                 }
             }
             // Start task
@@ -86,9 +86,10 @@ struct WeatherManager {
             let tempMin = decodedData.main.temp_min
             let tempMax = decodedData.main.temp_max
             let name = decodedData.name
+            let message = decodedData.message
             let country = decodedData.sys.country
             
-            let weather = WeatherModel(cityName: name, currentTemperature: currentTemp, feels_like: feelsLike, tempMin: tempMin, tempMax: tempMax, conditionId: conditionId, description: description, icon: icon, country: country)
+            let weather = WeatherModel(cityName: name, message: message, currentTemperature: currentTemp, feels_like: feelsLike, tempMin: tempMin, tempMax: tempMax, conditionId: conditionId, description: description, icon: icon, country: country)
             
             return weather
             
