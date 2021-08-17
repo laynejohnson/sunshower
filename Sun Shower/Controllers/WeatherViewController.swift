@@ -46,6 +46,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var hueButton: UIButton!
     
     // Weather View
+    @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var textStackView: UIStackView!
     @IBOutlet weak var cityLabel: UILabel!
@@ -109,20 +110,20 @@ class WeatherViewController: UIViewController {
         
     }
     
-    @IBAction func montrealPressed(_ sender: UIButton) {
+    @IBAction func firstFavoritePressed(_ sender: UIButton) {
         weatherManager.fetchWeather(cityName: "Montreal")
     }
     
-    @IBAction func austinPressed(_ sender: UIButton) {
+    @IBAction func secondFavoritePressed(_ sender: UIButton) {
         weatherManager.fetchWeather(cityName: "Austin")
     }
     
-    @IBAction func parisPressed(_ sender: UIButton) {
-        weatherManager.fetchWeather(cityName: "Austin")
+    @IBAction func thirdFavoritePressed(_ sender: UIButton) {
+        weatherManager.fetchWeather(cityName: "Quito")
     }
     
-    @IBAction func nashvillePressed(_ sender: UIButton) {
-        weatherManager.fetchWeather(cityName: "Nashville")
+    @IBAction func fourthFavoritePressed(_ sender: UIButton) {
+        weatherManager.fetchWeather(cityName: "Catanzaro")
     }
     
     // MARK: - Prepare for Segue
@@ -247,6 +248,12 @@ extension WeatherViewController: HueViewControllerDelegate {
             // Pink hue
             print("Cotton candy sky chosen")
             
+            // Change background color
+            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1)
+            
+            // Change navigation bar color
+            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1)
+            
             // CHANGE BUTTONS
             // Set location button image
             changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_pink")
@@ -259,9 +266,9 @@ extension WeatherViewController: HueViewControllerDelegate {
          
             // CHANGE TEMP UI
         
-            lowTempImage.image = UIImage(named: "other_temp_halo_pink")
-            currentTempImage.image = UIImage(named: "current_temp_halo_pink")
-            highTempImage.image = UIImage(named: "other_temp_halo_pink")
+            lowTempImage.image = UIImage(named: "other_temp_pink")
+            currentTempImage.image = UIImage(named: "current_temp_pink")
+            highTempImage.image = UIImage(named: "other_temp_pink")
         
             // CHANGE FAVORITES UI
        
@@ -271,15 +278,21 @@ extension WeatherViewController: HueViewControllerDelegate {
             changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_pink")
             changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_pink_highlight")
             
-            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_pink")
-            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_pink_highlight")
+            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_pink")
+            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_pink_highlight")
             
-            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_pink")
-            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_pink_highlight")
+            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_pink")
+            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_pink_highlight")
     
         case 2:
             // Blue hue
             print("Fine day chosen")
+            
+            // Change background color
+            backgroundView.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9921568627, blue: 1, alpha: 1)
+            
+            // Change navigation bar color
+            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9607843137, green: 0.9921568627, blue: 1, alpha: 1)
             
             // CHANGE BUTTONS
             // Set location button image
@@ -293,9 +306,9 @@ extension WeatherViewController: HueViewControllerDelegate {
          
             // CHANGE TEMP UI
         
-            lowTempImage.image = UIImage(named: "other_temp_halo_blue")
-            currentTempImage.image = UIImage(named: "current_temp_halo_blue")
-            highTempImage.image = UIImage(named: "other_temp_halo_blue")
+            lowTempImage.image = UIImage(named: "other_temp_blue")
+            currentTempImage.image = UIImage(named: "current_temp_blue")
+            highTempImage.image = UIImage(named: "other_temp_blue")
         
             // CHANGE FAVORITES UI
        
@@ -305,15 +318,21 @@ extension WeatherViewController: HueViewControllerDelegate {
             changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_blue")
             changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_blue_highlight")
             
-            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_blue")
-            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_blue_highlight")
+            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_blue")
+            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_blue_highlight")
             
-            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_blue")
-            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_blue_highlight")
+            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_blue")
+            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_blue_highlight")
             
         case 3:
             // Yellow hue
             print("Sunshine chosen")
+            
+            // Change background color
+            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
+            
+            // Change navigation bar color
+            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
             
             // CHANGE BUTTONS
             // Set location button image
@@ -327,9 +346,9 @@ extension WeatherViewController: HueViewControllerDelegate {
          
             // CHANGE TEMP UI
         
-            lowTempImage.image = UIImage(named: "other_temp_halo_yellow")
-            currentTempImage.image = UIImage(named: "current_temp_halo_yellow")
-            highTempImage.image = UIImage(named: "other_temp_halo_yellow")
+            lowTempImage.image = UIImage(named: "other_temp_yellow")
+            currentTempImage.image = UIImage(named: "current_temp_yellow")
+            highTempImage.image = UIImage(named: "other_temp_yellow")
         
             // CHANGE FAVORITES UI
        
@@ -339,15 +358,18 @@ extension WeatherViewController: HueViewControllerDelegate {
             changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_yellow")
             changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_yellow_highlight")
             
-            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_yellow")
-            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_yellow_highlight")
+            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_yellow")
+            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_yellow_highlight")
             
-            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_yellow")
-            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_yellow_highlight")
+            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_yellow")
+            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_yellow_highlight")
             
         case 4:
             // Sunshower hue
             print("Sunshower chosen")
+            
+            // Change background color
+            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
             
             // CHANGE BUTTONS
             // Set location button image
@@ -361,9 +383,9 @@ extension WeatherViewController: HueViewControllerDelegate {
          
             // CHANGE TEMP UI
         
-            lowTempImage.image = UIImage(named: "other_temp_halo_sunshower")
-            currentTempImage.image = UIImage(named: "current_temp_halo_sunshower")
-            highTempImage.image = UIImage(named: "other_temp_halo_sunshower")
+            lowTempImage.image = UIImage(named: "other_temp_sunshower")
+            currentTempImage.image = UIImage(named: "current_temp_sunshower")
+            highTempImage.image = UIImage(named: "other_temp_sunshower")
         
             // CHANGE FAVORITES UI
        
@@ -373,14 +395,19 @@ extension WeatherViewController: HueViewControllerDelegate {
             changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_sunshower")
             changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_sunshower_highlight")
             
-            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_sunshower")
-            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_sunshower_highlight")
+            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_sunshower")
+            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_sunshower_highlight")
             
-            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_sunshower")
-            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_sunshower_highlight")
+            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_sunshower")
+            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_sunshower_highlight")
             
         default:
             print("Hello, I am the default hue")
+            
+            // Change background color
+            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9725490196, blue: 0.9607843137, alpha: 1)
+            
+            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9725490196, blue: 0.9607843137, alpha: 1)
             
             // CHANGE BUTTONS
             // Set location button image
@@ -394,9 +421,9 @@ extension WeatherViewController: HueViewControllerDelegate {
          
             // CHANGE TEMP UI
         
-            lowTempImage.image = UIImage(named: "other_temp_halo_default")
-            currentTempImage.image = UIImage(named: "current_temp_halo_default")
-            highTempImage.image = UIImage(named: "other_temp_halo_default")
+            lowTempImage.image = UIImage(named: "other_temp_default")
+            currentTempImage.image = UIImage(named: "current_temp_default")
+            highTempImage.image = UIImage(named: "other_temp_default")
         
             // CHANGE FAVORITES UI
        
@@ -406,12 +433,11 @@ extension WeatherViewController: HueViewControllerDelegate {
             changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_default")
             changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_default_highlight")
             
-            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_default")
-            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_default_highlight")
+            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_default")
+            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_default_highlight")
             
-            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_default")
-            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_default_hidefault
-            
+            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_default")
+            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_default_hidefault")
         }
     }
     

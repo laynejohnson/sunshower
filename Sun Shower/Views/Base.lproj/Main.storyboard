@@ -77,13 +77,14 @@
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.sun.bolt" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4iR-T4-0NW">
                                                 <rect key="frame" x="125.5" y="76" width="166" height="169"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="163.5" id="OFB-vp-IKP"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" name="Background"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="48h-P2-us2"/>
                                             <constraint firstItem="4iR-T4-0NW" firstAttribute="centerX" secondItem="1lL-YX-yIT" secondAttribute="centerX" id="AmI-Uv-8ev"/>
@@ -97,17 +98,17 @@
                                         <rect key="frame" x="0.0" y="250" width="414" height="193.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="a0J-Af-jEX" userLabel="Text Stack View">
-                                                <rect key="frame" x="128.5" y="0.0" width="157.5" height="127.5"/>
+                                                <rect key="frame" x="115.5" y="0.0" width="183" height="127.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Montreal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URb-eh-jil" userLabel="City Label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="47"/>
-                                                        <color key="backgroundColor" name="Background"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="56"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="40"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcu-I1-rAr" userLabel="Country Label">
-                                                        <rect key="frame" x="0.0" y="27" width="157.5" height="100.5"/>
+                                                        <rect key="frame" x="0.0" y="36" width="183" height="91.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,7 +122,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear skies" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rah-fD-2pk" userLabel="Description Label">
-                                                <rect key="frame" x="158" y="160" width="98.5" height="25.5"/>
+                                                <rect key="frame" x="150.5" y="160" width="113" height="25.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25.5" id="enp-jX-WRd"/>
                                                 </constraints>
@@ -130,7 +131,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" name="Background"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="rah-fD-2pk" firstAttribute="centerX" secondItem="a0J-Af-jEX" secondAttribute="centerX" id="4yF-og-QP4"/>
                                             <constraint firstItem="rah-fD-2pk" firstAttribute="centerX" secondItem="fHg-Dj-SSU" secondAttribute="centerX" id="ISF-qZ-fLi"/>
@@ -144,14 +145,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j71-x4-hB4" userLabel="Temp View">
                                         <rect key="frame" x="0.0" y="443.5" width="414" height="193.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other_temp_halo_default" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-4e-Fbu" userLabel="Low Temp Halo">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other_temp_default" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-4e-Fbu" userLabel="Low Temp Halo">
                                                 <rect key="frame" x="43" y="47" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="4QI-oc-fjb"/>
                                                     <constraint firstAttribute="height" constant="100" id="5PE-nE-2Ue"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="current_temp_halo_default" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-9Q-Ek2" userLabel="Current Temp Halo">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="current_temp_default" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-9Q-Ek2" userLabel="Current Temp Halo">
                                                 <rect key="frame" x="150.5" y="40.5" width="113" height="113"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="113" id="Aip-gl-Z96"/>
@@ -159,12 +160,12 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="4fQ-HS-bV3" userLabel="Current Temp Label">
-                                                <rect key="frame" x="192.5" y="81.5" width="29" height="30.5"/>
+                                                <rect key="frame" x="194.5" y="78.5" width="25" height="36.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="26"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other_temp_halo_default" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-bJ-z0u" userLabel="High Temp Halo">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other_temp_default" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-bJ-z0u" userLabel="High Temp Halo">
                                                 <rect key="frame" x="271" y="47" width="100" height="100"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -173,19 +174,19 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="t2C-kM-hJX" userLabel="High Temp Label">
-                                                <rect key="frame" x="307.5" y="83" width="27" height="28"/>
+                                                <rect key="frame" x="309.5" y="80" width="23.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="4we-RK-SCQ" userLabel="Low Temp Label">
-                                                <rect key="frame" x="79.5" y="83" width="27" height="28"/>
+                                                <rect key="frame" x="81.5" y="80" width="23.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" name="Background"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="xIj-9Q-Ek2" firstAttribute="centerX" secondItem="j71-x4-hB4" secondAttribute="centerX" id="1Qo-UK-c15"/>
                                             <constraint firstItem="t2C-kM-hJX" firstAttribute="centerY" secondItem="C1Z-bJ-z0u" secondAttribute="centerY" id="BeL-o7-gn0"/>
@@ -215,16 +216,16 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-Sg-IgL" userLabel="First Favorite Button">
                                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="68.5"/>
-                                                                <state key="normal" image="montreal_fav"/>
+                                                                <state key="normal" image="montreal_fav_default"/>
                                                                 <connections>
-                                                                    <action selector="montrealPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqE-1P-ouh"/>
+                                                                    <action selector="firstFavoritePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqE-1P-ouh"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU9-he-vW8" userLabel="Second Favorite Button">
                                                                 <rect key="frame" x="0.0" y="68.5" width="183" height="68.5"/>
-                                                                <state key="normal" image="austin_fav"/>
+                                                                <state key="normal" image="austin_fav_default"/>
                                                                 <connections>
-                                                                    <action selector="austinPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFq-OT-1xV"/>
+                                                                    <action selector="secondFavoritePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFq-OT-1xV"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -234,16 +235,16 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-vE-rmd" userLabel="Third Favorite Button">
                                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="68.5"/>
-                                                                <state key="normal" image="paris_fav"/>
+                                                                <state key="normal" image="quito_fav_default"/>
                                                                 <connections>
-                                                                    <action selector="parisPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFu-vU-UBI"/>
+                                                                    <action selector="thirdFavoritePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFu-vU-UBI"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE2-OM-CFR" userLabel="Fourth Favorite Button">
                                                                 <rect key="frame" x="0.0" y="68.5" width="183" height="68.5"/>
-                                                                <state key="normal" image="nashville_fav"/>
+                                                                <state key="normal" image="catanzaro_fav_default"/>
                                                                 <connections>
-                                                                    <action selector="nashvillePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FMH-nw-PwN"/>
+                                                                    <action selector="fourthFavoritePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FMH-nw-PwN"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -251,7 +252,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" name="Background"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="AQu-QX-HzD" firstAttribute="leading" secondItem="Vme-7s-2ok" secondAttribute="leading" constant="24" id="MS5-Wr-Eh7"/>
                                             <constraint firstAttribute="height" constant="137" id="Nbh-Qh-RaJ"/>
@@ -261,6 +262,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="1lL-YX-yIT" firstAttribute="top" secondItem="J7a-Wo-wmg" secondAttribute="top" id="48J-IP-b5M"/>
                                     <constraint firstAttribute="trailing" secondItem="1lL-YX-yIT" secondAttribute="trailing" id="JEP-cF-Tfx"/>
@@ -280,6 +282,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jsT-R5-ORI"/>
                     <connections>
+                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="hTA-X5-tv2"/>
                         <outlet property="cityLabel" destination="URb-eh-jil" id="hjm-qF-y9x"/>
                         <outlet property="conditionImageView" destination="4iR-T4-0NW" id="WmO-Ix-mvX"/>
                         <outlet property="countryLabel" destination="xcu-I1-rAr" id="2rH-C8-Lph"/>
@@ -554,8 +557,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YZ7-9k-Vth">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="AlmostBlack"/>
-                        <color key="barTintColor" name="Background"/>
+                        <color key="barTintColor" red="1" green="0.97254901960784312" blue="0.96078431372549022" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="AlmostBlack"/>
+                            <color key="textShadowColor" name="AlmostBlack"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="0.0"/>
                             <color key="textColor" name="AlmostBlack"/>
@@ -574,10 +582,11 @@
     <resources>
         <image name="Search Bar" width="365" height="63"/>
         <image name="Search_footer" width="43" height="43"/>
-        <image name="austin_fav" width="174" height="63"/>
+        <image name="austin_fav_default" width="174" height="63"/>
         <image name="blue_hue" width="60" height="60"/>
+        <image name="catanzaro_fav_default" width="174" height="63"/>
         <image name="cloud.sun.bolt" catalog="system" width="128" height="128"/>
-        <image name="current_temp_halo_default" width="104" height="104"/>
+        <image name="current_temp_default" width="104" height="104"/>
         <image name="default_hue" width="60" height="60"/>
         <image name="hue_footer" width="45" height="36"/>
         <image name="hue_icon_black" width="37" height="29"/>
@@ -585,11 +594,10 @@
         <image name="location_icon_black" width="32" height="32"/>
         <image name="location_icon_default" width="32" height="32"/>
         <image name="location_icon_selected" width="32" height="32"/>
-        <image name="montreal_fav" width="174" height="63"/>
-        <image name="nashville_fav" width="174" height="63"/>
-        <image name="other_temp_halo_default" width="90" height="90"/>
-        <image name="paris_fav" width="174" height="63"/>
+        <image name="montreal_fav_default" width="174" height="63"/>
+        <image name="other_temp_default" width="90" height="90"/>
         <image name="pink_hue" width="60" height="60"/>
+        <image name="quito_fav_default" width="174" height="63"/>
         <image name="rainbow_icon_selected" width="37" height="29"/>
         <image name="sea" width="128" height="128"/>
         <image name="search_button" width="142" height="55"/>
