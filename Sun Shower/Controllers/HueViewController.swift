@@ -9,13 +9,13 @@ import UIKit
 
 protocol HueViewControllerDelegate {
     
-    func hueChosen(hueCode: Int)
+    func didChangeHue(hueCode: Int)
     
-    func didChangeDefaultButtonImage(button: UIButton, imageName: String)
+    func changeHueDefaultButtonImage(button: UIButton, imageName: String)
 
-    func didChangeHighlightedButtonImage(button: UIButton, imageName: String)
+    func changeHueHighlightedButtonImage(button: UIButton, imageName: String)
 
-    func didChangeUIImage(imageView: UIImage, imageName: String)
+//    func didChangeUIImage(imageView: UIImage, imageName: String)
     
 }
 
@@ -35,35 +35,35 @@ class HueViewController: UIViewController {
     
     @IBAction func defaultHueSelected(_ sender: UIButton) {
         
-        delegate?.hueChosen(hueCode: 0)
+        delegate?.didChangeHue(hueCode: 0)
         
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func pinkHueSelected(_ sender: UIButton) {
         
-        delegate?.hueChosen(hueCode: 1)
+        delegate?.didChangeHue(hueCode: 1)
         
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func blueHueSelected(_ sender: UIButton) {
         
-        delegate?.hueChosen(hueCode: 2)
+        delegate?.didChangeHue(hueCode: 2)
         
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func yellowHueSelected(_ sender: UIButton) {
         
-        delegate?.hueChosen(hueCode: 3)
+        delegate?.didChangeHue(hueCode: 3)
         
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func sunshowerHueSelected(_ sender: UIButton) {
         
-        delegate?.hueChosen(hueCode: 4)
+        delegate?.didChangeHue(hueCode: 4)
         
         navigationController?.popViewController(animated: true)
     }

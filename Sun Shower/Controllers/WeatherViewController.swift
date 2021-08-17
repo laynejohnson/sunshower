@@ -226,47 +226,37 @@ extension WeatherViewController: SearchViewControllerDelegate {
 
 extension WeatherViewController: HueViewControllerDelegate {
     
-    func didChangeDefaultButtonImage(button: UIButton, imageName: String) {
+    func changeHueDefaultButtonImage(button: UIButton, imageName: String) {
+
+        if let image = UIImage(named: imageName) {
+            button.setImage(image, for: .normal)
+        }
+    }
+    
+    func changeHueHighlightedButtonImage(button: UIButton, imageName: String) {
 
         if let image = UIImage(named: imageName) {
             button.setImage(image, for: .highlighted)
         }
     }
     
-    func didChangeHighlightedButtonImage(button: UIButton, imageName: String) {
-
-        if let image = UIImage(named: imageName) {
-            button.setImage(image, for: .highlighted)
-        }
-    }
-
-    func didChangeUIImage(imageView: UIImage, imageName: String) {
-        if let image = UIImage(named: imageName) {
-            imageView.image = UIImage(named: imageName)
-        }
-    }
-    
-    func hueChosen(hueCode: Int) {
+    func didChangeHue(hueCode: Int) {
         
         switch hueCode {
         case 1:
+            // Pink hue
             print("Cotton candy sky chosen")
             
             // CHANGE BUTTONS
             // Set location button image
-            if let locationButtonImage = UIImage(named: "location_icon_pink") {
-                locationButton.setImage(locationButtonImage, for: .highlighted)
-            }
+            changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_pink")
             
             // Set search button
-            if let searchButtonImage = UIImage(named: "search_icon_pink") {
-                searchButton.setImage(searchButtonImage, for: .highlighted)
-            }
+            changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_pink")
+    
             // Set hue button
-            if let hueButtonImage = UIImage(named: "hue_icon_pink") {
-                hueButton.setImage(hueButtonImage, for: .highlighted)
-            }
-            
+            changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_pink")
+         
             // CHANGE TEMP UI
         
             lowTempImage.image = UIImage(named: "other_temp_halo_pink")
@@ -274,71 +264,130 @@ extension WeatherViewController: HueViewControllerDelegate {
             highTempImage.image = UIImage(named: "other_temp_halo_pink")
         
             // CHANGE FAVORITES UI
-            // Change default state image
-            // Change highlighted state image
-            
-            if let firstFavNormal = UIImage(named: "montreal_fav_pink") {
-                firstFavoriteButton.setImage(firstFavNormal, for: .normal)
-            }
-            
-            if let firstFavHighlight = UIImage(named: "montreal_fav_pink_highlight") {
-                firstFavoriteButton.setImage(firstFavHighlight, for: .highlighted)
-            }
        
-//
-//            secondFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
-//            secondFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .highlighted)
-//
-//            thirdFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
-//            thirdFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .highlighted)
-//
-//            fourthFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .normal)
-//            fourthFavoriteButton.setImage(<#T##image: UIImage?##UIImage?#>, for: .highlighted)
+            changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_pink")
+            changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_pink_highlight")
+            
+            changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_pink")
+            changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_pink_highlight")
+            
+            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_pink")
+            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_pink_highlight")
+            
+            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_pink")
+            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_pink_highlight")
     
         case 2:
+            // Blue hue
             print("Fine day chosen")
             
+            // CHANGE BUTTONS
             // Set location button image
-            if let locationButtonImage = UIImage(named: "location_icon_blue") {
-                locationButton.setImage(locationButtonImage, for: .highlighted)
-            }
+            changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_blue")
             
             // Set search button
-            if let searcButtonImage = UIImage(named: "search_icon_blue") {
-                searchButton.setImage(searcButtonImage, for: .highlighted)
-            }
+            changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_blue")
+    
             // Set hue button
-            if let hueButtonImage = UIImage(named: "hue_icon_blue") {
-                hueButton.setImage(hueButtonImage, for: .highlighted)
-            }
+            changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_blue")
+         
+            // CHANGE TEMP UI
+        
+            lowTempImage.image = UIImage(named: "other_temp_halo_blue")
+            currentTempImage.image = UIImage(named: "current_temp_halo_blue")
+            highTempImage.image = UIImage(named: "other_temp_halo_blue")
+        
+            // CHANGE FAVORITES UI
+       
+            changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_blue")
+            changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_blue_highlight")
+            
+            changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_blue")
+            changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_blue_highlight")
+            
+            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_blue")
+            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_blue_highlight")
+            
+            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_blue")
+            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_blue_highlight")
+            
         case 3:
+            // Yellow hue
             print("Sunshine chosen")
             
+            // CHANGE BUTTONS
+            // Set location button image
+            changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_yellow")
+            
+            // Set search button
+            changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_yellow")
+    
+            // Set hue button
+            changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_yellow")
+         
+            // CHANGE TEMP UI
+        
+            lowTempImage.image = UIImage(named: "other_temp_halo_yellow")
+            currentTempImage.image = UIImage(named: "current_temp_halo_yellow")
+            highTempImage.image = UIImage(named: "other_temp_halo_yellow")
+        
+            // CHANGE FAVORITES UI
+       
+            changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_yellow")
+            changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_yellow_highlight")
+            
+            changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_yellow")
+            changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_yellow_highlight")
+            
+            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_yellow")
+            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_yellow_highlight")
+            
+            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_yellow")
+            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_yellow_highlight")
+            
         case 4:
+            // Sunshower hue
             print("Sunshower chosen")
+            
+            // CHANGE BUTTONS
+            // Set location button image
+            changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_sunshower")
+            
+            // Set search button
+            changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_sunshower")
+    
+            // Set hue button
+            changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_sunshower")
+         
+            // CHANGE TEMP UI
+        
+            lowTempImage.image = UIImage(named: "other_temp_halo_sunshower")
+            currentTempImage.image = UIImage(named: "current_temp_halo_sunshower")
+            highTempImage.image = UIImage(named: "other_temp_halo_sunshower")
+        
+            // CHANGE FAVORITES UI
+       
+            changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_sunshower")
+            changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_sunshower_highlight")
+            
+            changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_sunshower")
+            changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_sunshower_highlight")
+            
+            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_sunshower")
+            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_sunshower_highlight")
+            
+            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_sunshower")
+            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_sunshower_highlight")
             
         default:
             print("Hello, I am the default hue")
             
-            // Set location button image
-            if let locationButtonImage = UIImage(named: "location_icon_default") {
-                locationButton.setImage(locationButtonImage, for: .highlighted)
-            }
-            
-            // Set search button
-            if let searcButtonImage = UIImage(named: "search_icon_default") {
-                searchButton.setImage(searcButtonImage, for: .highlighted)
-            }
-            // Set hue button
-            if let hueButtonImage = UIImage(named: "hue_icon_default") {
-                hueButton.setImage(hueButtonImage, for: .highlighted)
-            }
         }
     }
     
 }
 
-// MARK: - String Extension
+// MARK: - String Struct Extension
 
 extension String {
     func capitalizingFirstLetter() -> String {
