@@ -14,14 +14,14 @@
  // ---------------------------------- //
  
  Features:
- // TODO: Language toggle
- // TODO: Units toggle (Tap to change unit)
+ // TODO: Refine color palette
+ // TODO: Units toggle (tap to change unit)
  // TODO: Add loading/fetching progress circle/animation (fetching weather)
- // Implement favorites feature (hard coded now)
- // Implement city entry validation e.g. city not found
- // Add highlighted default assets
- // Adjust text sizing for labels (auto)
- // Add temp indicators
+ // TODO: Implement favorites feature (hard coded now)
+ // TODO: Implement city entry validation e.g. city not found
+ // TODO: Adjust text sizing for labels (auto)
+ // TODO: Add temp indicators
+ // TODO: Change navigation header color in hue chooser before segue
  
  Refactor:
  // TODO:
@@ -255,7 +255,7 @@ extension WeatherViewController: HueViewControllerDelegate {
                 backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1)
                 
                 // Change navigation bar color
-                navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1)
+                navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9137254902, blue: 0.8745098039, alpha: 1)
                 
                 // CHANGE BUTTONS
                 // Set location button image
@@ -292,10 +292,10 @@ extension WeatherViewController: HueViewControllerDelegate {
             print("Fine day chosen")
             
             // Change background color
-            backgroundView.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9921568627, blue: 1, alpha: 1)
+            backgroundView.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9960784314, blue: 1, alpha: 1)
             
             // Change navigation bar color
-            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9607843137, green: 0.9921568627, blue: 1, alpha: 1)
+            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9764705882, green: 0.9960784314, blue: 1, alpha: 1)
             
             // CHANGE BUTTONS
             // Set location button image
@@ -374,6 +374,9 @@ extension WeatherViewController: HueViewControllerDelegate {
             // Change background color
             backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
             
+            // Change navigation bar color
+            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
+            
             // CHANGE BUTTONS
             // Set location button image
             changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_sunshower")
@@ -410,7 +413,7 @@ extension WeatherViewController: HueViewControllerDelegate {
             // Change background color
             backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9725490196, blue: 0.9607843137, alpha: 1)
             
-            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9725490196, blue: 0.9607843137, alpha: 1)
+            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9450980392, blue: 0.9215686275, alpha: 1)
             
             // CHANGE BUTTONS
             // Set location button image

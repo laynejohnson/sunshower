@@ -25,8 +25,14 @@ struct WeatherManager {
     
     func fetchWeather(cityName: String) {
         
-        let urlString = "\(weatherURL)&q=\(cityName)"
-        performRequest(with: urlString)
+        if cityName.contains(" ") {
+            let cityWithSpaces = cityName.replacingOccurrences(of: " ", with: "+")
+            let urlString = "\(weatherURL)&q=\(cityWithSpaces)"
+            performRequest(with: urlString)
+        } else {
+            let urlString = "\(weatherURL)&q=\(cityName)"
+            performRequest(with: urlString)
+        }
     }
     
     func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {

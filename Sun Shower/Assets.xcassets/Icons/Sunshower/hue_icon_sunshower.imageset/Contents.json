@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "hue_icon_sunshower.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

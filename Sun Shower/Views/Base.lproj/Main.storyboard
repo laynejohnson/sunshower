@@ -201,7 +201,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qm5-KY-sRV" userLabel="Current">
                                                         <rect key="frame" x="111.5" y="0.0" width="111" height="143.5"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="lpF-mo-0nt">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="lpF-mo-0nt">
                                                                 <rect key="frame" x="-64" y="24" width="239" height="95.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXv-l0-08e" userLabel="Current View Label">
@@ -212,17 +212,17 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTi-3R-cyw">
-                                                                        <rect key="frame" x="0.0" y="88.5" width="239" height="7"/>
+                                                                        <rect key="frame" x="0.0" y="68.5" width="239" height="27"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="current_temp_default" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-9Q-Ek2" userLabel="Current Temp Image">
-                                                                                <rect key="frame" x="63" y="-53" width="113" height="113"/>
+                                                                                <rect key="frame" x="63" y="-43" width="113" height="113"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="113" id="88t-Xf-tQK"/>
                                                                                     <constraint firstAttribute="width" constant="113" id="HnI-9l-7Ya"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="4fQ-HS-bV3" userLabel="Current Temp Label">
-                                                                                <rect key="frame" x="107" y="-53" width="25" height="113"/>
+                                                                                <rect key="frame" x="107" y="-43" width="25" height="113"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="26"/>
                                                                                 <color key="textColor" name="AlmostBlack"/>
                                                                                 <nil key="highlightedColor"/>
@@ -395,7 +395,7 @@
                             <constraint firstItem="J7a-Wo-wmg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oYb-br-SRz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jsT-R5-ORI"/>
+                    <navigationItem key="navigationItem" title="Weather" id="jsT-R5-ORI"/>
                     <connections>
                         <outlet property="backgroundView" destination="8bC-Xf-vdC" id="hTA-X5-tv2"/>
                         <outlet property="cityLabel" destination="URb-eh-jil" id="hjm-qF-y9x"/>
@@ -674,7 +674,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="AlmostBlack"/>
-                        <color key="barTintColor" red="1" green="0.97254901960784312" blue="0.96078431372549022" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="1" green="0.94509803921568625" blue="0.92156862745098034" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="AlmostBlack"/>
                             <color key="textShadowColor" name="AlmostBlack"/>
