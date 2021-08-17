@@ -1,2 +1,3 @@
-#  SunShower
+#  Sun Shower
 
+#### Minimalist weather.
