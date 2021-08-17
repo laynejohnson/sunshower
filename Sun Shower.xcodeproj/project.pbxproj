@@ -98,7 +98,6 @@
 				E8BF0D3A26C4010900F29361 /* App.swift */,
 				E8897E1C26AC88DF00992D6E /* Info.plist */,
 				E8897E1726AC88DF00992D6E /* Assets.xcassets */,
-				E8897E2526AC89D100992D6E /* Assets */,
 				E8897E2226AC899600992D6E /* Models */,
 				E8897E2326AC899D00992D6E /* Views */,
 				E8897E2426AC89A200992D6E /* Controllers */,
@@ -133,13 +132,6 @@
 				E8BF0D3826C3FBC000F29361 /* HueViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E8897E2526AC89D100992D6E /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

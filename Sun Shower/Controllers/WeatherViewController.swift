@@ -19,6 +19,8 @@
  // TODO: Add loading/fetching progress circle/animation (fetching weather)
  // Implement favorites feature (hard coded now)
  // Implement city entry validation e.g. city not found
+ // Add highlighted default assets
+ // Adjust text sizing for labels (auto)
  
  Refactor:
  // TODO:
@@ -379,6 +381,36 @@ extension WeatherViewController: HueViewControllerDelegate {
             
         default:
             print("Hello, I am the default hue")
+            
+            // CHANGE BUTTONS
+            // Set location button image
+            changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_default")
+            
+            // Set search button
+            changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_default")
+    
+            // Set hue button
+            changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_default")
+         
+            // CHANGE TEMP UI
+        
+            lowTempImage.image = UIImage(named: "other_temp_halo_default")
+            currentTempImage.image = UIImage(named: "current_temp_halo_default")
+            highTempImage.image = UIImage(named: "other_temp_halo_default")
+        
+            // CHANGE FAVORITES UI
+       
+            changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_default")
+            changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_default_highlight")
+            
+            changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_default")
+            changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_default_highlight")
+            
+            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_default")
+            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "paris_fav_default_highlight")
+            
+            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_default")
+            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "nashville_fav_default_hidefault
             
         }
     }

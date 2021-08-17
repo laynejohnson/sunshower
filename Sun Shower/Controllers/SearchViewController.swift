@@ -41,7 +41,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - UITextFieldDelegate Functions
     
-    // Function enables return key on keyboard.
+    // Function enables return key on keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Dismiss keyboard
         searchTextField.endEditing(true)
@@ -49,7 +49,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        // Validate entry.
+        // Validate entry
         if textField.text != "" {
             // Should end editing
             return true
@@ -61,7 +61,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        // Function runs when search field editing stops.
+        // Function runs when search field editing stops
         
         // Capture search field text
         if let searchCity = searchTextField.text {
