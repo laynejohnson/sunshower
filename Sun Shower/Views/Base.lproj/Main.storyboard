@@ -395,7 +395,9 @@
                             <constraint firstItem="J7a-Wo-wmg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oYb-br-SRz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Weather" id="jsT-R5-ORI"/>
+                    <navigationItem key="navigationItem" title="Sun Shower" id="jsT-R5-ORI">
+                        <barButtonItem key="backBarButtonItem" title=" " id="n9K-TP-8ec"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="backgroundView" destination="8bC-Xf-vdC" id="hTA-X5-tv2"/>
                         <outlet property="cityLabel" destination="URb-eh-jil" id="hjm-qF-y9x"/>
@@ -438,10 +440,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-pd-C4C" userLabel="Search Stack View">
-                                <rect key="frame" x="58" y="389" width="298" height="118"/>
+                                <rect key="frame" x="35" y="389" width="344" height="118"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search cities" textAlignment="natural" minimumFontSize="17" background="Search Bar" translatesAutoresizingMaskIntoConstraints="NO" id="oi6-0N-7ao" userLabel="Search Text Field">
-                                        <rect key="frame" x="0.0" y="0.0" width="298" height="51"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="51"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="cxz-YO-tHw"/>
@@ -449,9 +451,14 @@
                                         <color key="textColor" name="AlmostBlack"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES" textContentType="address-level2"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.81960784313725488" green="0.81960784313725488" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wd-0n-sOL" userLabel="Search Button">
-                                        <rect key="frame" x="156" y="63" width="142" height="55"/>
+                                        <rect key="frame" x="202" y="63" width="142" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="8jW-w9-Jb7"/>
                                             <constraint firstAttribute="height" constant="55" id="ac1-b8-yd2"/>
@@ -477,13 +484,15 @@
                         <constraints>
                             <constraint firstItem="gFZ-lt-llZ" firstAttribute="centerX" secondItem="hOx-PF-pF6" secondAttribute="centerX" id="4v6-gh-WVy"/>
                             <constraint firstItem="gFZ-lt-llZ" firstAttribute="bottom" secondItem="hOx-PF-pF6" secondAttribute="bottomMargin" constant="-75" id="7aW-O7-B1o"/>
-                            <constraint firstItem="Shf-pd-C4C" firstAttribute="leading" secondItem="hOx-PF-pF6" secondAttribute="leadingMargin" constant="38" id="BNO-H2-e8a"/>
+                            <constraint firstItem="Shf-pd-C4C" firstAttribute="leading" secondItem="hOx-PF-pF6" secondAttribute="leadingMargin" constant="15" id="BNO-H2-e8a"/>
                             <constraint firstItem="Shf-pd-C4C" firstAttribute="centerY" secondItem="hOx-PF-pF6" secondAttribute="centerY" id="Mnj-Tc-LCW"/>
                             <constraint firstItem="Shf-pd-C4C" firstAttribute="centerX" secondItem="hOx-PF-pF6" secondAttribute="centerX" id="Yrx-Hs-1yt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Shf-pd-C4C" secondAttribute="trailing" constant="38" id="og0-di-UVr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Shf-pd-C4C" secondAttribute="trailing" constant="15" id="og0-di-UVr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="X4s-Tr-lvD"/>
+                    <navigationItem key="navigationItem" title="Search" id="X4s-Tr-lvD">
+                        <barButtonItem key="backBarButtonItem" title=" " id="e0E-N9-Imy"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchButton" destination="4wd-0n-sOL" id="86v-fg-Xqi"/>
                         <outlet property="searchTextField" destination="oi6-0N-7ao" id="Twp-lB-gxJ"/>
@@ -543,8 +552,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FB-CT-ec9" userLabel="Middle Left View">
                                                 <rect key="frame" x="0.0" y="0.0" width="102" height="54"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-gU-Nvs" userLabel="Pink Hue Button">
-                                                        <rect key="frame" x="0.0" y="5" width="45" height="44"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-gU-Nvs" userLabel="Pink Hue Button">
+                                                        <rect key="frame" x="0.0" y="2" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="bOZ-GS-J9x"/>
                                                             <constraint firstAttribute="height" constant="50" id="s8D-GS-ZjS"/>
@@ -556,6 +565,10 @@
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="MZc-gU-Nvs" firstAttribute="leading" secondItem="7FB-CT-ec9" secondAttribute="leading" id="Gbf-SD-P1O"/>
+                                                    <constraint firstItem="MZc-gU-Nvs" firstAttribute="centerY" secondItem="7FB-CT-ec9" secondAttribute="centerY" id="mdy-vc-KqM"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4G-xr-ea9" userLabel="Middle Right View">
                                                 <rect key="frame" x="102" y="0.0" width="102" height="54"/>
