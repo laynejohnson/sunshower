@@ -532,6 +532,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="xmC-YN-b21"/>
                                                         </constraints>
                                                         <state key="normal" image="blue_hue"/>
+                                                        <state key="selected" image="blue_hue_selected"/>
                                                         <connections>
                                                             <action selector="blueHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="Hp5-cb-wDS"/>
                                                         </connections>
@@ -559,6 +560,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="s8D-GS-ZjS"/>
                                                         </constraints>
                                                         <state key="normal" image="pink_hue"/>
+                                                        <state key="selected" image="pink_hue_selected"/>
                                                         <connections>
                                                             <action selector="pinkHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="fn5-mz-9co"/>
                                                         </connections>
@@ -578,6 +580,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="sunshine_hue"/>
+                                                        <state key="selected" image="yellow_hue_selected"/>
                                                         <connections>
                                                             <action selector="yellowHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="nJb-mQ-ujK"/>
                                                         </connections>
@@ -603,6 +606,8 @@
                                                             <constraint firstAttribute="width" constant="50" id="uSe-xY-vp1"/>
                                                         </constraints>
                                                         <state key="normal" image="default_hue"/>
+                                                        <state key="selected" image="default_hue_selected"/>
+                                                        <state key="highlighted" image="default_hue_selected"/>
                                                         <connections>
                                                             <action selector="defaultHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="RY2-K1-rMF"/>
                                                         </connections>
@@ -624,6 +629,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="U5q-CE-C16"/>
                                                         </constraints>
                                                         <state key="normal" image="sunshower_hue"/>
+                                                        <state key="selected" image="sunshower_hue_selected"/>
                                                         <connections>
                                                             <action selector="sunshowerHueSelected:" destination="pf6-pC-Vg5" eventType="touchUpInside" id="UpB-OU-6hX"/>
                                                         </connections>
@@ -712,10 +718,12 @@
         <image name="Search_footer" width="43" height="43"/>
         <image name="austin_fav_default" width="174" height="63"/>
         <image name="blue_hue" width="60" height="60"/>
+        <image name="blue_hue_selected" width="81" height="81"/>
         <image name="catanzaro_fav_default" width="174" height="63"/>
         <image name="cloud.sun.bolt" catalog="system" width="128" height="128"/>
         <image name="current_temp_default" width="104" height="104"/>
         <image name="default_hue" width="60" height="60"/>
+        <image name="default_hue_selected" width="81" height="81"/>
         <image name="hue_footer" width="45" height="36"/>
         <image name="hue_icon_black" width="37" height="29"/>
         <image name="hue_icon_default" width="37" height="29"/>
@@ -725,6 +733,7 @@
         <image name="montreal_fav_default" width="174" height="63"/>
         <image name="other_temp_default" width="90" height="90"/>
         <image name="pink_hue" width="60" height="60"/>
+        <image name="pink_hue_selected" width="81" height="81"/>
         <image name="quito_fav_default" width="174" height="63"/>
         <image name="rainbow_icon_selected" width="37" height="29"/>
         <image name="sea" width="128" height="128"/>
@@ -733,6 +742,8 @@
         <image name="search_icon_selected" width="34" height="34"/>
         <image name="sunshine_hue" width="60" height="60"/>
         <image name="sunshower_hue" width="60" height="60"/>
+        <image name="sunshower_hue_selected" width="81" height="81"/>
+        <image name="yellow_hue_selected" width="81" height="81"/>
         <namedColor name="AlmostBlack">
             <color red="0.18000000715255737" green="0.18000000715255737" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

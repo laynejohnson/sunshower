@@ -20,7 +20,6 @@
  // TODO: Implement favorites feature (hard coded now)
  // TODO: Implement city entry validation e.g. city not found
  // TODO: Adjust text sizing for labels (auto)
- // TODO: Add temp indicators
  // TODO: Change navigation header color in hue chooser before segue
  
  Refactor:
@@ -231,6 +230,7 @@ extension WeatherViewController: SearchViewControllerDelegate {
 // MARK: - HueViewControllerDelegate
 
 extension WeatherViewController: HueViewControllerDelegate {
+    
     func transformHue(hue: String, backgroundColor: UIColor, barTint: UIColor) {
         
         DispatchQueue.main.async { [self] in
@@ -243,13 +243,13 @@ extension WeatherViewController: HueViewControllerDelegate {
         
         // CHANGE BUTTONS
         // Set location button image
-        changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_\(hue)")
+        changeHighlightedButtonImage(button: locationButton, imageName: "location_icon_\(hue)")
         
         // Set search button
-        changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_\(hue)")
+        changeHighlightedButtonImage(button: searchButton, imageName: "search_icon_\(hue)")
         
         // Set hue button
-        changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_\(hue)")
+        changeHighlightedButtonImage(button: hueButton, imageName: "hue_icon_\(hue)")
         
         // CHANGE TEMP UI
         
@@ -259,28 +259,27 @@ extension WeatherViewController: HueViewControllerDelegate {
         
         // CHANGE FAVORITES UI
         
-        changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)")
-        changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)_highlight")
+        changeDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)")
+        changeHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)_highlight")
         
-        changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_\(hue)")
-        changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_\(hue)_highlight")
+        changeDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_\(hue)")
+        changeHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_\(hue)_highlight")
         
-        changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)")
-        changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)_highlight")
+        changeDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)")
+        changeHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)_highlight")
         
-        changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)")
-        changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)_highlight")
+        changeDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)")
+        changeHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)_highlight")
     }
 }
-    
-    func changeHueDefaultButtonImage(button: UIButton, imageName: String) {
+    func changeDefaultButtonImage(button: UIButton, imageName: String) {
         
         if let image = UIImage(named: imageName) {
             button.setImage(image, for: .normal)
         }
     }
     
-    func changeHueHighlightedButtonImage(button: UIButton, imageName: String) {
+    func changeHighlightedButtonImage(button: UIButton, imageName: String) {
         
         if let image = UIImage(named: imageName) {
             button.setImage(image, for: .highlighted)
