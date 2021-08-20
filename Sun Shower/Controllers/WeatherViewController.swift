@@ -192,6 +192,10 @@ extension WeatherViewController: CLLocationManagerDelegate {
         
         print("Location button pressed")
         
+        UIView.animate(withDuration: 0.6) {
+            self.locationButton.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        }
+        
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.requestLocation()
@@ -227,6 +231,47 @@ extension WeatherViewController: SearchViewControllerDelegate {
 // MARK: - HueViewControllerDelegate
 
 extension WeatherViewController: HueViewControllerDelegate {
+    func transformHue(hue: String, backgroundColor: UIColor, barTint: UIColor) {
+        
+        DispatchQueue.main.async { [self] in
+            
+        // Change background color
+        backgroundView.backgroundColor = backgroundColor
+        
+        // Change navigation bar color
+        navigationController?.navigationBar.barTintColor = backgroundColor
+        
+        // CHANGE BUTTONS
+        // Set location button image
+        changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_\(hue)")
+        
+        // Set search button
+        changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_\(hue)")
+        
+        // Set hue button
+        changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_\(hue)")
+        
+        // CHANGE TEMP UI
+        
+        lowTempImage.image = UIImage(named: "other_temp_\(hue)")
+        currentTempImage.image = UIImage(named: "current_temp_\(hue)")
+        highTempImage.image = UIImage(named: "other_temp_\(hue)")
+        
+        // CHANGE FAVORITES UI
+        
+        changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)")
+        changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)_highlight")
+        
+        changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_\(hue)")
+        changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_\(hue)_highlight")
+        
+        changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)")
+        changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)_highlight")
+        
+        changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)")
+        changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)_highlight")
+    }
+}
     
     func changeHueDefaultButtonImage(button: UIButton, imageName: String) {
         
@@ -239,211 +284,6 @@ extension WeatherViewController: HueViewControllerDelegate {
         
         if let image = UIImage(named: imageName) {
             button.setImage(image, for: .highlighted)
-        }
-    }
-    
-    func didChangeHue(hueCode: Int) {
-        
-        switch hueCode {
-        case 1:
-            // Pink hue
-            print("Cotton candy sky chosen")
-            
-            DispatchQueue.main.async { [self] in
-                
-                // Change background color
-                backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1)
-                
-                // Change navigation bar color
-                navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9137254902, blue: 0.8745098039, alpha: 1)
-                
-                // CHANGE BUTTONS
-                // Set location button image
-                changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_pink")
-                
-                // Set search button
-                changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_pink")
-                
-                // Set hue button
-                changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_pink")
-                
-                // CHANGE TEMP UI
-                
-                lowTempImage.image = UIImage(named: "other_temp_pink")
-                currentTempImage.image = UIImage(named: "current_temp_pink")
-                highTempImage.image = UIImage(named: "other_temp_pink")
-                
-                // CHANGE FAVORITES UI
-                
-                changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_pink")
-                changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_pink_highlight")
-                
-                changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_pink")
-                changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_pink_highlight")
-                
-                changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_pink")
-                changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_pink_highlight")
-                
-                changeHueDefaultButtonImage(button: self.fourthFavoriteButton, imageName: "catanzaro_fav_pink")
-                self.changeHueHighlightedButtonImage(button: self.fourthFavoriteButton, imageName: "catanzaro_fav_pink_highlight")
-            }
-        case 2:
-            // Blue hue
-            print("Fine day chosen")
-            
-            // Change background color
-            backgroundView.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9960784314, blue: 1, alpha: 1)
-            
-            // Change navigation bar color
-            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9764705882, green: 0.9960784314, blue: 1, alpha: 1)
-            
-            // CHANGE BUTTONS
-            // Set location button image
-            changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_blue")
-            
-            // Set search button
-            changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_blue")
-            
-            // Set hue button
-            changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_blue")
-            
-            // CHANGE TEMP UI
-            
-            lowTempImage.image = UIImage(named: "other_temp_blue")
-            currentTempImage.image = UIImage(named: "current_temp_blue")
-            highTempImage.image = UIImage(named: "other_temp_blue")
-            
-            // CHANGE FAVORITES UI
-            
-            changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_blue")
-            changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_blue_highlight")
-            
-            changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_blue")
-            changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_blue_highlight")
-            
-            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_blue")
-            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_blue_highlight")
-            
-            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_blue")
-            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_blue_highlight")
-            
-        case 3:
-            // Yellow hue
-            print("Sunshine chosen")
-            
-            // Change background color
-            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
-            
-            // Change navigation bar color
-            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
-            
-            // CHANGE BUTTONS
-            // Set location button image
-            changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_yellow")
-            
-            // Set search button
-            changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_yellow")
-            
-            // Set hue button
-            changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_yellow")
-            
-            // CHANGE TEMP UI
-            
-            lowTempImage.image = UIImage(named: "other_temp_yellow")
-            currentTempImage.image = UIImage(named: "current_temp_yellow")
-            highTempImage.image = UIImage(named: "other_temp_yellow")
-            
-            // CHANGE FAVORITES UI
-            
-            changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_yellow")
-            changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_yellow_highlight")
-            
-            changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_yellow")
-            changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_yellow_highlight")
-            
-            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_yellow")
-            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_yellow_highlight")
-            
-            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_yellow")
-            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_yellow_highlight")
-            
-        case 4:
-            // Sunshower hue
-            print("Sunshower chosen")
-            
-            // Change background color
-            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
-            
-            // Change navigation bar color
-            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
-            
-            // CHANGE BUTTONS
-            // Set location button image
-            changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_sunshower")
-            
-            // Set search button
-            changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_sunshower")
-            
-            // Set hue button
-            changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_sunshower")
-            
-            // CHANGE TEMP UI
-            
-            lowTempImage.image = UIImage(named: "other_temp_sunshower")
-            currentTempImage.image = UIImage(named: "current_temp_sunshower")
-            highTempImage.image = UIImage(named: "other_temp_sunshower")
-            
-            // CHANGE FAVORITES UI
-            
-            changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_sunshower")
-            changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_sunshower_highlight")
-            
-            changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_sunshower")
-            changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_sunshower_highlight")
-            
-            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_sunshower")
-            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_sunshower_highlight")
-            
-            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_sunshower")
-            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_sunshower_highlight")
-            
-        default:
-            print("Hello, I am the default hue")
-            
-            // Change background color
-            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.9725490196, blue: 0.9607843137, alpha: 1)
-            
-            navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9450980392, blue: 0.9215686275, alpha: 1)
-            
-            // CHANGE BUTTONS
-            // Set location button image
-            changeHueHighlightedButtonImage(button: locationButton, imageName: "location_icon_default")
-            
-            // Set search button
-            changeHueHighlightedButtonImage(button: searchButton, imageName: "search_icon_default")
-            
-            // Set hue button
-            changeHueHighlightedButtonImage(button: hueButton, imageName: "hue_icon_default")
-            
-            // CHANGE TEMP UI
-            
-            lowTempImage.image = UIImage(named: "other_temp_default")
-            currentTempImage.image = UIImage(named: "current_temp_default")
-            highTempImage.image = UIImage(named: "other_temp_default")
-            
-            // CHANGE FAVORITES UI
-            
-            changeHueDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_default")
-            changeHueHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_default_highlight")
-            
-            changeHueDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_default")
-            changeHueHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_default_highlight")
-            
-            changeHueDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_default")
-            changeHueHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_default_highlight")
-            
-            changeHueDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_default")
-            changeHueHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_default_hidefault")
         }
     }
 }
