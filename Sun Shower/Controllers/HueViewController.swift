@@ -47,6 +47,8 @@ class HueViewController: UIViewController {
     
     @IBAction func pinkHueSelected(_ sender: UIButton) {
         
+        sender.isSelected = true
+        
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9137254902, blue: 0.8745098039, alpha: 1)
         
         delegate?.transformHue(hue: "pink", backgroundColor: #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1), barTint: #colorLiteral(red: 1, green: 0.9137254902, blue: 0.8745098039, alpha: 1) )
@@ -54,6 +56,8 @@ class HueViewController: UIViewController {
     }
     
     @IBAction func blueHueSelected(_ sender: UIButton) {
+        
+        sender.isSelected = true
         
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9764705882, green: 0.9960784314, blue: 1, alpha: 1)
         
@@ -63,6 +67,8 @@ class HueViewController: UIViewController {
     
     @IBAction func yellowHueSelected(_ sender: UIButton) {
         
+        sender.isSelected = true
+        
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
         
         delegate?.transformHue(hue: "yellow", backgroundColor: #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1), barTint: #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1) )
@@ -70,6 +76,8 @@ class HueViewController: UIViewController {
     }
     
     @IBAction func sunshowerHueSelected(_ sender: UIButton) {
+        
+        sender.isSelected = true
         
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
         
