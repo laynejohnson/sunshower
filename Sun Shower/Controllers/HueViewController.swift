@@ -13,10 +13,6 @@ protocol HueViewControllerDelegate {
     
     func transformHue(hue: String, backgroundColor: UIColor, barTint: UIColor)
     
-    func changeDefaultButtonImage(button: UIButton, imageName: String)
-    
-    func changeHighlightedButtonImage(button: UIButton, imageName: String)
-    
 }
 
 class HueViewController: UIViewController {

@@ -5,19 +5,19 @@
 //  Created by Layne Johnson on 7/24/21.
 //  Copyright © 2021. All rights reserved.
 
- // MARK: - Development List:
- 
- // ---------------------------------- //
- // - - - - - - - - DEV - - - - - - -  //
- // ---------------------------------- //
+// MARK: - Development List:
 
- // TODO: Refine color palette
- // TODO: Units toggle (tap to change unit)
- // TODO: Add loading/fetching progress circle/animation (fetching weather)
- // TODO: Implement favorites feature (hard coded now)
- // TODO: Implement city entry validation e.g. city not found
- // TODO: Adjust text sizing for labels (auto)
- 
+// ---------------------------------- //
+// - - - - - - - - DEV - - - - - - -  //
+// ---------------------------------- //
+
+// TODO: Refine color palette
+// TODO: Units toggle (tap to change unit)
+// TODO: Add loading/fetching progress circle/animation (fetching weather)
+// TODO: Implement favorites feature
+// TODO: Implement city entry validation (e.g. city not found)
+// TODO: Adjust text sizing for labels (auto)
+
 
 import UIKit
 import CoreLocation
@@ -134,6 +134,20 @@ class WeatherViewController: UIViewController {
 
 // MARK: - UI Functions
 
+func changeDefaultButtonImage(button: UIButton, imageName: String) {
+    
+    if let image = UIImage(named: imageName) {
+        button.setImage(image, for: .normal)
+    }
+}
+
+func changeHighlightedButtonImage(button: UIButton, imageName: String) {
+    
+    if let image = UIImage(named: imageName) {
+        button.setImage(image, for: .highlighted)
+    }
+}
+
 // Get country name
 func getCountryName(countryCode: String) -> String? {
     let current = Locale(identifier: "en_US")
@@ -227,54 +241,41 @@ extension WeatherViewController: HueViewControllerDelegate {
         
         DispatchQueue.main.async { [self] in
             
-        // Change background color
-        backgroundView.backgroundColor = backgroundColor
-        
-        // Change navigation bar color
-        navigationController?.navigationBar.barTintColor = backgroundColor
-        
-        // CHANGE BUTTONS
-        // Set location button image
-        changeHighlightedButtonImage(button: locationButton, imageName: "location_icon_\(hue)")
-        
-        // Set search button
-        changeHighlightedButtonImage(button: searchButton, imageName: "search_icon_\(hue)")
-        
-        // Set hue button
-        changeHighlightedButtonImage(button: hueButton, imageName: "hue_icon_\(hue)")
-        
-        // CHANGE TEMP UI
-        
-        lowTempImage.image = UIImage(named: "other_temp_\(hue)")
-        currentTempImage.image = UIImage(named: "current_temp_\(hue)")
-        highTempImage.image = UIImage(named: "other_temp_\(hue)")
-        
-        // CHANGE FAVORITES UI
-        
-        changeDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)")
-        changeHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)_highlight")
-        
-        changeDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_\(hue)")
-        changeHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_\(hue)_highlight")
-        
-        changeDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)")
-        changeHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)_highlight")
-        
-        changeDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)")
-        changeHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)_highlight")
-    }
-}
-    func changeDefaultButtonImage(button: UIButton, imageName: String) {
-        
-        if let image = UIImage(named: imageName) {
-            button.setImage(image, for: .normal)
-        }
-    }
-    
-    func changeHighlightedButtonImage(button: UIButton, imageName: String) {
-        
-        if let image = UIImage(named: imageName) {
-            button.setImage(image, for: .highlighted)
+            // Change background color
+            backgroundView.backgroundColor = backgroundColor
+            
+            // Change navigation bar color
+            navigationController?.navigationBar.barTintColor = backgroundColor
+            
+            // CHANGE BUTTONS
+            // Set location button image
+            changeHighlightedButtonImage(button: locationButton, imageName: "location_icon_\(hue)")
+            
+            // Set search button
+            changeHighlightedButtonImage(button: searchButton, imageName: "search_icon_\(hue)")
+            
+            // Set hue button
+            changeHighlightedButtonImage(button: hueButton, imageName: "hue_icon_\(hue)")
+            
+            // CHANGE TEMP UI
+            
+            lowTempImage.image = UIImage(named: "other_temp_\(hue)")
+            currentTempImage.image = UIImage(named: "current_temp_\(hue)")
+            highTempImage.image = UIImage(named: "other_temp_\(hue)")
+            
+            // CHANGE FAVORITES UI
+            
+            changeDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)")
+            changeHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)_highlight")
+            
+            changeDefaultButtonImage(button: secondFavoriteButton, imageName: "austin_fav_\(hue)")
+            changeHighlightedButtonImage(button: secondFavoriteButton, imageName: "austin_fav_\(hue)_highlight")
+            
+            changeDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)")
+            changeHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)_highlight")
+            
+            changeDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)")
+            changeHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)_highlight")
         }
     }
 }
