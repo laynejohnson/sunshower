@@ -66,9 +66,9 @@ struct WeatherManager {
                         // Send data to delegate
                         self.delegate?.didUpdateWeather(self, weather: weather)
                     }
-                    //                     View data in console:
-                    let dataString = String(data: safeData, encoding:.utf8)
-                    print(dataString!)
+//                    // View data in console:
+//                    let dataString = String(data: safeData, encoding:.utf8)
+//                    print(dataString!)
                 }
             }
             // Start task

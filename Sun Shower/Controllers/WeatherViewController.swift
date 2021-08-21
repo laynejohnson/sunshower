@@ -17,7 +17,8 @@
 // TODO: Implement favorites feature
 // TODO: Implement city entry validation (e.g. city not found)
 // TODO: Adjust text sizing for labels (auto)
-
+// TODO: Fix hue button toggle; deselect all when selected
+// TODO: Add new assets w/corner rounding
 
 import UIKit
 import CoreLocation
@@ -118,7 +119,8 @@ class WeatherViewController: UIViewController {
         weatherManager.fetchWeather(cityName: "Catanzaro")
     }
     
-    // MARK: - Prepare for Segue
+// MARK: - Prepare for Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.destination is SearchViewController {
@@ -181,7 +183,6 @@ extension WeatherViewController: WeatherManagerDelegate {
             self.highTemperatureLabel.text = weather.highTemperatureString
             
         }
-        
     }
     
     func didFailWithError(error: Error) {
@@ -196,11 +197,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
     @IBAction func locationButtonPressed(_ sender: UIButton) {
         
         print("Location button pressed")
-        
-        UIView.animate(withDuration: 0.6) {
-            self.locationButton.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-        }
-        
+
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.requestLocation()
@@ -237,7 +234,7 @@ extension WeatherViewController: SearchViewControllerDelegate {
 
 extension WeatherViewController: HueViewControllerDelegate {
     
-    func transformHue(hue: String, backgroundColor: UIColor, barTint: UIColor) {
+    func didChangeHue(hue: String, backgroundColor: UIColor, barTint: UIColor) {
         
         DispatchQueue.main.async { [self] in
             
