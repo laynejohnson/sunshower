@@ -5,27 +5,19 @@
 //  Created by Layne Johnson on 7/24/21.
 //  Copyright © 2021. All rights reserved.
 
-/*
- 
  // MARK: - Development List:
  
  // ---------------------------------- //
  // - - - - - - - - DEV - - - - - - -  //
  // ---------------------------------- //
- 
- Features:
+
  // TODO: Refine color palette
  // TODO: Units toggle (tap to change unit)
  // TODO: Add loading/fetching progress circle/animation (fetching weather)
  // TODO: Implement favorites feature (hard coded now)
  // TODO: Implement city entry validation e.g. city not found
  // TODO: Adjust text sizing for labels (auto)
- // TODO: Change navigation header color in hue chooser before segue
  
- Refactor:
- // TODO:
- 
- */
 
 import UIKit
 import CoreLocation

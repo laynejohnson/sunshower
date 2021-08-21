@@ -7,6 +7,8 @@
 
 import UIKit
 
+// TODO: Deselect all buttons when one selector selected
+
 protocol HueViewControllerDelegate {
     
     func transformHue(hue: String, backgroundColor: UIColor, barTint: UIColor)
