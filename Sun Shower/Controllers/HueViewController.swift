@@ -27,13 +27,15 @@ class HueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9450980392, blue: 0.9215686275, alpha: 1)
     }
     
     @IBAction func defaultHueSelected(_ sender: UIButton) {
         
         sender.isSelected = true
         
-        let barTint = #colorLiteral(red: 1, green: 0.9725490196, blue: 0.9607843137, alpha: 1)
+        let barTint = #colorLiteral(red: 1, green: 0.9450980392, blue: 0.9215686275, alpha: 1)
         let backgroundColor = #colorLiteral(red: 1, green: 0.9725490196, blue: 0.9607843137, alpha: 1)
         
         navigationController?.navigationBar.barTintColor = barTint
@@ -49,10 +51,8 @@ class HueViewController: UIViewController {
         
         sender.isSelected = true
         
-        let barTint = #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1)
+        let barTint = #colorLiteral(red: 1, green: 0.9450980392, blue: 0.9215686275, alpha: 1)
         let backgroundColor = #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1)
-        
-        navigationController?.navigationBar.barTintColor = barTint
         
         delegate?.didChangeHue(hue: "pink", backgroundColor: backgroundColor, barTint: barTint)
         
@@ -67,8 +67,6 @@ class HueViewController: UIViewController {
         let barTint = #colorLiteral(red: 0.9568627451, green: 0.9607843137, blue: 0.9803921569, alpha: 1)
         let backgroundColor = #colorLiteral(red: 0.9568627451, green: 0.9607843137, blue: 0.9803921569, alpha: 1)
         
-        navigationController?.navigationBar.barTintColor = barTint
-        
         delegate?.didChangeHue(hue: "blue", backgroundColor: backgroundColor, barTint: barTint)
         
         navigationController?.popToRootViewController(animated: true)
@@ -82,8 +80,6 @@ class HueViewController: UIViewController {
         let barTint = #colorLiteral(red: 1, green: 0.9921568627, blue: 0.9450980392, alpha: 1)
         let backgroundColor = #colorLiteral(red: 1, green: 0.9921568627, blue: 0.9450980392, alpha: 1)
         
-        navigationController?.navigationBar.barTintColor = barTint
-        
         delegate?.didChangeHue(hue: "yellow", backgroundColor: backgroundColor, barTint: barTint)
         
         navigationController?.popToRootViewController(animated: true)
@@ -96,8 +92,6 @@ class HueViewController: UIViewController {
         
         let barTint = #colorLiteral(red: 1, green: 0.9803921569, blue: 0.9725490196, alpha: 1)
         let backgroundColor = #colorLiteral(red: 1, green: 0.9803921569, blue: 0.9725490196, alpha: 1)
-        
-        navigationController?.navigationBar.barTintColor = barTint
         
         delegate?.didChangeHue(hue: "sunshower", backgroundColor: backgroundColor, barTint: barTint)
         

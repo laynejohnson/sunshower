@@ -11,14 +11,17 @@
 // - - - - - - - - DEV - - - - - - -  //
 // ---------------------------------- //
 
-// TODO: Refine color palette
+// DEV TODO:
 // TODO: Units toggle (tap to change unit)
 // TODO: Add loading/fetching progress circle/animation (fetching weather)
 // TODO: Implement favorites feature
 // TODO: Implement city entry validation (e.g. city not found)
-// TODO: Adjust text sizing for labels (auto)
+// TODO: Refactor with HueModel
+
+// UI TODO:
 // TODO: Fix hue button toggle; deselect all when selected
-// TODO: Add new assets w/corner rounding
+// TODO: Align hue buttons/temp images along arc
+// TODO: Refine colors
 
 import UIKit
 import CoreLocation
@@ -96,6 +99,7 @@ class WeatherViewController: UIViewController {
         
         // If gesture blocks other touches
         // tapGesture.cancelsTouchesInView = false
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -119,7 +123,7 @@ class WeatherViewController: UIViewController {
         weatherManager.fetchWeather(cityName: "Palermo")
     }
     
-// MARK: - Prepare for Segue
+    // MARK: - Prepare for Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -197,7 +201,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
     @IBAction func locationButtonPressed(_ sender: UIButton) {
         
         print("Location button pressed")
-
+        
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.requestLocation()
@@ -242,7 +246,7 @@ extension WeatherViewController: HueViewControllerDelegate {
             backgroundView.backgroundColor = backgroundColor
             
             // Change navigation bar color
-            navigationController?.navigationBar.barTintColor = backgroundColor
+            navigationController?.navigationBar.barTintColor = barTint
             
             // CHANGE BUTTONS
             // Set location button image
