@@ -33,9 +33,12 @@ class HueViewController: UIViewController {
         
         sender.isSelected = true
         
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
+        let barTint = #colorLiteral(red: 1, green: 0.9725490196, blue: 0.9607843137, alpha: 1)
+        let backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
-        delegate?.didChangeHue(hue: "default", backgroundColor: #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1), barTint: #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1) )
+        navigationController?.navigationBar.barTintColor = barTint
+        
+        delegate?.didChangeHue(hue: "default", backgroundColor: backgroundColor, barTint: barTint)
         
     }
     
@@ -43,9 +46,12 @@ class HueViewController: UIViewController {
         
         sender.isSelected = true
         
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9137254902, blue: 0.8745098039, alpha: 1)
+        let barTint = #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1)
+        let backgroundColor = #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1)
         
-        delegate?.didChangeHue(hue: "pink", backgroundColor: #colorLiteral(red: 1, green: 0.9647058824, blue: 0.9490196078, alpha: 1), barTint: #colorLiteral(red: 1, green: 0.9137254902, blue: 0.8745098039, alpha: 1) )
+        navigationController?.navigationBar.barTintColor = barTint
+        
+        delegate?.didChangeHue(hue: "pink", backgroundColor: backgroundColor, barTint: barTint)
         
     }
     
@@ -53,9 +59,12 @@ class HueViewController: UIViewController {
         
         sender.isSelected = true
         
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9764705882, green: 0.9960784314, blue: 1, alpha: 1)
+        let barTint = #colorLiteral(red: 0.9568627451, green: 0.9607843137, blue: 0.9803921569, alpha: 1)
+        let backgroundColor = #colorLiteral(red: 0.9568627451, green: 0.9607843137, blue: 0.9803921569, alpha: 1)
         
-        delegate?.didChangeHue(hue: "blue", backgroundColor: #colorLiteral(red: 0.9764705882, green: 0.9960784314, blue: 1, alpha: 1), barTint: #colorLiteral(red: 0.9764705882, green: 0.9960784314, blue: 1, alpha: 1) )
+        navigationController?.navigationBar.barTintColor = barTint
+        
+        delegate?.didChangeHue(hue: "blue", backgroundColor: backgroundColor, barTint: barTint)
         
     }
     
@@ -63,9 +72,12 @@ class HueViewController: UIViewController {
         
         sender.isSelected = true
         
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
+        let barTint = #colorLiteral(red: 1, green: 0.9921568627, blue: 0.9450980392, alpha: 1)
+        let backgroundColor = #colorLiteral(red: 1, green: 0.9921568627, blue: 0.9450980392, alpha: 1)
         
-        delegate?.didChangeHue(hue: "yellow", backgroundColor: #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1), barTint: #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1) )
+        navigationController?.navigationBar.barTintColor = barTint
+        
+        delegate?.didChangeHue(hue: "yellow", backgroundColor: backgroundColor, barTint: barTint)
         
     }
     
@@ -73,9 +85,12 @@ class HueViewController: UIViewController {
         
         sender.isSelected = true
         
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1)
+        let barTint = #colorLiteral(red: 1, green: 0.9803921569, blue: 0.9725490196, alpha: 1)
+        let backgroundColor = #colorLiteral(red: 1, green: 0.9803921569, blue: 0.9725490196, alpha: 1)
         
-        delegate?.didChangeHue(hue: "sunshower", backgroundColor: #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1), barTint: #colorLiteral(red: 1, green: 0.9607843137, blue: 0.9450980392, alpha: 1) )
+        navigationController?.navigationBar.barTintColor = barTint
+        
+        delegate?.didChangeHue(hue: "sunshower", backgroundColor: backgroundColor, barTint: barTint)
         
     }
 }

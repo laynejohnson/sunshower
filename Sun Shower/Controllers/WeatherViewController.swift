@@ -116,7 +116,7 @@ class WeatherViewController: UIViewController {
     }
     
     @IBAction func fourthFavoritePressed(_ sender: UIButton) {
-        weatherManager.fetchWeather(cityName: "Catanzaro")
+        weatherManager.fetchWeather(cityName: "Palermo")
     }
     
 // MARK: - Prepare for Segue
@@ -271,8 +271,8 @@ extension WeatherViewController: HueViewControllerDelegate {
             changeDefaultButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)")
             changeHighlightedButtonImage(button: thirdFavoriteButton, imageName: "quito_fav_\(hue)_highlight")
             
-            changeDefaultButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)")
-            changeHighlightedButtonImage(button: fourthFavoriteButton, imageName: "catanzaro_fav_\(hue)_highlight")
+            changeDefaultButtonImage(button: fourthFavoriteButton, imageName: "palermo_fav_\(hue)")
+            changeHighlightedButtonImage(button: fourthFavoriteButton, imageName: "palermo_fav_\(hue)_highlight")
         }
     }
 }
