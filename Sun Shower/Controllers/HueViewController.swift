@@ -34,11 +34,14 @@ class HueViewController: UIViewController {
         sender.isSelected = true
         
         let barTint = #colorLiteral(red: 1, green: 0.9725490196, blue: 0.9607843137, alpha: 1)
-        let backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        let backgroundColor = #colorLiteral(red: 1, green: 0.9725490196, blue: 0.9607843137, alpha: 1)
         
         navigationController?.navigationBar.barTintColor = barTint
         
+        
         delegate?.didChangeHue(hue: "default", backgroundColor: backgroundColor, barTint: barTint)
+        
+        navigationController?.popToRootViewController(animated: true)
         
     }
     
@@ -53,6 +56,8 @@ class HueViewController: UIViewController {
         
         delegate?.didChangeHue(hue: "pink", backgroundColor: backgroundColor, barTint: barTint)
         
+        navigationController?.popToRootViewController(animated: true)
+        
     }
     
     @IBAction func blueHueSelected(_ sender: UIButton) {
@@ -65,6 +70,8 @@ class HueViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = barTint
         
         delegate?.didChangeHue(hue: "blue", backgroundColor: backgroundColor, barTint: barTint)
+        
+        navigationController?.popToRootViewController(animated: true)
         
     }
     
@@ -79,6 +86,8 @@ class HueViewController: UIViewController {
         
         delegate?.didChangeHue(hue: "yellow", backgroundColor: backgroundColor, barTint: barTint)
         
+        navigationController?.popToRootViewController(animated: true)
+        
     }
     
     @IBAction func sunshowerHueSelected(_ sender: UIButton) {
@@ -91,6 +100,8 @@ class HueViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = barTint
         
         delegate?.didChangeHue(hue: "sunshower", backgroundColor: backgroundColor, barTint: barTint)
+        
+        navigationController?.popToRootViewController(animated: true)
         
     }
 }
