@@ -1,7 +1,7 @@
 #  Sun Shower
 
 #### Minimalist weather built with the Openweather Weather API.
-#### *>> To Run:* 
+#### **☀️ To Run:** 
 - Add an Openweather API key to `WeatherManager.swift`.
 
 <img src="Sun Shower/Assets.xcassets/Screenshots/00.imageset/00.png" alt="Sun Shower app icon" width="150" height="150"/>
