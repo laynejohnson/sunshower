@@ -29,31 +29,34 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func searchPressed(_ sender: UIButton) {
+        
         // Dismiss keyboard.
         searchTextField.endEditing(true)
-        print("I am city from searchPressed \(city)")
         
         delegate?.searchPerformed(cityName: city)
         
         navigationController?.popViewController(animated: true)
-        
     }
     
     // MARK: - UITextFieldDelegate Functions
     
-    // Function enables return key on keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         // Dismiss keyboard
         searchTextField.endEditing(true)
         return true
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        
         // Validate entry
         if textField.text != "" {
+            
             // Should end editing
             return true
+            
         } else {
+            
             // Do not end editing
             textField.placeholder = "Enter a city"
             return false
@@ -61,7 +64,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        // Function runs when search field editing stops
         
         // Capture search field text
         if let searchCity = searchTextField.text {

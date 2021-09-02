@@ -40,11 +40,9 @@ class HueViewController: UIViewController {
         
         navigationController?.navigationBar.barTintColor = barTint
         
-        
         delegate?.didChangeHue(hue: "default", backgroundColor: backgroundColor, barTint: barTint)
         
         navigationController?.popToRootViewController(animated: true)
-        
     }
     
     @IBAction func pinkHueSelected(_ sender: UIButton) {
@@ -57,7 +55,6 @@ class HueViewController: UIViewController {
         delegate?.didChangeHue(hue: "pink", backgroundColor: backgroundColor, barTint: barTint)
         
         navigationController?.popToRootViewController(animated: true)
-        
     }
     
     @IBAction func blueHueSelected(_ sender: UIButton) {
@@ -70,7 +67,6 @@ class HueViewController: UIViewController {
         delegate?.didChangeHue(hue: "blue", backgroundColor: backgroundColor, barTint: barTint)
         
         navigationController?.popToRootViewController(animated: true)
-        
     }
     
     @IBAction func yellowHueSelected(_ sender: UIButton) {
@@ -83,7 +79,6 @@ class HueViewController: UIViewController {
         delegate?.didChangeHue(hue: "yellow", backgroundColor: backgroundColor, barTint: barTint)
         
         navigationController?.popToRootViewController(animated: true)
-        
     }
     
     @IBAction func sunshowerHueSelected(_ sender: UIButton) {
@@ -96,6 +91,5 @@ class HueViewController: UIViewController {
         delegate?.didChangeHue(hue: "sunshower", backgroundColor: backgroundColor, barTint: barTint)
         
         navigationController?.popToRootViewController(animated: true)
-        
     }
 }

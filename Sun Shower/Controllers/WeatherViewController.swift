@@ -50,7 +50,6 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     // Temperature View
-    // Halos
     @IBOutlet weak var lowTempImage: UIImageView!
     @IBOutlet weak var currentTempImage: UIImageView!
     @IBOutlet weak var highTempImage: UIImageView!
@@ -60,7 +59,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var highTemperatureLabel: UILabel!
     
-    // Favorites View (temp setup)
+    // Favorites View (temporary setup)
     @IBOutlet weak var firstFavoriteButton: UIButton!
     @IBOutlet weak var secondFavoriteButton: UIButton!
     @IBOutlet weak var thirdFavoriteButton: UIButton!
@@ -108,18 +107,22 @@ class WeatherViewController: UIViewController {
     }
     
     @IBAction func firstFavoritePressed(_ sender: UIButton) {
+        
         weatherManager.fetchWeather(cityName: "Montreal")
     }
     
     @IBAction func secondFavoritePressed(_ sender: UIButton) {
+        
         weatherManager.fetchWeather(cityName: "Austin")
     }
     
     @IBAction func thirdFavoritePressed(_ sender: UIButton) {
+        
         weatherManager.fetchWeather(cityName: "Quito")
     }
     
     @IBAction func fourthFavoritePressed(_ sender: UIButton) {
+        
         weatherManager.fetchWeather(cityName: "Palermo")
     }
     
@@ -128,9 +131,12 @@ class WeatherViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.destination is SearchViewController {
+            
             let destination = segue.destination as! SearchViewController
             destination.delegate = self
+            
         } else if segue.destination is HueViewController {
+            
             let destination = segue.destination as! HueViewController
             destination.delegate = self
         }
@@ -156,6 +162,7 @@ func changeHighlightedButtonImage(button: UIButton, imageName: String) {
 
 // Get country name
 func getCountryName(countryCode: String) -> String? {
+    
     let current = Locale(identifier: "en_US")
     return current.localizedString(forRegionCode: countryCode)
 }
@@ -171,8 +178,11 @@ extension WeatherViewController: WeatherManagerDelegate {
             let icon = weather.icon
             
             if icon.contains("n") {
+                
                 self.conditionImageView.image = UIImage.init(systemName: weather.nightConditionName)
+                
             } else if icon.contains("d") {
+                
                 self.conditionImageView.image = UIImage.init(systemName: weather.dayConditionName)
             }
             
@@ -185,7 +195,6 @@ extension WeatherViewController: WeatherManagerDelegate {
             self.currentTemperatureLabel.text = weather.currentTemperatureString
             self.lowTemperatureLabel.text = weather.lowTemperatureString
             self.highTemperatureLabel.text = weather.highTemperatureString
-            
         }
     }
     
@@ -228,9 +237,8 @@ extension WeatherViewController: CLLocationManagerDelegate {
 extension WeatherViewController: SearchViewControllerDelegate {
     
     func searchPerformed(cityName: String) {
-        print("This is city from stubFunc: \(cityName)")
-        weatherManager.fetchWeather(cityName: cityName)
         
+        weatherManager.fetchWeather(cityName: cityName)
     }
 }
 
@@ -281,14 +289,17 @@ extension WeatherViewController: HueViewControllerDelegate {
     }
 }
 
-// MARK: - String Struct Extension
+// MARK: - String Extension
 
 extension String {
+    
     func capitalizingFirstLetter() -> String {
+        
         return prefix(1).capitalized + dropFirst()
     }
     
     mutating func capitalizeFirstLetter() {
+        
         self = self.capitalizingFirstLetter()
     }
 }
