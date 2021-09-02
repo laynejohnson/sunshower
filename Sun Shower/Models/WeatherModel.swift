@@ -9,8 +9,6 @@ import Foundation
 
 struct WeatherModel {
     
-    // Stored properties:
-    
     // WeatherData struct
     let cityName: String
     let message: String?
@@ -30,8 +28,6 @@ struct WeatherModel {
     // Weather.sys
     let country: String
     
-    // Computed properties:
-    
     var currentTemperatureString: String {
         return String(format: "%.0f", currentTemperature)
     }
@@ -44,6 +40,7 @@ struct WeatherModel {
         return String(format: "%.0f", tempMin)
     }
     
+    // SF Symbols for daytime conditions
     var dayConditionName: String {
         switch conditionId {
         case 200...232:
@@ -83,6 +80,7 @@ struct WeatherModel {
         }
     }
     
+    // SF Symbols for nightime conditions
     var nightConditionName: String {
         switch conditionId {
         case 200...232:

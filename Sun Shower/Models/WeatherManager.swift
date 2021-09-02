@@ -8,7 +8,6 @@
 import Foundation
 import CoreLocation
 
-// Create protocol in the same file as the class the will use protocol (not delegate file)
 protocol WeatherManagerDelegate {
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
@@ -26,16 +25,20 @@ struct WeatherManager {
     func fetchWeather(cityName: String) {
         
         if cityName.contains(" ") {
+            
             let cityWithSpaces = cityName.replacingOccurrences(of: " ", with: "+")
             let urlString = "\(weatherURL)&q=\(cityWithSpaces)"
             performRequest(with: urlString)
+            
         } else {
+            
             let urlString = "\(weatherURL)&q=\(cityName)"
             performRequest(with: urlString)
         }
     }
     
     func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        
         let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
         performRequest(with: urlString)
     }
@@ -66,9 +69,9 @@ struct WeatherManager {
                         // Send data to delegate
                         self.delegate?.didUpdateWeather(self, weather: weather)
                     }
-//                    // View data in console:
-//                    let dataString = String(data: safeData, encoding:.utf8)
-//                    print(dataString!)
+                    //                    // View data in console:
+                    //                    let dataString = String(data: safeData, encoding:.utf8)
+                    //                    print(dataString!)
                 }
             }
             // Start task
@@ -82,8 +85,8 @@ struct WeatherManager {
         // .self turns WeatherData into a data type (instead of object)
         // throw keyword indicates that if something goes wrong, method will throw an error
         do {
-            let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
             
+            let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
             let conditionId = decodedData.weather[0].id
             let description = decodedData.weather[0].description
             let icon = decodedData.weather[0].icon
@@ -100,6 +103,7 @@ struct WeatherManager {
             return weather
             
         } catch {
+            
             delegate?.didFailWithError(error: error)
             return nil
         }

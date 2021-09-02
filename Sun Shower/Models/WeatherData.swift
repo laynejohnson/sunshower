@@ -8,6 +8,7 @@
 import Foundation
 
 // A struct that conforms to the Decodable protocol is a type that can decode itself from an external representation (JSON representation).
+
 struct WeatherData: Codable {
     let name: String
     let message: String?
@@ -16,7 +17,6 @@ struct WeatherData: Codable {
     let sys: Sys
 }
 
-// Property names must match property names in JSON
 struct Main: Codable {
     let temp: Double
     let feels_like: Double

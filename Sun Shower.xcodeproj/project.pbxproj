@@ -24,7 +24,6 @@
 		E8BF0D3726C3FBAD00F29361 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF0D3626C3FBAD00F29361 /* SearchViewController.swift */; };
 		E8BF0D3926C3FBC000F29361 /* HueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF0D3826C3FBC000F29361 /* HueViewController.swift */; };
 		E8BF0D3B26C4010900F29361 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF0D3A26C4010900F29361 /* App.swift */; };
-		E8CA9F1F26CFE37B005A763D /* HueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CA9F1E26CFE37B005A763D /* HueModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +47,6 @@
 		E8BF0D3826C3FBC000F29361 /* HueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueViewController.swift; sourceTree = "<group>"; };
 		E8BF0D3A26C4010900F29361 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E8BF0D3C26C41AD900F29361 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E8CA9F1E26CFE37B005A763D /* HueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +108,6 @@
 		E8897E2226AC899600992D6E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E8CA9F1E26CFE37B005A763D /* HueModel.swift */,
 				E891D74626AF372500003359 /* WeatherData.swift */,
 				E891D74826AF7CA400003359 /* WeatherModel.swift */,
 				E891D74426AF00E800003359 /* WeatherManager.swift */,
@@ -220,7 +217,6 @@
 				E891D74926AF7CA400003359 /* WeatherModel.swift in Sources */,
 				E8897E1126AC88DE00992D6E /* SceneDelegate.swift in Sources */,
 				E891D74726AF372500003359 /* WeatherData.swift in Sources */,
-				E8CA9F1F26CFE37B005A763D /* HueModel.swift in Sources */,
 				E870728726AE2CC3001B59D9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
