@@ -36,12 +36,12 @@ class WeatherViewController: UIViewController {
     // - - - - - - -  OUTLETS - - - - - - //
     // ---------------------------------- //
     
-    // Icon Stack
+    // Icon Stack.
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var hueButton: UIButton!
     
-    // Weather View
+    // Weather View.
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var textStackView: UIStackView!
@@ -49,17 +49,17 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    // Temperature View
+    // Temperature View.
     @IBOutlet weak var lowTempImage: UIImageView!
     @IBOutlet weak var currentTempImage: UIImageView!
     @IBOutlet weak var highTempImage: UIImageView!
     
-    // Labels
+    // Labels.
     @IBOutlet weak var lowTemperatureLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var highTemperatureLabel: UILabel!
     
-    // Favorites View (temporary setup)
+    // Favorites View (temporary setup).
     @IBOutlet weak var firstFavoriteButton: UIButton!
     @IBOutlet weak var secondFavoriteButton: UIButton!
     @IBOutlet weak var thirdFavoriteButton: UIButton!
@@ -74,29 +74,28 @@ class WeatherViewController: UIViewController {
     var weatherManager = WeatherManager()
     let locationManager = CLLocationManager()
     
-    //    var hue: Int = 0
     
     // MARK: - View Controller Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Must set locationManager delegate before requesting location
+        // Must set locationManager delegate before requesting location.
         locationManager.delegate = self
         
-        // Send location permission request
+        // Send location permission request.
         locationManager.requestWhenInUseAuthorization()
         
-        // Request intial location fix
+        // Request intial location fix.
         locationManager.startUpdatingLocation()
         
         weatherManager.delegate = self
         
-        // Dismiss keyboard with tap gesture
+        // Dismiss keyboard with tap gesture.
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
         
-        // If gesture blocks other touches
+        // If gesture blocks other touches:
         // tapGesture.cancelsTouchesInView = false
         
     }
@@ -160,7 +159,7 @@ func changeHighlightedButtonImage(button: UIButton, imageName: String) {
     }
 }
 
-// Get country name
+// Get country name.
 func getCountryName(countryCode: String) -> String? {
     
     let current = Locale(identifier: "en_US")
@@ -250,30 +249,27 @@ extension WeatherViewController: HueViewControllerDelegate {
         
         DispatchQueue.main.async { [self] in
             
-            // Change background color
+            // Change background color.
             backgroundView.backgroundColor = backgroundColor
             
-            // Change navigation bar color
+            // Change navigation bar color.
             navigationController?.navigationBar.barTintColor = barTint
             
-            // CHANGE BUTTONS
-            // Set location button image
+            // Set location button image.
             changeHighlightedButtonImage(button: locationButton, imageName: "location_icon_\(hue)")
             
-            // Set search button
+            // Set search button.
             changeHighlightedButtonImage(button: searchButton, imageName: "search_icon_\(hue)")
             
-            // Set hue button
+            // Set hue button.
             changeHighlightedButtonImage(button: hueButton, imageName: "hue_icon_\(hue)")
             
-            // CHANGE TEMP UI
-            
+            // Set temperature UI elements.
             lowTempImage.image = UIImage(named: "other_temp_\(hue)")
             currentTempImage.image = UIImage(named: "current_temp_\(hue)")
             highTempImage.image = UIImage(named: "other_temp_\(hue)")
             
-            // CHANGE FAVORITES UI
-            
+            // Set favorite cities.
             changeDefaultButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)")
             changeHighlightedButtonImage(button: firstFavoriteButton, imageName: "montreal_fav_\(hue)_highlight")
             

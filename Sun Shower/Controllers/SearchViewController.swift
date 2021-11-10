@@ -42,7 +42,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        // Dismiss keyboard
+        // Dismiss keyboard.
         searchTextField.endEditing(true)
         return true
     }
@@ -52,12 +52,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         // Validate entry
         if textField.text != "" {
             
-            // Should end editing
+            // Should end editing.
             return true
             
         } else {
             
-            // Do not end editing
+            // Do not end editing.
             textField.placeholder = "Enter a city"
             return false
         }
@@ -65,7 +65,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        // Capture search field text
+        // Capture search field text.
         if let searchCity = searchTextField.text {
             city = searchCity
         }

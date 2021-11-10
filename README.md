@@ -1,4 +1,4 @@
-#  Sun Shower
+#  Sun Shower Weather
 
 #### Minimalist weather app built with the Openweather Weather API.
 #### **⛅️ To Run App:** 

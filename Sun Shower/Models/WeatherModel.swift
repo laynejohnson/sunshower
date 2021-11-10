@@ -9,7 +9,7 @@ import Foundation
 
 struct WeatherModel {
     
-    // WeatherData struct
+    // WeatherData
     let cityName: String
     let message: String?
     
@@ -20,7 +20,6 @@ struct WeatherModel {
     let tempMax: Double
     
     // Weather.weather
-    
     let conditionId: Int
     let description: String
     let icon: String
@@ -40,7 +39,7 @@ struct WeatherModel {
         return String(format: "%.0f", tempMin)
     }
     
-    // SF Symbols for daytime conditions
+    // SF Symbols for daytime conditions.
     var dayConditionName: String {
         switch conditionId {
         case 200...232:
@@ -80,7 +79,7 @@ struct WeatherModel {
         }
     }
     
-    // SF Symbols for nightime conditions
+    // SF Symbols for nightime conditions.
     var nightConditionName: String {
         switch conditionId {
         case 200...232:

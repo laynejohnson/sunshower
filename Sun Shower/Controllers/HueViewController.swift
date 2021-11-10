@@ -7,7 +7,7 @@
 
 import UIKit
 
-// TODO: Deselect all buttons when one selector selected
+// TODO: Deselect all buttons when one selector selected.
 
 protocol HueViewControllerDelegate {
     

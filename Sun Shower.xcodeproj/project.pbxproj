@@ -23,7 +23,6 @@
 		E891D74926AF7CA400003359 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891D74826AF7CA400003359 /* WeatherModel.swift */; };
 		E8BF0D3726C3FBAD00F29361 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF0D3626C3FBAD00F29361 /* SearchViewController.swift */; };
 		E8BF0D3926C3FBC000F29361 /* HueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF0D3826C3FBC000F29361 /* HueViewController.swift */; };
-		E8BF0D3B26C4010900F29361 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF0D3A26C4010900F29361 /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		E891D74826AF7CA400003359 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		E8BF0D3626C3FBAD00F29361 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E8BF0D3826C3FBC000F29361 /* HueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueViewController.swift; sourceTree = "<group>"; };
-		E8BF0D3A26C4010900F29361 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E8BF0D3C26C41AD900F29361 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E81FFA71273C15B0005E561D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E870728626AE2CC3001B59D9 /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E86C6C2A26C06279004BD1E5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,10 +98,9 @@
 		E8897E0D26AC88DE00992D6E /* Sun Shower */ = {
 			isa = PBXGroup;
 			children = (
+				E81FFA71273C15B0005E561D /* Resources */,
 				E8897E0E26AC88DE00992D6E /* AppDelegate.swift */,
 				E8897E1026AC88DE00992D6E /* SceneDelegate.swift */,
-				E870728626AE2CC3001B59D9 /* Constants.swift */,
-				E8BF0D3A26C4010900F29361 /* App.swift */,
 				E8897E1C26AC88DF00992D6E /* Info.plist */,
 				E8897E1726AC88DF00992D6E /* Assets.xcassets */,
 				E8897E2226AC899600992D6E /* Models */,
@@ -211,7 +216,6 @@
 				E8897E1326AC88DE00992D6E /* WeatherViewController.swift in Sources */,
 				E8897E0F26AC88DE00992D6E /* AppDelegate.swift in Sources */,
 				E8BF0D3726C3FBAD00F29361 /* SearchViewController.swift in Sources */,
-				E8BF0D3B26C4010900F29361 /* App.swift in Sources */,
 				E891D74526AF00E800003359 /* WeatherManager.swift in Sources */,
 				E8BF0D3926C3FBC000F29361 /* HueViewController.swift in Sources */,
 				E891D74926AF7CA400003359 /* WeatherModel.swift in Sources */,
