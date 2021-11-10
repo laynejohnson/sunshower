@@ -5,7 +5,7 @@
 - `xed .` in Terminal to open app in XCode.
 - Add an Openweather API key to `Models` > `WeatherManager.swift`.
 
-<img src="Sun Shower/Assets.xcassets/Screenshots/00.imageset/00.png" alt="Sun Shower app icon" width="150" height="150"/>
+<img src="Sun Shower/Assets.xcassets/Screenshots/00.imageset/SunShowerAppIcon.png" alt="Sun Shower app icon" width="150" height="150"/>
 
 ##### Default Theme:
 <img src="Sun Shower/Assets.xcassets/Screenshots/02.imageset/02.png" alt="weather main screen" width="207" height="448"/>|
