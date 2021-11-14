@@ -1,8 +1,8 @@
 #  Sun Shower Weather
 
-### Minimalist weather app built with the Openweather Weather API.
-
 <img src="Sun Shower/Assets.xcassets/Screenshots/00.imageset/SunShowerAppIcon.png" alt="Sun Shower app icon" width="150" height="150"/>
+
+### Minimalist weather app built with the Openweather Weather API.
 
 ### **⛅️ To Run App:** 
 - `xed .` in Terminal to open app in XCode.
